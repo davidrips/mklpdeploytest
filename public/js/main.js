@@ -85,21 +85,44 @@ $(document).ready(function(){
         
     // var wipeAnimation = new TimelineMax().add(TweenMax.to($("#controw8"),3, {right:"0%", ease: "Power2.easeInOut"}))
 
-    var drawGraphs = new TimelineMax()
-    .add(TweenMax.to($("#barsvgy1"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($("#barsvgp1"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($("#barsvgy2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($("#barsvgp2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($("#barsvgy3"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    .add(TweenMax.to($("#barsvgp3"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
         
-       
+// function replacePolylinesWithPaths(parentElement) {
+//     var polylines = $(parentElement).find('polyline');
+    
+//     $.each(polylines, function() {
+//     var points = $(this).attr('points');
+//     $('path')
+//     .attr('d', 'M' + points)
+//     .attr('fill', $(this).attr('fill'))
+//     .attr('stroke', $(this).attr('stroke'))
+//     .attr('stroke-width', $(this).attr('stroke-width'))
+//     .insertAfter(this);
+//     });
+
+//     $(polylines).remove();
+// }
+
+// replacePolylinesWithPaths($(".barsvg"))
+
+
+
+    var drawGraphs = new TimelineMax()
+        .add(TweenMax.to($("#barsvgy1"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgp1"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgy2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgp2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgy3"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgp3"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.staggerTo($(".linepdots"),.5,{opacity: 1, ease:Linear.easeNone}, 0.2))
+        .add(TweenMax.to($(".pline"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.staggerTo($(".lineydots"),.5,{opacity: 1, ease:Linear.easeNone}, 0.2))
+        .add(TweenMax.to($(".yline"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
 
 
 
         // TweenMax.to($("#controw8"),1,{x:"-100%"})
     var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"500%"}).setPin("#pinContainer").addTo(controller);
-    var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30}).setTween(drawGraphs).addTo(controller);
+    var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30, duration:"90%"}).setTween(drawGraphs).addTo(controller);
 
     // var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:400, duration:"200%"}).setTween(wipeAnimation).addTo(controller);
 
@@ -109,7 +132,7 @@ $(document).ready(function(){
 
 
 
-// var len = $("#barsvgy1").getTotalLength();
+// var len = $(".yline").get(0).getTotalLength();
 // console.log(len);;
 
 // 191.69161987304688

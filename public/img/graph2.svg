@@ -10,37 +10,47 @@
 			302.265,527.546 152.389,432.598 		"/>
 	</g>
 </g>
-<g id="Layer_3">
-	<polyline fill="none" stroke="#3D3D65" stroke-width="13" stroke-miterlimit="10" points="55.521,578.721 150.667,422.276 
-		303.505,519.099 438.056,467.321 529.584,408.265 667.153,92.268 833.166,253.628 917.489,92.263 	"/>
+<g id="PurpleDots">
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="156" cy="448.256" r="14.979"/>
+	</g>
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="302.334" cy="521.281" r="14.979"/>
+	</g>
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="426.587" cy="415.985" r="14.978"/>
+	</g>
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="528.095" cy="409.139" r="14.979"/>
+	</g>
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="664.74" cy="123.551" r="14.976"/>
+	</g>
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="832.676" cy="254.503" r="14.979"/>
+	</g>
+	<g>
+		<circle class='linepdots' fill="#3D3D65" cx="955.5" cy="78.255" r="14.978"/>
+	</g>
 </g>
-<g id="Layer_1">
-	<g>
-		<circle fill="#3D3D65" cx="151.667" cy="420.278" r="14.979"/>
-	</g>
-	<g>
-		<circle fill="#3D3D65" cx="430.588" cy="470.152" r="14.978"/>
-	</g>
-	<g>
-		<circle fill="#3D3D65" cx="528.095" cy="409.139" r="14.979"/>
-	</g>
-	<g>
-		<ellipse fill="#3D3D65" cx="666.74" cy="92.884" rx="13.223" ry="14.976"/>
-	</g>
-	<g>
-		<circle fill="#3D3D65" cx="832.676" cy="254.503" r="14.979"/>
-	</g>
-	<g>
-		<circle fill="#3D3D65" cx="918" cy="93.138" r="14.978"/>
-	</g>
-	<polyline fill="none" stroke="#FED138" stroke-width="9" stroke-miterlimit="10" points="52.521,562.721 147.667,406.276 
-		300.505,503.099 435.056,451.321 526.584,392.265 664.153,76.268 830.166,237.628 914.489,76.263 	"/>
-	<circle fill="#FED138" cx="150.714" cy="403.965" r="14.979"/>
-	<circle fill="#FED138" cx="428.078" cy="453.278" r="14.978"/>
-	<circle fill="#FED138" cx="526.585" cy="392.265" r="14.979"/>
-	<circle fill="#FED138" cx="664.985" cy="77.009" r="14.978"/>
-	<circle fill="#FED138" cx="830.166" cy="237.629" r="14.979"/>
-	<circle fill="#FED138" cx="914.49" cy="76.264" r="14.978"/>
+<g id="PurpleLine">
+	<path fill="none" class='pline' stroke="#3D3D65" stroke-width="13" stroke-miterlimit="10" d="M55.521,578.721 156,448.254 
+		303.505,519.099 426.587,415.983 529.584,408.265 665.004,121.589 833.166,253.628 955.5,78.254 	z"/>
+</g>
+<g id="YellowDots">
+	<circle class='lineydots' fill="#FED138" cx="150.714" cy="403.965" r="14.979"/>
+	<circle class='lineydots' fill="#FED138" cx="301.38" cy="503.299" r="14.979"/>
+	<circle class='lineydots' fill="#FED138" cx="428.078" cy="453.278" r="14.978"/>
+	<circle class='lineydots' fill="#FED138" cx="526.585" cy="392.265" r="14.979"/>
+	<circle class='lineydots' fill="#FED138" cx="664.985" cy="77.009" r="14.978"/>
+	<circle class='lineydots' fill="#FED138" cx="874.167" cy="257.629" r="14.979"/>
+	<circle class='lineydots' fill="#FED138" cx="951.823" cy="41.597" r="14.978"/>
+</g>
+<g id="YellowLine">
+	<polyline fill="none" class='yline' stroke="#FED138" stroke-width="9" stroke-miterlimit="10" points="52.521,562.721 147.667,406.276 
+		300.505,503.099 435.056,451.321 526.584,392.265 664.153,76.268 873.67,258.921 951.822,41.596 	"/>
+</g>
+<g id="background">
 	<g>
 		<polygon fill="#3D3D65" points="976.712,591.943 25.468,591.943 25.468,62.257 52.521,62.257 52.521,562.305 976.712,562.305 		
 			"/>

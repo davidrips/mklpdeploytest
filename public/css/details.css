@@ -613,8 +613,18 @@ label{
     overflow:hidden;
 }
 
-#barsvg{
-    width:20vw;
+#controw7a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.barsvg{
+    flex: 1;
+    /*width:20vw;
+    height: 20vw;*/
 }
 
 #barsvgy1{
@@ -625,7 +635,7 @@ label{
      stroke-dasharray:245.058;
     stroke-dashoffset:245.058;
 }
-#barsvgy2{
+#barsvgy3{
      stroke-dasharray:369.18;
     stroke-dashoffset:369.18;
 }
@@ -639,14 +649,40 @@ label{
      stroke-dasharray:245.058;
     stroke-dashoffset:245.058;
 }
-#barsvgp2{
+#barsvgp3{
      stroke-dasharray:369.18;
     stroke-dashoffset:369.18;
 }
 .barsvgpurple{
 
 }
-   
+
+.linepdots{
+    opacity: 0;
+}
+
+.lineydots{
+    opacity: 0;
+}
+
+.pline{
+    
+    stroke-dasharray:1336.847412109375;
+    stroke-dashoffset:1336.847412109375;
+}
+
+.yline{
+    
+    stroke-dasharray:1470.677734375;
+    stroke-dashoffset:1470.677734375;
+} 
+
+#circarrowsvg{
+
+    transform: rotate(45);
+    /*x1="489.96" y1="392.33" x2="715"*/
+}
+
     /*display: flex;
     flex-direction: column;
     justify-content: center;
@@ -786,15 +822,29 @@ label{
         /*width:80%;*/
     }
 
+
+    #controw7a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    
     #row7svgdiv{
     /*flex-grow: 1;*/
-    width:90vw;
+    /*width:90vw;*/
    
-     display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
+    }
+
+    .barsvg{
+        /*flex:1;*/
+        max-width: 30%;
+        max-height: 20vh;
     }
 
 
