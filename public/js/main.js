@@ -53,6 +53,7 @@ $(document).ready(function(){
 
     var controller = new ScrollMagic.Controller({loglevel: 3});
 
+
     var scene1 = new ScrollMagic.Scene({triggerElement: "#section2", duration: "50%"})
         scene1.setTween(enterAnim1);
         scene1.addTo(controller);
@@ -80,12 +81,35 @@ $(document).ready(function(){
     // var scene18 = new ScrollMagic.Scene({triggerElement:"#controw5", triggerHook:"onLeave", offset:"50vh", duration:"95%"}).removePin("#controw5").addTo(controller);
     var scene19 = new ScrollMagic.Scene({triggerElement:"#controw5", triggerHook:"0"}).setTween(hidepinned).addTo(controller)
     // var scene19 = new ScrollMagic.Scene({triggerElement:"#controw6", triggerHook:"onLeave", offset:14}).setPin("#controw6").addTo(controller);
-    var scene20 = new ScrollMagic.Scene({triggerElement:"#controw7", triggerHook:"onLeave", offset:14, duration:"195%"}).setPin("#controw7a", {pushFollowers:true}).addTo(controller);
+    
+        
+    // var wipeAnimation = new TimelineMax().add(TweenMax.to($("#controw8"),3, {right:"0%", ease: "Power2.easeInOut"}))
+
+    var drawGraphs = new TimelineMax()
+    .add(TweenMax.to($("#barsvgy1"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    .add(TweenMax.to($("#barsvgp1"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    .add(TweenMax.to($("#barsvgy2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    .add(TweenMax.to($("#barsvgp2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    .add(TweenMax.to($("#barsvgy3"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    .add(TweenMax.to($("#barsvgp3"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        
+       
+
+
+
+        // TweenMax.to($("#controw8"),1,{x:"-100%"})
+    var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"500%"}).setPin("#pinContainer").addTo(controller);
+    var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30}).setTween(drawGraphs).addTo(controller);
+
+    // var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:400, duration:"200%"}).setTween(wipeAnimation).addTo(controller);
+
+     
 
 
 
 
-// var len = $("#svgscrib2").get(0).getTotalLength();
+
+// var len = $("#barsvgy1").getTotalLength();
 // console.log(len);;
 
 // 191.69161987304688
