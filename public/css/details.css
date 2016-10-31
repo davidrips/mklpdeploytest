@@ -3,7 +3,7 @@
 *{
     /*font-family: "Raleway", sans-serif !important;*/
   
-    font-size: 12pt;
+    /*font-size: 12pt;*/
 }
 
 
@@ -11,6 +11,7 @@
 
 html{
     width:100%;
+    /*font-size: 62.5%;*/
  }
 body{
     height: 100%;
@@ -178,7 +179,7 @@ label{
     display: flex;
     justify-content: center;
     width: 100%;
-    align-self: flex-start;
+    /*align-self: flex-start;*/
 }
 .aboutUs{
     /*margin-top: 5%;*/
@@ -242,14 +243,29 @@ label{
 }
 
 .bigr{
-    font-family: 'Amatic SC', cursive;
-    line-height: 90%;
+    font-family: 'Josefin Slab', serif;
+    line-height: 95%;
     text-align: center;
     font-size: 9vw;
+
     margin-left: auto;
     margin-right: auto;
     /*margin-top: 5vh;*/
     position: relative;
+}
+
+
+#probquest{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 3vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+
+
+
 }
 
 #secondpgcontent1{
@@ -265,14 +281,16 @@ label{
     justify-content: center;
 }
 #secondpgcontent1a{
-    width: 100vw;
+    /*width: 100vw;*/
     right: -100%;
     /*margin-top: 3vh;*/
+    font-size: 9vmin;
     position: relative;
 }
 #secondpgcontent1b{
     left: -100%;
-    width: 100vw;
+     font-size: 9vmin;
+    /*width: 100vw;*/
     /*position: absolute;*/
 }
 
@@ -280,7 +298,7 @@ label{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;   
+    /*margin-top: 5%;   */
 }
 
 #qlleftsvg{
@@ -315,7 +333,8 @@ label{
 #qlcirc{
     fill:white;
     width:0%;
-    height:0%;    
+    height:0%;  
+    max-width: 40vh;  
     /*z-index: 1;*/
 }
 #qlqmark{
@@ -332,7 +351,7 @@ label{
     display: flex;
     justify-content: space-around;
     height: 20vw;
-    width: 100vw;
+    /*width: 100vw;*/
     margin-left: auto;
     margin-right: auto;
     /*margin-top: 5vh;*/
@@ -367,19 +386,23 @@ label{
 
 #controw4{
     /*margin-top: 1vh;*/
-    position: absolute;
+    /*position: absolute;*/
     /*margin-bottom: 50vh;*/
 
 }
 #missioncont{
     height: 100vh;
       width:100vw;
-      margin-bottom: 50vh;
+    margin-bottom: 50vh;
     display: block;
+    padding-right: 10vw;
+    padding-left: 10vw;
     /*margin-bottom: 20vh;*/
 }
 #controw5{
     /*position:absolute;*/
+    padding-left: 10vw;
+    padding-right: 10vw;
     background-color: #44a2d9; 
     width:100vw;
     height:100vh;
@@ -387,7 +410,7 @@ label{
     text-align: center;
     border-top: 14px solid white;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 #controw5text{
@@ -405,10 +428,14 @@ label{
 }
 
 #tododiv{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     /*display: inline-block;*/
 }
 #secondpgcontent2{
-    text-align: left;
+    text-align: center;
+    font-size: 6vmin;
+    max-width: 80vw;
     /*display: inline-block;*/
    /* width: auto;
     max-width: 40%
@@ -423,8 +450,8 @@ label{
 }
 
 .smlr{
-    font-family: 'Amatic SC', cursive;
-    line-height: 90%;
+    font-family: 'Josefin Slab', serif;
+    line-height: 95%;
     text-align: center;
     font-size: 9vmin;
     margin-left: auto;

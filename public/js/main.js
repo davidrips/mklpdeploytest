@@ -36,7 +36,7 @@ $(document).ready(function(){
     var enterAnim1 = TweenMax.to($("#secondpgcontent1"), 1, {left:0, ease:"Power2.easeInOut"});
     var enterAnim2= TweenMax.to($("#secondpgcontent1a"), 1, {right:0, ease:"Power2.easeInOut"});
     var enterAnim3= TweenMax.to($("#secondpgcontent1b"), 1, {left:0, ease:"Power2.easeInOut"});
-    var qlcircle= TweenMax.to("#qlcirc", 1, {width: '20%', height: '20%', rotation: "360", ease:"Power2.easeInOut" })
+    var qlcircle= TweenMax.to("#qlcirc", 1, {width: '50%', rotation: "360", ease:"Power2.easeInOut" })
     var shrinkCircle = TweenMax.to($("#qlcirc"), 1, {width: '0%', height:"0%", rotation:"-360", ease: "Power2.easeInOut"});
     // var pushdownprovtext = TweenMax.to($("#secondpgcontent1b"),1,{top:"24vh", ease: "Power2.easeInOut"});
     var bringouttools= TweenMax.to($("#svgrow"),2,{scale:1, ease: "Power2.easeInOut"})
@@ -53,14 +53,12 @@ $(document).ready(function(){
 
     var controller = new ScrollMagic.Controller({loglevel: 3});
 
-
-    var scene1 = new ScrollMagic.Scene({triggerElement: "#section2", duration: "50%"})
-        scene1.setTween(enterAnim1);
-        scene1.addTo(controller);
+    var scene1a = new ScrollMagic.Scene({triggerElement: '#probquest', triggerHook: 'onLeave', duration:"90%"}).setPin("#probquest").addTo(controller);
+    var scene1 = new ScrollMagic.Scene({triggerElement: "#probquest", duration: "50%"}).setTween(enterAnim1).addTo(controller);
     var scene2 = new ScrollMagic.Scene({triggerElement: "#section2", duration: "60%", offset: "15%"}).setTween(enterAnim2).addTo(controller);
     var scene3 = new ScrollMagic.Scene({triggerElement: "#section2", duration: "60%", offset: "15%"}).setTween(enterAnim3).addTo(controller);
-    var scene4 = new ScrollMagic.Scene({triggerElement: "#section2", duration: "40%", offset: "15%"}).setTween(qlcircle).addTo(controller);
-    var scene6 = new ScrollMagic.Scene({triggerElement:"#questionLines", triggerHook:"onLeave", offset: "-80%",duration:"25%"}).setTween(shrinkCircle).addTo(controller);
+    var scene4 = new ScrollMagic.Scene({triggerElement: "#probquest", duration: "80%"}).setTween(qlcircle).addTo(controller);
+    var scene6 = new ScrollMagic.Scene({triggerElement:"#missioncont", triggerHook:"0.5",duration:"25%"}).setTween(shrinkCircle).addTo(controller);
 
     var testnew = new ScrollMagic.Scene({triggerElement:"#missioncont", triggerHook:"0.1"}).setPin("#missioncont",{spacerClass:"controw2spacer"}).addTo(controller);
     // var scene7 = new ScrollMagic.Scene({triggerElement:"#controw2", triggerHook:"onLeave"}).setPin("#controw2",{spacerClass:"controw2spacer"}).addTo(controller);
@@ -83,26 +81,8 @@ $(document).ready(function(){
     // var scene19 = new ScrollMagic.Scene({triggerElement:"#controw6", triggerHook:"onLeave", offset:14}).setPin("#controw6").addTo(controller);
     
         
-    // var wipeAnimation = new TimelineMax().add(TweenMax.to($("#controw8"),3, {right:"0%", ease: "Power2.easeInOut"}))
+    var wipeAnimation = TweenMax.to($("#controw8"),3, {right:"0%", ease: "Power2.easeInOut"})
 
-        
-// function replacePolylinesWithPaths(parentElement) {
-//     var polylines = $(parentElement).find('polyline');
-    
-//     $.each(polylines, function() {
-//     var points = $(this).attr('points');
-//     $('path')
-//     .attr('d', 'M' + points)
-//     .attr('fill', $(this).attr('fill'))
-//     .attr('stroke', $(this).attr('stroke'))
-//     .attr('stroke-width', $(this).attr('stroke-width'))
-//     .insertAfter(this);
-//     });
-
-//     $(polylines).remove();
-// }
-
-// replacePolylinesWithPaths($(".barsvg"))
 
 
 
@@ -123,6 +103,10 @@ $(document).ready(function(){
         // TweenMax.to($("#controw8"),1,{x:"-100%"})
     var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"500%"}).setPin("#pinContainer").addTo(controller);
     var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30, duration:"90%"}).setTween(drawGraphs).addTo(controller);
+    var scene22 = new ScrollMagic.Scene()
+
+
+
 
     // var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:400, duration:"200%"}).setTween(wipeAnimation).addTo(controller);
 
