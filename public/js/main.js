@@ -68,7 +68,8 @@ $(document).ready(function(){
     // var scene12 = new ScrollMagic.Scene({triggerElement:"#controw2", triggerHook:"onLeave", duration:"20%"}).setTween(pushdownprovtext).addTo(controller);
     var scene13 = new ScrollMagic.Scene({triggerElement:"#missioncont", triggerHook:"0.2", duration:"40%"}).setTween(bringouttools2).addTo(controller);
     var scene13 = new ScrollMagic.Scene({triggerElement:"#missioncont", triggerHook:"0.2", duration:"50%"}).setTween(bringouttools).addTo(controller);
-    var scene14 = new ScrollMagic.Scene({triggerElement:"#controw5", triggerHook:"onLeave", offset:14, duration:"95%"}).setPin("#controw5", {pushFollowers:true}).addTo(controller);
+
+    var scene14 = new ScrollMagic.Scene({triggerElement:"#controw5", triggerHook:"onLeave", offset:'14'}).setPin("#controw5", {pushFollowers: false}).addTo(controller);
     // scene14.on('start', function(){testnew.update()})
     // scene14.on("end", function() {testnew.removePin()})
 
@@ -81,7 +82,7 @@ $(document).ready(function(){
     // var scene19 = new ScrollMagic.Scene({triggerElement:"#controw6", triggerHook:"onLeave", offset:14}).setPin("#controw6").addTo(controller);
     
         
-    var wipeAnimation = TweenMax.to($("#controw8"),3, {right:"0%", ease: "Power2.easeInOut"})
+    // var wipeAnimation = TweenMax.to($("#controw8"),3, {right:"0%", ease: "Power2.easeInOut"})
 
 
 
@@ -98,16 +99,122 @@ $(document).ready(function(){
         .add(TweenMax.staggerTo($(".lineydots"),.5,{opacity: 1, ease:Linear.easeNone}, 0.2))
         .add(TweenMax.to($(".yline"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
 
+        .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gaugeparty"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gaugepartg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+
 
 
         // TweenMax.to($("#controw8"),1,{x:"-100%"})
-    var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"500%"}).setPin("#pinContainer").addTo(controller);
+    var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"400%"}).setPin("#pinContainer", {pushFollowers:true}).addIndicators().addTo(controller);
     var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30, duration:"90%"}).setTween(drawGraphs).addTo(controller);
     var scene22 = new ScrollMagic.Scene()
 
 
 
+    var g;
+   var h = $("#secondpgcontent3").css('height');
+   // console.log(h);
 
+
+    function spc3Height(size){
+        // console.log(size);
+        var size2 = size.substring(0, size.length-2);
+        // console.log(size2);
+        var size3 = parseInt(size2);
+
+        var size4 = size3 * 1.05;
+        // console.log(size4);
+        g = size4
+    }
+
+    spc3Height(h);
+    // console.log(g);
+
+ 
+    var sr6a = new ScrollMagic.Scene({triggerElement: '#controw6o',triggerHook: 0, offset: '14'
+    }).setPin("#controw6o", {pushFollowers:false}).addTo(controller);
+
+    var sr6b = new ScrollMagic.Scene({triggerElement: '#svg6wrap', triggerHook: "onLeave"}).setPin('#svg6wrap', {pushFollowers:false}).addTo(controller);
+    sr6b.offset(g*-1)
+    var sr6c = new ScrollMagic.Scene({triggerElement: '#controw6b', triggerHook: 0.7}).setPin('#controw6b', {pushFollowers:false}).addTo(controller);
+
+    // var drawGauge = new TimelineMax()
+    //     .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    //     .add(TweenMax.to($("#gaugeparty"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    //     .add(TweenMax.to($("#gaugepartg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    //     .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+    //     .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+
+var gaugepartr = $("# ").get(0).getTotalLength();
+console.log("gauge part p = " + gaugepartr);
+// var gaugepartr = $("#gaugepartr").get(0).getTotalLength();
+// console.log("gauge part r = " + gaugepartr);
+// var gaugepartg = $("#gaugepartg").get(0).getTotalLength();
+// console.log("gauge part g = " + gaugepartg);
+// var gaugeparty = $("#gaugeparty").get(0).getTotalLength();
+// console.log("gauge part y = " + gaugeparty);
+// var gaugepartl = $("#gaugepartl").get(0).getTotalLength();
+// console.log("gauge part l = " + gaugepartl);
+
+    //pin again
+    // var pinIntroScene2 = new ScrollMagic.Scene({
+    //     triggerElement: '#crtxt1',
+    //     triggerHook: 0,
+    //     duration:"90%"
+    // })
+    // .setPin('#crtxt2', {pushFollowers: false})
+    // .addTo(controller);
+
+    //build a scene
+ //    var ourScene = new ScrollMagic.Scene({
+ //        triggerElement: '#secondpgcontent3a img',
+ //        duration: '50%',
+ //        triggerHook: 0.9
+ //    })
+ //    .setClassToggle('#secondpgcontent3a', 'fade-in') //add class to project01
+ //    .addIndicators({
+ //        name: 'fade scene',
+ //        colorTrigger:'white',
+ //        colorStart:'#75C695',
+ //        colorEnd: 'pink'
+ //    }) //this requires a plugin
+
+ //    .addTo(controller);
+
+ // //build a scene
+ //    var ourScene = new ScrollMagic.Scene({
+ //        triggerElement: '#secondpgcontent3b img',
+ //        duration: '50%',
+ //        triggerHook: 0.9
+ //    })
+ //    .setClassToggle('#secondpgcontent3b', 'fade-in') //add class to project01
+ //    .addIndicators({
+ //        name: 'fade scene',
+ //        colorTrigger:'white',
+ //        colorStart:'#75C695',
+ //        colorEnd: 'pink'
+ //    }) //this requires a plugin
+
+ //    .addTo(controller);
+
+ //     //build a scene
+ //    var ourScene = new ScrollMagic.Scene({
+ //        triggerElement: '#secondpgcontent3c img',
+ //        duration: '50%',
+ //        triggerHook: 0.9
+ //    })
+ //    .setClassToggle('#secondpgcontent3c', 'fade-in') //add class to project01
+ //    .addIndicators({
+ //        name: 'fade scene',
+ //        colorTrigger:'white',
+ //        colorStart:'#75C695',
+ //        colorEnd: 'pink'
+ //    }) //this requires a plugin
+
+ //    .addTo(controller);
     // var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:400, duration:"200%"}).setTween(wipeAnimation).addTo(controller);
 
      
@@ -116,8 +223,6 @@ $(document).ready(function(){
 
 
 
-// var len = $(".yline").get(0).getTotalLength();
-// console.log(len);;
 
 // 191.69161987304688
 
