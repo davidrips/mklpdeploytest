@@ -69,7 +69,7 @@ $(document).ready(function(){
     var scene13 = new ScrollMagic.Scene({triggerElement:"#missioncont", triggerHook:"0.2", duration:"40%"}).setTween(bringouttools2).addTo(controller);
     var scene13 = new ScrollMagic.Scene({triggerElement:"#missioncont", triggerHook:"0.2", duration:"50%"}).setTween(bringouttools).addTo(controller);
 
-    var scene14 = new ScrollMagic.Scene({triggerElement:"#controw5", triggerHook:"onLeave", offset:'14'}).setPin("#controw5", {pushFollowers: false}).addTo(controller);
+    var scene14 = new ScrollMagic.Scene({triggerElement:"#controw5", triggerHook:"onLeave", offset:'14', duration:"150%"}).setPin("#controw5", {pushFollowers: false}).addTo(controller);
     // scene14.on('start', function(){testnew.update()})
     // scene14.on("end", function() {testnew.removePin()})
 
@@ -108,9 +108,9 @@ $(document).ready(function(){
 
 
         // TweenMax.to($("#controw8"),1,{x:"-100%"})
-    var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"400%"}).setPin("#pinContainer", {pushFollowers:true}).addIndicators().addTo(controller);
+    var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"200%"}).setPin("#pinContainer", {pushFollowers:true}).addIndicators().addTo(controller);
     var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30, duration:"90%"}).setTween(drawGraphs).addTo(controller);
-    var scene22 = new ScrollMagic.Scene()
+
 
 
 
@@ -131,15 +131,48 @@ $(document).ready(function(){
     }
 
     spc3Height(h);
+   
     // console.log(g);
+     // var makebigdots= new TweenMax.to($(".bigconcircles"), 0.9,{opacity:"1", ease:Linear.easeNone});
+    var makedots= new TimelineMax()
+        .add(TweenMax.to($(".bigconcircles"), 0.9,{opacity:"1", ease:Linear.easeNone}),0)
+        .add(TweenMax.to($(".yellowconcircles"), 0.9,{opacity:"1", ease:Linear.easeNone}),1)
+        .add(TweenMax.to($(".iconcongrp"), 0.9,{opacity:"1", ease:Linear.easeNone}),2)
+        .add(TweenMax.to($(".littleconcircles"), 0.9,{opacity:"1", ease:Linear.easeNone}),3)
+        .add(TweenMax.to($("#conright"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
+        .add(TweenMax.to($("#conbottom"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
+        .add(TweenMax.to($("#contop"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
+        .add(TweenMax.to($("#conleft"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
+        .add(TweenMax.to($("#conleft2"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
+        .add(TweenMax.to($("#secondpgcontent7"), 5, {right:"300%", ease:"Power2.easeInOut"}),5)
+        .add(TweenMax.to($("#secondpgcontent7a"), 5, {left:"-100%", ease:"Power2.easeInOut"}),6)
 
+
+   // var drawConnect = new TimelineMax()
+   //      .add(TweenMax.to($(".littleconcircles"), 0.9,{opacity:"1", ease:Linear.easeNone}))
+   //      .add(TweenMax.to($("#conright"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
+   //      .add(TweenMax.to($("#conbottom"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
+   //      .add(TweenMax.to($("#contop"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
+   //      .add(TweenMax.to($("#conleft"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
+   //      .add(TweenMax.to($("#conleft2"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
  
-    var sr6a = new ScrollMagic.Scene({triggerElement: '#controw6o',triggerHook: 0, offset: '14'
-    }).setPin("#controw6o", {pushFollowers:false}).addTo(controller);
+    var sr6a = new ScrollMagic.Scene({triggerElement: '#controw6o',triggerHook: 0, offset: '14',
+    duration:"300%"}).setPin("#controw6o", {pushFollowers:false}).addTo(controller);
 
-    var sr6b = new ScrollMagic.Scene({triggerElement: '#svg6wrap', triggerHook: "onLeave"}).setPin('#svg6wrap', {pushFollowers:false}).addTo(controller);
+    var sr6b = new ScrollMagic.Scene({triggerElement: '#svg6wrap', triggerHook: "onLeave",  duration:"200%"}).setPin('#svg6wrap', {pushFollowers:false}).addTo(controller);
     sr6b.offset(g*-1)
-    var sr6c = new ScrollMagic.Scene({triggerElement: '#controw6b', triggerHook: 0.7}).setPin('#controw6b', {pushFollowers:false}).addTo(controller);
+    var sr6c = new ScrollMagic.Scene({triggerElement: '#controw6b', triggerHook: 0.7,  duration:"100%"}).setPin('#controw6b', {pushFollowers:false}).addTo(controller);
+    
+    var con = new ScrollMagic.Scene({triggerElement: '#connectContainer', triggerHook: "onLeave", offset:"14", duration:"500%"}).setPin('#connectContainer', {pushFollowers:true}).addTo(controller);
+
+    // var drawConAnim1= new ScrollMagic.Scene({triggerElement:"#connectContainer", triggerHook:"onLeave", duration:"20%"}).setTween(makebigdots).addTo(controller).addIndicators({loglevel:"3"});
+
+    var drawConAnim2= new ScrollMagic.Scene({triggerElement:"#connectContainer", triggerHook:"onLeave", duration:"400%"}).setTween(makedots).addTo(controller).addIndicators({loglevel:"3"});
+
+    // var drawConAnim3= new ScrollMagic.Scene({triggerElement:"#connectContainer", triggerHook:"onLeave", duration:"60%"}).setTween(drawConnect).addTo(controller).addIndicators({loglevel:"3"});
+ 
+   
+
 
     // var drawGauge = new TimelineMax()
     //     .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
@@ -148,17 +181,21 @@ $(document).ready(function(){
     //     .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
     //     .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
 
-var gaugepartr = $("# ").get(0).getTotalLength();
-console.log("gauge part p = " + gaugepartr);
-// var gaugepartr = $("#gaugepartr").get(0).getTotalLength();
-// console.log("gauge part r = " + gaugepartr);
-// var gaugepartg = $("#gaugepartg").get(0).getTotalLength();
-// console.log("gauge part g = " + gaugepartg);
-// var gaugeparty = $("#gaugeparty").get(0).getTotalLength();
-// console.log("gauge part y = " + gaugeparty);
-// var gaugepartl = $("#gaugepartl").get(0).getTotalLength();
-// console.log("gauge part l = " + gaugepartl);
-
+// var gaugepartr = $("#conright").get(0).getTotalLength();
+// console.log("conright = " + gaugepartr);
+// var gaugepartr = $("#conbottom").get(0).getTotalLength();
+// console.log("conbottom" + gaugepartr);
+// var gaugepartg = $("#contop").get(0).getTotalLength();
+// console.log("contop " + gaugepartg);
+// var gaugeparty = $("#conleft").get(0).getTotalLength();
+// console.log("conleft" + gaugeparty);
+// var gaugepartl = $("#conleft2").get(0).getTotalLength();
+// console.log("conleft2 " + gaugepartl);
+// conright = 2801.720458984375
+// conbottom = 2674.608154296875
+// contop= 2828.107666015625
+// conleft= 2070.843994140625
+// conleft2= 4688.1962890625
     //pin again
     // var pinIntroScene2 = new ScrollMagic.Scene({
     //     triggerElement: '#crtxt1',

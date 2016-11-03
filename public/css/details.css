@@ -420,12 +420,13 @@ label{
     height:105vh;
     margin-bottom: 100vh;
     display: block;
+    border-top: 14px solid white;
   
 }
 #controw5inner{
     /*background-color: #44a2d9; */
     text-align: center;
-    border-top: 14px solid white;
+    
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -767,7 +768,7 @@ font-family: 'Amatic SC';
 
 #pinContainer{
     width:100vw;
-    height:400vh;
+    height:105vh;
     overflow:hidden;
 }
 
@@ -865,24 +866,118 @@ font-family: 'Amatic SC';
     stroke-dashoffset:328.97;
 }
 
-#connectsvgcontainer{
-    width: 50vw;
-    height: auto;
-}
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
 
-/*
-#section2special{
+#connectContainer{
+    background-color: #44a2d9;
+    height: 105vh;
+    width: 100vw;
     display: flex;
+    padding-top: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    border-top: 14px solid white;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5vh;
 
-}*/
+}
 
+#consvgconcon{
+    max-width: 80vw;
+    max-height: 60vmin;
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: center;
+}
+#connectsvgcontainer{
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    width: 80vmin;
+    /*padding-bottom: 50%;*/
+}
+
+#consvg{
+    display: block;
+    /*position: absolute;*/
+    top:0;
+    left:0;
+    /*flex:1;*/
+    width: auto;
+    height: 100%;
+
+}
+
+#contextcon{
+    display: inline-block;
+    white-space: nowrap;
+}
+
+#secondpgcontent7{
+    display: inline-block;
+    flex: 1;
+    font-size: 6vmin;
+    line-height: 100%;
+    position: relative;
+    white-space: normal;
+}
+
+#secondpgcontent7a{
+    display: inline-block;
+    font-size: 6vmin;
+      line-height: 100%;
+    position: relative;
+    left: 300%;
+    white-space: normal;
+}
+
+
+
+#conright{
+     stroke-dasharray:2801.720458984375;
+    stroke-dashoffset:2801.720458984375;
+}
+
+#conbottom{
+     stroke-dasharray: 2674.608154296875;
+    stroke-dashoffset: 2674.608154296875;
+}
+
+#contop{
+     stroke-dasharray: 2828.107666015625;
+    stroke-dashoffset: 2828.107666015625;
+}
+#conleft{
+     stroke-dasharray: 2070.843994140625;
+    stroke-dashoffset: 2070.843994140625;
+}
+#conleft2{
+     stroke-dasharray: 4688.1962890625;
+    stroke-dashoffset: 4688.1962890625;
+}
+
+.littleconcircles{
+    opacity: 0;
+
+}
+
+.lilconwhite{
+    fill:white;
+}
+
+.bigconcircles{
+    opacity: 0;
+}
+
+.yellowconcircles{
+    opacity: 0;
+}
+
+.iconcongrp{
+    opacity: 0;
+}
 
 
 
