@@ -7,8 +7,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
 var routes = require('./routes/index');
-var hacks = require('viewport-units-buggyfill.hacks');
-var viewportUnitsBuggyfill = require('viewport-units-buggyfill');
+// var hacks = require('viewport-units-buggyfill.hacks');
+// var viewportUnitsBuggyfill = require('viewport-units-buggyfill');
 var app = express();
 
 
