@@ -27,30 +27,30 @@ app.use(cookieParser());
 
 var Sequelize = require('sequelize');
 
-// var pg = require('pg');
+var pg = require('pg');
 
-// pg.defaults.ssl = true;
-// pg.connect(process.env.DATABASE_URL, function(err, client) {
-//   if (err) throw err;
-//   console.log('Connected to postgres! Getting schemas...');
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
 
-//   client
-//     .query('SELECT table_schema,table_name FROM information_schema.tables;')
-//     .on('row', function(row) {
-//       console.log(JSON.stringify(row));
-//     });
-// });
+  client
+    .query('SELECT table_schema,table_name FROM information_schema.tables;')
+    .on('row', function(row) {
+      console.log(JSON.stringify(row));
+    });
+});
 
 // var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
 
 
-// var sequelize = new Sequelize(process.env.DATABASE_URL, {
-//       dialect:  'postgres',
-//       protocol: 'postgres',
-//       port:     5432,
-//       host:     'ec2-54-243-58-188.compute-1.amazonaws.com',
-//       logging:  true //false
-//     })
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
+      dialect:  'postgres',
+      protocol: 'postgres',
+      port:     5432,
+      host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
+      logging:  true //false
+    })
 
 
 
