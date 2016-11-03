@@ -15,7 +15,8 @@
     "mysql": "^2.11.1",
     "pg": "6.1.0",
     "sequelize": "^3.24.3",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "viewport-units-buggyfill": "^0.6.0"
   },
   "engines": {
     "node": "5.10.1"

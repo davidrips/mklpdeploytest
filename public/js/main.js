@@ -4,6 +4,20 @@ $(document).ready(function(){
     // $("#navLogo").css({'height':logoW})\
 // $('#myForm').validator()
 
+var hacks = require('viewport-units-buggyfill.hacks');
+var viewportUnitsBuggyfill = require('viewport-units-buggyfill');
+viewportUnitsBuggyfill.init({
+  hacks: hacks
+});
+
+
+window.addEventListener('viewport-unit-buggyfill-init', function() {
+  console.log('getting lost in CSSOM');
+});
+window.addEventListener('viewport-unit-buggyfill-style', function() {
+  console.log('updated rules using viewport unit');
+});
+
 
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {
