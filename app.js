@@ -41,8 +41,16 @@ var Sequelize = require('sequelize');
 //     });
 // });
 
-var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
-  
+// var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
+
+
+// var sequelize = new Sequelize(process.env.DATABASE_URL, {
+//       dialect:  'postgres',
+//       protocol: 'postgres',
+//       port:     5432,
+//       host:     'ec2-54-243-58-188.compute-1.amazonaws.com',
+//       logging:  true //false
+//     })
 
 
 

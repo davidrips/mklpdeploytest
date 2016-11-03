@@ -161,7 +161,7 @@ $(document).ready(function(){
 
     var sr6b = new ScrollMagic.Scene({triggerElement: '#svg6wrap', triggerHook: "onLeave",  duration:"200%"}).setPin('#svg6wrap', {pushFollowers:false}).addTo(controller);
     sr6b.offset(g*-1)
-    var sr6c = new ScrollMagic.Scene({triggerElement: '#controw6b', triggerHook: 0.7,  duration:"100%"}).setPin('#controw6b', {pushFollowers:false}).addTo(controller);
+    var sr6c = new ScrollMagic.Scene({triggerElement: '#controw6b', triggerHook: 0.8,  duration:"100%"}).setPin('#controw6b', {pushFollowers:false}).addTo(controller);
     
     var con = new ScrollMagic.Scene({triggerElement: '#connectContainer', triggerHook: "onLeave", offset:"14", duration:"500%"}).setPin('#connectContainer', {pushFollowers:true}).addTo(controller);
 
