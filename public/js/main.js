@@ -4,8 +4,7 @@ $(document).ready(function(){
     // $("#navLogo").css({'height':logoW})\
 // $('#myForm').validator()
 
-var hacks = require('viewport-units-buggyfill.hacks');
-var viewportUnitsBuggyfill = require('viewport-units-buggyfill');
+
 viewportUnitsBuggyfill.init({
   hacks: hacks
 });
