@@ -15,13 +15,13 @@ html{
  }
 body{
     height: 100%;
-    width:100vw;
+    width:100%;
     /*font-size: 100%;*/
 }
 
 #bodycontainer{
     height: 100%;
-    width: 100%;
+    width: 100vw;
 }
 
 
