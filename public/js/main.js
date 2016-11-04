@@ -5,47 +5,49 @@ $(document).ready(function(){
 // $('#myForm').validator()
 
 
-viewportUnitsBuggyfill.init({
-  hacks: hacks
-});
+// viewportUnitsBuggyfill.init({
+//   hacks: hacks
+// });
 
 
-window.addEventListener('viewport-unit-buggyfill-init', function() {
-  console.log('getting lost in CSSOM');
-});
-window.addEventListener('viewport-unit-buggyfill-style', function() {
-  console.log('updated rules using viewport unit');
-});
+// window.addEventListener('viewport-unit-buggyfill-init', function() {
+//   console.log('getting lost in CSSOM');
+// });
+// window.addEventListener('viewport-unit-buggyfill-style', function() {
+//   console.log('updated rules using viewport unit');
+// });
 
 
-    $('#myForm').validator().on('submit', function (e) {
-        if (e.isDefaultPrevented()) {
-            console.log('gotstuck');
-        // handle the invalid form...
-        } else {
-        // everything looks good!
-        e.preventDefault();
-            console.log("clicked");
+                $('#myForm').validator().on('submit', function (e) {
+                    if (e.isDefaultPrevented()) {
+                        console.log('gotstuck');
+                    // handle the invalid form...
+                    } else {
+                    // everything looks good!
+                    e.preventDefault();
+                        console.log("clicked");
 
-            var first = $('#inputFirstName').val()
-            var last = $('#inputLastName').val() 
-            var email = $('#inputEmail').val()
+                        var first = $('#inputFirstName').val()
+                        var last = $('#inputLastName').val() 
+                        var email = $('#inputEmail').val()
 
-            $.post('/signup', {
-                first: $('#inputFirstName').val(),
-                last: $('#inputLastName').val(), 
-                email: $('#inputEmail').val()
-            }, function(data){
-                // console.log(data);
-                console.log('herenow');
-                $('#newModalTitle').text("Welcome to myKlovr " + first)
-                    $('#newModal').modal();
+                        $.post('/signup', {
+                            first: $('#inputFirstName').val(),
+                            last: $('#inputLastName').val(), 
+                            email: $('#inputEmail').val()
+                        }, function(data){
+                            // console.log(data);
+                            console.log('herenow');
+                            $('#newModalTitle').text("Welcome to myKlovr " + first)
+                                $('#newModal').modal();
+                                }
+                        )
                     }
-            )
-        }
-    })
-})
+                })
 
+if(!Modernizr.touch){
+
+    console.log('it aint mobile at all');
     var enterAnim1 = TweenMax.to($("#secondpgcontent1"), 1, {left:0, ease:"Power2.easeInOut"});
     var enterAnim2= TweenMax.to($("#secondpgcontent1a"), 1, {right:0, ease:"Power2.easeInOut"});
     var enterAnim3= TweenMax.to($("#secondpgcontent1b"), 1, {left:0, ease:"Power2.easeInOut"});
@@ -184,7 +186,11 @@ window.addEventListener('viewport-unit-buggyfill-style', function() {
 
     // var drawConAnim3= new ScrollMagic.Scene({triggerElement:"#connectContainer", triggerHook:"onLeave", duration:"60%"}).setTween(drawConnect).addTo(controller).addIndicators({loglevel:"3"});
  
-   
+   }else{
+    console.log('yes itis mobile');
+
+    $("#introhead").html("<h1>TESTINGITTT</h1>")
+   }
 
 
     // var drawGauge = new TimelineMax()
@@ -380,7 +386,7 @@ window.addEventListener('viewport-unit-buggyfill-style', function() {
 
 
 
-
+})
 
 
 
