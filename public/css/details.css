@@ -11,17 +11,18 @@
 
 html{
     width:100%;
+    height:100%;
     /*font-size: 62.5%;*/
  }
 body{
     height: 100%;
-    width:100%;
+    width:100vw;
     /*font-size: 100%;*/
 }
 
 #bodycontainer{
     height: 100%;
-    width: 100vw;
+    width: 100%;
 }
 
 
