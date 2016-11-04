@@ -19,6 +19,11 @@ body{
     /*font-size: 100%;*/
 }
 
+#bodycontainer{
+    height: 100%;
+    width: 100%;
+}
+
 
 .worryless {
     color: #fff;
