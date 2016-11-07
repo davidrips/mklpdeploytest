@@ -31,6 +31,8 @@ $(document).ready(function(){
             )
         }
     })
+
+     var controller = new ScrollMagic.Controller({loglevel: 3});
 if(!Modernizr.touchevents){
 
     console.log('hiiii');
@@ -52,7 +54,7 @@ if(!Modernizr.touchevents){
 
     var a = 100;
 
-    var controller = new ScrollMagic.Controller({loglevel: 3});
+   
 
     var scene1a = new ScrollMagic.Scene({triggerElement: '#probquest', triggerHook: 'onLeave', duration:"90%"}).setPin("#probquest").addTo(controller);
     var scene1 = new ScrollMagic.Scene({triggerElement: "#probquest", duration: "50%"}).setTween(enterAnim1).addTo(controller);
@@ -79,11 +81,14 @@ if(!Modernizr.touchevents){
         .add(TweenMax.to($(".pline"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
         .add(TweenMax.staggerTo($(".lineydots"),.5,{opacity: 1, ease:Linear.easeNone}, 0.2))
         .add(TweenMax.to($(".yline"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        .add(TweenMax.to($("#gaugeparty"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        .add(TweenMax.to($("#gaugepartg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gy"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        // .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        // .add(TweenMax.to($("#gaugeparty"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        // .add(TweenMax.to($("#gaugepartg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        // .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        // .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
 
     var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"200%"}).setPin("#pinContainer", {pushFollowers:true}).addTo(controller);
     var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30, duration:"90%"}).setTween(drawGraphs).addTo(controller);
@@ -120,6 +125,7 @@ if(!Modernizr.touchevents){
      var con1move= TweenMax.to($("#secondpgcontent7"), 1, {right:0, ease:"Power2.easeInOut"});
     var con1 = new ScrollMagic.Scene({triggerElement: '#connectContainer', triggerHook: "onLeave", offset:"14"}).setTween(con1move).addTo(controller);
     var drawConAnim2= new ScrollMagic.Scene({triggerElement:"#connectContainer", triggerHook:"onLeave", duration:"400%"}).setTween(makedots).addTo(controller);
+
 }else{
     console.log('touchin');
 
@@ -132,6 +138,22 @@ if(!Modernizr.touchevents){
         .add(TweenMax.to($("#svgscrib1"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),3)
         .add(TweenMax.to($("#svgscrib3"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),5)
 
+     
+      var drawGraphs = new TimelineMax({repeat:-1, yoyo:true, repeatDelay:1})
+      .add(TweenMax.to($("#barsvgy1"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgp1"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgy2"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgp2"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgy3"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#barsvgp3"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.staggerTo($(".linepdots"),.4,{opacity: 1, ease:Linear.easeNone}, 0.2))
+        .add(TweenMax.to($(".pline"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.staggerTo($(".lineydots"),.4,{opacity: 1, ease:Linear.easeNone}, 0.2))
+        .add(TweenMax.to($(".yline"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gr"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gy"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+        .add(TweenMax.to($("#gg"), 0.3, {strokeDashoffset: 0, ease:Linear.easeNone}))
+
     var makedots= new TimelineMax({repeat:-1, repeatDelay:1, yoyo:true})
         .add(TweenMax.to($(".bigconcircles"), 0.9,{opacity:"1", ease:Linear.easeNone}),0)
         .add(TweenMax.to($(".yellowconcircles"), 0.5,{opacity:"1", ease:Linear.easeNone}),1)
@@ -143,27 +165,108 @@ if(!Modernizr.touchevents){
         .add(TweenMax.to($("#conleft"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
         .add(TweenMax.to($("#conleft2"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
 }
- 
+
+
+    var keylink =$("#keysvg");
+    var keyjig = new TimelineMax({repeat: -1, yoyo:true, repeateDelay:1})
+    .add(TweenMax.fromTo(keylink, 0.7, {rotation:"-15"},{rotation:"15", ease: Back.easeOut.config(1.7)}))
+    // .add(TweenMax.to(keylink, 0.3, {rotation:"-15", ease: Back.easeOut.config(1.7)}));
+
+    // TweenMax.to(keylink, 0.2, {x:"-=10", yoyo:true, repeat:-1});
+
+
+    // controller.scrollTo(function(newpos){
+    //     TweenMax.to(window, 1, {scrollTo: {y: newpos}, ease: Power4.easeInOut});
+    // });
+
+    keylink.click(function(e){
+        console.log("keyclicked");
+        e.preventDefault();
+        $(window).scrollTo(0, {duration:800, ease: Power4.easeInOut});
+    })
+
+    var home =$("#home")
+    var about =$("#about")
+    var end =$("#end")
+
+    home.click(function(e){
+        e.preventDefault();
+         $(window).scrollTo(0, {duration:700, ease: Power4.easeInOut});
+    })
+
+    about.click(function(e){
+        e.preventDefault();
+         $(window).scrollTo("#section2", {duration:700, ease: Power4.easeInOut});
+    })
+
+    end.click(function(e){
+        e.preventDefault();
+         $(window).scrollTo("#section3", {duration:700, ease: Power4.easeInOut});
+    })
+    // var mhome = document.getElementById('#mhome')
+    $('#mhome').click(function(e){
+          e.preventDefault();
+        console.log('mhomeclicked');
+        closeNav();
+        $(window).scrollTo(0, {duration:800, ease: Power4.easeInOut});
+
+
+    })
+    // var mabout = document.getElementById('#mabout')
+    $("#mabout").click(function(e){
+          e.preventDefault();
+        console.log('mabclicked');
+         closeNav();
+        $(window).scrollTo("#section2", {duration:800, ease: Power4.easeInOut});
+    })
+    // var mend = document.getElementById('#mend')
+    $('#mend').click(function(e){
+          e.preventDefault();
+        console.log('mhemdclicked');
+         closeNav();
+         $(window).scrollTo("#section3", {duration:800, ease: Power4.easeInOut});
+    })
+
+
+    var sidenavtrig = $("#sidenavtrig")
+    var sidenavclose= $(".closebtn")
+
+    sidenavtrig.click(function(e){
+        e.preventDefault()
+        openNav()
+    })
+
+    sidenavclose.click(function(e){
+        e.preventDefault()
+        closeNav()
+    })
+
+
+
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "50vw";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+     
    
 
 
-    // var drawGauge = new TimelineMax()
-    //     .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    //     .add(TweenMax.to($("#gaugeparty"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    //     .add(TweenMax.to($("#gaugepartg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    //     .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-    //     .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+   
+  
 
-// var gaugepartr = $("#conright").get(0).getTotalLength();
-// console.log("conright = " + gaugepartr);
-// var gaugepartr = $("#conbottom").get(0).getTotalLength();
-// console.log("conbottom" + gaugepartr);
-// var gaugepartg = $("#contop").get(0).getTotalLength();
-// console.log("contop " + gaugepartg);
-// var gaugeparty = $("#conleft").get(0).getTotalLength();
-// console.log("conleft" + gaugeparty);
-// var gaugepartl = $("#conleft2").get(0).getTotalLength();
-// console.log("conleft2 " + gaugepartl);
+// var gaugepartr = $("#gr").get(0).getTotalLength();
+// console.log("gr = " + gaugepartr);
+// // var gaugepartp = $("#gp").get(0).getTotalLength();
+// // console.log("gp" + gaugepartp);
+// var gaugepartg = $("#gy").get(0).getTotalLength();
+// console.log("gy " + gaugepartg);
+// // var gaugeparty = $("#ga").get(0).getTotalLength();
+// // console.log("ga" + gaugeparty);
+// var gaugepartl = $("#gg").get(0).getTotalLength();
+// console.log("gg " + gaugepartl);
 // conright = 2801.720458984375
 // conbottom = 2674.608154296875
 // contop= 2828.107666015625

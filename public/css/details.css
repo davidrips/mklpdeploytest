@@ -1,10 +1,13 @@
   
 
 *{
+
     /*font-family: "Raleway", sans-serif !important;*/
   
     /*font-size: 12pt;*/
 }
+
+
 
 
 
@@ -20,6 +23,164 @@ body{
     width:100vw;
     /*font-size: 100%;*/
 }
+
+#sidenavtrig{
+    display: none;
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    z-index: 1;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+    z-index: 2; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 6vw;
+    color: white;
+    /*color:#818181;*/
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+nav{
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: right;
+  z-index: 100; }
+  nav a {
+    display: block;
+    line-height: 25px;
+    position: relative;
+    padding-right: 20px;
+    color: #ffffff;
+    text-decoration: none; 
+    }
+    nav a:hover .nav-label {
+        text-decoration: none; 
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+      visibility: visible; }
+  nav .nav-dot {
+
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 100%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear; }
+  nav .nav-label {
+    display: block;
+    opacity: 0.5;
+    visibility: hidden;
+    text-decoration: none; 
+    color: #fed136;
+    font-family: 'Josefin Slab', serif;
+    font-size: 3vw;
+
+  
+    -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -webkit-transition: all 0.2s cubic-bezier(.17, .67, .83, .67);
+            transition: all 0.2s cubic-bezier(.17, .67, .83, .67); }
+  nav.is-dark a {
+    color: #212121;
+    text-decoration: none; }
+   
+  nav.is-dark .nav-dot {
+    background-color: rgba(0, 0, 0, 0.5); 
+text-decoration: none;}
+
+  nav.is-light a {
+    color: #ffffff; 
+text-decoration: none;}
+  nav.is-light .nav-dot {
+    background-color: rgba(255, 255, 255, 0.5); 
+text-decoration: none;}
+  nav ul {
+    margin: 0;
+    padding: 0; }
+  nav li {
+    width: auto;
+    text-decoration: none; 
+    list-style: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #genanimcont{
     width:100vw;
@@ -62,14 +223,15 @@ body{
 }
 
 #pg1logo{
-    max-width: 100%;
+    /*max-width: 100%;*/
 }
 
 #introhead{
     color: #f2d040;
     text-align: center;
     font-size: 3em;
-    font-family: "Raleway", sans-serif;
+    font-family: "Lato";
+    font-weight: 400;
   
 }
 
@@ -77,6 +239,8 @@ body{
     color: #f2d040;
     text-align: right;
     font-size: 3em;
+    font-family: "Lato";
+    font-weight: 400;
     /*font-family: "Raleway", sans-serif !important;*/
     text-transform: none !important;
   
@@ -86,7 +250,14 @@ body{
     text-align: center;
     color: white;
     margin-bottom: 24px;
+    font-family: "Lato";
+    font-weight: 400;
     /*text-transform: none !important;*/
+}
+
+#submitbutton{
+    font-family: "Lato";
+    font-weight: 900;
 }
 
 footer{
@@ -783,6 +954,7 @@ font-family: 'Amatic SC';
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 
 }
 
@@ -848,7 +1020,7 @@ font-family: 'Amatic SC';
     transform: rotate(45);
     /*x1="489.96" y1="392.33" x2="715"*/
 }
-
+/*
 #gaugepartp{
      stroke-dasharray:2055.11865234375;
     stroke-dashoffset:2055.11865234375;
@@ -868,12 +1040,26 @@ font-family: 'Amatic SC';
 #gaugepartl{
      stroke-dasharray:328.97;
     stroke-dashoffset:328.97;
+}*/
+
+#gr{
+    stroke-dasharray:569.3870849609375;
+    stroke-dashoffset:569.3870849609375;
 }
+#gy{
+    stroke-dasharray:680.918212890625;
+    stroke-dashoffset:680.918212890625;
+}
+#gg{
+    stroke-dasharray:568.3973999023438;
+    stroke-dashoffset:568.3973999023438;
+}
+
 
 
 #connectContainer{
     background-color: #44a2d9;
-    /*height: 105vh;*/
+    /*height: 100%;*/
     width: 100vw;
     display: flex;
     padding-top: 5vh;
@@ -923,7 +1109,7 @@ font-family: 'Amatic SC';
     display: inline-block;
     right:200%;
     flex: 1;
-    font-size: 5vmin;
+    font-size: 4vmin;
     /*line-height: 100%;*/
     position: relative;
     white-space: normal;
@@ -931,8 +1117,9 @@ font-family: 'Amatic SC';
 
 #secondpgcontent7a{
     display: inline-block;
-    font-size: 5vmin;
+    font-size: 4vmin;
       line-height: 100%;
+      width:80vw;
     position: relative;
     left: 300%;
     white-space: normal;
@@ -985,35 +1172,89 @@ font-family: 'Amatic SC';
 }
 
 
+    #section3{
+        height: 100vh;
+        background: #3c3d65;
+    }
+
+    #secondpgcontent8{
+        display: inline-block;
+        text-align: center;
+        font-size: 5vmin;
+        margin-top: 5vh;
+        line-height: 100%;
+        width: 80vw;
+        white-space: normal;
+    }
+
+    #secondpgcontent8a{
+        display: inline-block;
+        text-align: center;
+        font-size: 4vmin;
+        margin-top: 5vh;
+        line-height: 100%;
+        width: 80vw;
+        white-space: normal;
+    }
+
+    #triangleContainer2{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        align-self: flex-start;
+        /*align-self: flex-start;*/
+    }
 
 
-#section3{
-    height: 100vh;
-    background: #3c3d65;
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
+    .section3svg{
+        display: flex;
+        justify-content: center;
+        width:80vw;
+        margin-top: 5vh;
 
-#secondpgcontent8{
+    }
 
-    display: inline-block;
-    text-align: center;
-    font-size: 5vmin;
-    margin-top: 5vh;
-    line-height: 100%;
-    width: 80vw;
-    white-space: normal;
+  
+
+    #keysvg{
+
+    }
+
+    .keysvg2{
+        width: 30vmin;
+        height: 30vmin;
+    }
+
+    #probquest2cont{
+  
+    }
+
+    #probquest2{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        height: 100vh;
+    }
+
+    #footerdiv{
+        height: 100%;
+        font-size: 4vmin;
+        color: white;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        text-align: center;
+        /* font-family: Josephin slab; */
+        font-family: 'Josefin Slab', serif
+    }
 
 
-}
 
-#triangleContainer2{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-self: flex-start;
-    /*align-self: flex-start;*/
-}
+
+
+
 
 
 
@@ -1138,6 +1379,7 @@ font-family: 'Amatic SC';
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     }
 
 
@@ -1179,20 +1421,23 @@ font-family: 'Amatic SC';
 /* Portrait and Landscape */
 @media only screen 
   and (min-device-width: 320px) 
-  and (max-device-width: 568px)
+  and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
+    #sidenavtrig{
+        display: inline;
+    }
     
+    nav{
+        display: none;
+    }
     #secondpgcontent1{
         left: 0%;
         font-size: 15vmin;
     }
-
-
-
     #qlcirc{
         width: auto;
     }
-
     #secondpgcontent1a{
         right:0%;
         font-size: 13vmin;
@@ -1213,7 +1458,9 @@ font-family: 'Amatic SC';
 
     #svgrow{
         transform: scale(1);
-        height:20vh;
+        height: 25vh;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
     }
 
     #tododiv{
@@ -1289,56 +1536,6 @@ font-family: 'Amatic SC';
     }
 
 
-    #barsvgy1{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-    #barsvgy2{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-    #barsvgy3{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-
-
-    #barsvgp1{
-         stroke-dasharray:0;
-        stroke-dashoffset:00;
-    }
-    #barsvgp2{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-    #barsvgp3{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-    .barsvgpurple{
-
-    }
-
-    .linepdots{
-        opacity: 1;
-    }
-
-    .lineydots{
-        opacity: 1;
-    }
-
-    .pline{
-        
-        stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-
-    .yline{
-        
-        stroke-dasharray:0;
-        stroke-dashoffset:0;
-    } 
-
     #secondpgcontent5{
         font-size: 10vmin;
     }
@@ -1374,52 +1571,6 @@ font-family: 'Amatic SC';
 
     }
 
-/*
-
-    #conright{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-
-    #conbottom{
-         stroke-dasharray: 0;
-        stroke-dashoffset: 0;
-    }
-
-    #contop{
-         stroke-dasharray: 0;
-        stroke-dashoffset: 0;
-    }
-    #conleft{
-         stroke-dasharray: 0;
-        stroke-dashoffset: 0;
-    }
-    #conleft2{
-         stroke-dasharray: 0;
-        stroke-dashoffset: 0;
-    }
-
-    .littleconcircles{
-        opacity: 1;
-
-    }
-
-    .lilconwhite{
-        fill:white;
-    }
-
-    .bigconcircles{
-        opacity: 1;
-    }
-
-    .yellowconcircles{
-        opacity: 1;
-    }
-
-    .iconcongrp{
-        opacity: 1;
-    }*/
-
     #connectsvgcontainer{
         height: 100%
     }
@@ -1432,25 +1583,46 @@ font-family: 'Amatic SC';
     }
 
 
+    #section3{
+        height: 100vh;
+        background: #3c3d65;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
 
-/*
-    #svgscrib2{
-    stroke-dasharray:0;
-    stroke-dashoffset:0;
+    #secondpgcontent8{
+        display: inline-block;
+        text-align: center;
+        font-size: 5vmin;
+        margin-top: 5vh;
+        line-height: 100%;
+        width: 80vw;
+        white-space: normal;
+    }
+
+    #triangleContainer2{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    .section3svg{
+        display: flex;
+        justify-content: center;
+        width:80vw;
+        margin-top: 5vh;
 
     }
 
-    #svgscrib1{
-          stroke-dasharray:0;
-        stroke-dashoffset:0;
+  
+
+    #keysvg{
+        width: 40vmin;
+        height: auto;
 
     }
 
-    #svgscrib3{
-         stroke-dasharray:0;
-        stroke-dashoffset:0;
-    }
-*/
     .testsvgblue{
         fill:white;
     }
@@ -1529,5 +1701,496 @@ font-family: 'Amatic SC';
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+
+
+}
+
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #sidenavtrig{
+        display: inline;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    #secondpgcontent1{
+        left: 0%;
+        font-size: 15vmin;
+    }
+    #qlcirc{
+        width: auto;
+    }
+    #secondpgcontent1a{
+        right:0%;
+        font-size: 13vmin;
+        line-height: 100%;
+    }
+    #secondpgcontent1b{
+        left:0%;
+        font-size: 13vmin;
+    }
+
+    #missioncont{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        margin-bottom: 5vh;
+        height: 100%;
+
+    }
+
+    #svgrow{
+        transform: scale(1);
+        height: 25vh;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    #tododiv{
+        height: 40vh;
+    }
+
+    .toolsvgs{
+        width: 25vmin;
+        height: auto;
+        max-height: 25vmin;
+    }
+    #controw5{
+        margin-bottom: 0;
+        padding-bottom: 5vh;
+        padding-top: 5vh;
+        height:100%;
+        border-top: 1vh dashed white;
+    }
+
+    #controw5text{
+        font-size: 10vmin;
+    }
+
+    #controw6o{
+        border-top: 1vh dashed white;
+        margin-top: 0;
+        padding-top: 5vh;
+        height:100%;
+
+    }
+
+    #crtxt1{
+        font-size: 10vmin;
+
+    }
+
+    #svg6wrap{
+        height: 100%;
+    }
+
+    #controw6a{
+        padding-left:5vw;
+        padding-right: 5vw;
+    }
+
+    .rows6txt{
+        font-size: 10vmin;
+    }
+    #controw6b{
+        padding-bottom: 5vh;
+        margin-bottom: 5vh;
+        height:100%;
+    }
+    #controw7{
+         border-top: 1vh dashed white;
+         padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    #secondpgcontent4{
+
+    font-size: 10vmin;
+    
+    }
+    
+    #row7svgdiv{
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    .barsvg{
+    /*flex:1;*/
+    max-width: 30%;
+    max-height: 20vh;
+    }
+
+
+
+    #secondpgcontent5{
+        font-size: 10vmin;
+    }
+
+    #pinContainer{
+        height: 100%;
+    }
+    #connectContainer{
+        border-top: 1vh dashed white;
+        height: 100%
+    }
+
+    #contextcon{
+        height:auto;
+        margin-top: 5vh;
+    }
+
+    #secondpgcontent7{
+        font-size: 10vmin;
+        right: 0;
+
+    }
+
+    #consvg{
+        width: 100%;
+    }
+
+    #consvgconcon{
+        margin-top: 5vh;
+        height: 100%;
+        max-height: 100%;
+
+
+    }
+
+    #connectsvgcontainer{
+        height: 100%
+    }
+
+    #secondpgcontent7a{
+        left:0;
+        font-size: 10vmin;
+        margin-top: 5vh;
+
+    }
+
+
+    #section3{
+        height: 100vh;
+        background: #3c3d65;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    #secondpgcontent8{
+        display: inline-block;
+        text-align: center;
+        font-size: 5vmin;
+        margin-top: 5vh;
+        line-height: 100%;
+        width: 80vw;
+        white-space: normal;
+    }
+
+    #triangleContainer2{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    .section3svg{
+        display: flex;
+        justify-content: center;
+        width:80vw;
+        margin-top: 5vh;
+
+    }
+
+  
+
+    #keysvg{
+        width: 40vmin;
+        height: auto;
+
+    }
+
+    .testsvgblue{
+        fill:white;
+    }
+
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+    #sidenavtrig{
+        display: inline;
+    }
+    
+    nav{
+        display: none;
+    }
+    #secondpgcontent1{
+        left: 0%;
+        font-size: 15vmin;
+    }
+    #qlcirc{
+        width: auto;
+    }
+    #secondpgcontent1a{
+        right:0%;
+        font-size: 13vmin;
+        line-height: 100%;
+    }
+    #secondpgcontent1b{
+        left:0%;
+        font-size: 13vmin;
+    }
+
+    #missioncont{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        margin-bottom: 5vh;
+        height: 100%;
+
+    }
+
+    #svgrow{
+        transform: scale(1);
+        height: 25vh;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    #tododiv{
+        height: 40vh;
+    }
+
+    .toolsvgs{
+        width: 25vmin;
+        height: auto;
+        max-height: 25vmin;
+    }
+    #controw5{
+        margin-bottom: 0;
+        padding-bottom: 5vh;
+        padding-top: 5vh;
+        height:100%;
+        border-top: 1vh dashed white;
+    }
+
+    #controw5text{
+        font-size: 10vmin;
+    }
+
+    #controw6o{
+        border-top: 1vh dashed white;
+        margin-top: 0;
+        padding-top: 5vh;
+        height:100%;
+
+    }
+
+    #crtxt1{
+        font-size: 10vmin;
+
+    }
+
+    #svg6wrap{
+        height: 100%;
+    }
+
+    #controw6a{
+        padding-left:5vw;
+        padding-right: 5vw;
+    }
+
+    .rows6txt{
+        font-size: 10vmin;
+    }
+    #controw6b{
+        padding-bottom: 5vh;
+        margin-bottom: 5vh;
+        height:100%;
+    }
+    #controw7{
+         border-top: 1vh dashed white;
+         padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    #secondpgcontent4{
+
+    font-size: 10vmin;
+    
+    }
+    
+    #row7svgdiv{
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    .barsvg{
+    /*flex:1;*/
+    max-width: 30%;
+    max-height: 20vh;
+    }
+
+
+    #secondpgcontent5{
+        font-size: 10vmin;
+    }
+
+    #pinContainer{
+        height: 100%;
+    }
+    #connectContainer{
+        border-top: 1vh dashed white;
+        height: 100%
+    }
+
+    #contextcon{
+        height:auto;
+        margin-top: 5vh;
+    }
+
+    #secondpgcontent7{
+        font-size: 10vmin;
+        right: 0;
+
+    }
+
+    #consvg{
+        width: 100%;
+    }
+
+    #consvgconcon{
+        margin-top: 5vh;
+        height: 100%;
+        max-height: 100%;
+
+
+    }
+
+    #connectsvgcontainer{
+        height: 100%
+    }
+
+    #secondpgcontent7a{
+        left:0;
+        font-size: 10vmin;
+        margin-top: 5vh;
+
+    }
+
+
+    #section3{
+        height: 100vh;
+        background: #3c3d65;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    #secondpgcontent8{
+        display: inline-block;
+        text-align: center;
+        font-size: 5vmin;
+        margin-top: 5vh;
+        line-height: 100%;
+        width: 80vw;
+        white-space: normal;
+    }
+
+    #triangleContainer2{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-self: flex-start;
+    }
+
+    .section3svg{
+        display: flex;
+        justify-content: center;
+        width:80vw;
+        margin-top: 5vh;
+
+    }
+
+  
+
+    #keysvg{
+        width: 40vmin;
+        height: auto;
+
+    }
+
+    .testsvgblue{
+        fill:white;
+    }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
 
 }
