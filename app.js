@@ -72,6 +72,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+ '/public/views/index.html'));
 });
 
+app.get('/sweepstakes', function(req,res){
+  res.sendFile(path.join(__dirname+ '/public/views/sweeps.html'));
+})
+
 app.post('/signup', function(req, res){
     Newusers.findAll({
     where: {email: req.body.email}
