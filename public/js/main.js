@@ -4,14 +4,7 @@ $(document).ready(function(){
     // $("#navLogo").css({'height':logoW})\
 // $('#myForm').validator()
 
-     function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-         if (response.status === 'connected') {
-    console.log(response.authResponse.accessToken);
-  }
-   console.log('fbgotcalled');
-    });
-  }
+
 
   
 
