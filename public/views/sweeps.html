@@ -20,24 +20,67 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
        <script src="js/modernizr.js"></script>
-       <script>function checkLoginState() {
+     <!--   <script>function checkLoginState() {
     FB.getLoginStatus(function(response) {
          if (response.status === 'connected') {
     console.log(response.authResponse.accessToken);
   }
    console.log('fbgotcalled');
     });
-  }</script>
+  }</script> -->
     </head>
+    
     <body>
-    <div id="fb-root"></div>
-        <script>(function(d, s, id) {
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '174978259621511',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+  FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+      console.log('Logged in.');
+    }
+    else {
+      FB.login();
+    }
+  });
+
+   function checkLoginState() {
+   if (response.status === 'connected') {
+      console.log('Logged in.');
+      FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      console.log(response);
+      
+    });
+    }
+    else {
+      FB.login();
+    }
+  }
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+</script>
+    <!-- <div id="fb-root"></div> -->
+       <!--  <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=174978259621511";
           fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        }(document, 'script', 'facebook-jssdk'));</script> -->
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
