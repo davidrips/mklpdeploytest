@@ -30,14 +30,14 @@
     FB.login(function(response) {
     if (response.authResponse) {
      console.log('Welcome!  Fetching your information.... ');
-     FB.api('/me', {fields: 'name,email'}, function(response) {
+     FB.api('/me', {fields: 'public_profile,email'}, function(response) {
        console.log(response);
        console.log(response.email);
      });
     } else {
      console.log('User cancelled login or did not fully authorize.');
     }
-}, {scope: "name,email"});
+}, {scope: "public_profile,email"});
   }
 
 
@@ -121,7 +121,7 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', {fields: 'name,email'}, function(response) {
+    FB.api('/me', {fields: 'public_profile,email'}, function(response) {
       console.log('Successful login for: ' + response.name);
       console.log(response);
       
