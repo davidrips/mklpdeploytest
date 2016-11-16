@@ -25,6 +25,21 @@
     <body>
 
 <script>
+
+  function loggingIn(){
+    FB.login(function(response) {
+    if (response.authResponse) {
+     console.log('Welcome!  Fetching your information.... ');
+     FB.api('/me', function(response) {
+       console.log('Good to see you, ' + response.name + '.');
+     });
+    } else {
+     console.log('User cancelled login or did not fully authorize.');
+    }
+});
+  }
+
+
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -51,28 +66,28 @@
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
   function checkLoginState() {
-    // FB.getLoginStatus(function(response) {
-    //   statusChangeCallback(response);
-    // });
-      FB.login(function(response) {
-
-        if (response.authResponse) {
-            console.log('Welcome!  Fetching your information.... ');
-            access_token = response.authResponse.accessToken; //get access token
-            user_id = response.authResponse.userID; //get FB UID
-            FB.api('/me', {fields: 'name,email'} function(response) {
-                user_email = response.email;      
-                console.log(response);  
-            });
-
-        } else {
-            //user hit cancel button
-            console.log('User cancelled login or did not fully authorize.');
-
-        }
-    }, {
-        scope: 'name,email'
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
     });
+    //   FB.login(function(response) {
+
+    //     if (response.authResponse) {
+    //         console.log('Welcome!  Fetching your information.... ');
+    //         access_token = response.authResponse.accessToken; //get access token
+    //         user_id = response.authResponse.userID; //get FB UID
+    //         FB.api('/me', {fields: 'name,email'} function(response) {
+    //             user_email = response.email;      
+    //             console.log(response);  
+    //         });
+
+    //     } else {
+    //         //user hit cancel button
+    //         console.log('User cancelled login or did not fully authorize.');
+
+    //     }
+    // }, {
+    //     scope: 'name,email'
+    // });
 
   };
 
@@ -86,9 +101,9 @@
   });
 
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+  // FB.getLoginStatus(function(response) {
+  //   statusChangeCallback(response);
+  // });
 
   };
 
@@ -151,7 +166,7 @@
       <!--   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
         </fb:login-button> -->
 
-        <img src="/img/facebook.png" onclick="checkLoginState();">
+        <img src="/img/facebook.png" onclick="loggingIn()" />
 
 
 
