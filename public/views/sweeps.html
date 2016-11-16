@@ -20,60 +20,9 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
        <script src="js/modernizr.js"></script>
-     <!--   <script>function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-         if (response.status === 'connected') {
-    console.log(response.authResponse.accessToken);
-  }
-   console.log('fbgotcalled');
-    });
-  }</script> -->
     </head>
     
     <body>
-<!--     <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '174978259621511',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  
-
-  FB.getLoginStatus(function(response) {
-    if (response.status === 'connected') {
-      console.log('Logged in.');
-    }
-    else {
-      FB.login();
-    }
-  });
-
-   function checkLoginState() {
-   if (response.status === 'connected') {
-      console.log('Logged in.');
-      FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      console.log(response);
-      
-    });
-    }
-    else {
-      FB.login();
-    }
-  }
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-}
-
-</script> -->
 
 <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -117,17 +66,6 @@
     version    : 'v2.8' // use graph api version 2.8
   });
 
-  // Now that we've initialized the JavaScript SDK, we call 
-  // FB.getLoginStatus().  This function gets the state of the
-  // person visiting this page and can return one of three states to
-  // the callback you provide.  They can be:
-  //
-  // 1. Logged into your app ('connected')
-  // 2. Logged into Facebook, but not your app ('not_authorized')
-  // 3. Not logged into Facebook and can't tell if they are logged into
-  //    your app or not.
-  //
-  // These three cases are handled in the callback function.
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -156,23 +94,6 @@
   }
 </script>
 
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-
-
-
-    <!-- <div id="fb-root"></div> -->
-       <!--  <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=174978259621511";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script> -->
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -207,11 +128,11 @@
         <h2>Enter to Win a Vision of the Future:</h2><h1> Samsung VR Goggles</h1>
         <p>myKlōvr is giving away two pairs of Samsung Virtual Reality Goggles to two lucky winners.</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a> 
+        
+      <!--   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button> -->
 
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-        </fb:login-button>
-        <!--   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-          </fb:login-button> -->
+        <img src="/img/facebook.png" onclick="checkLoginState();">
 
 
 
