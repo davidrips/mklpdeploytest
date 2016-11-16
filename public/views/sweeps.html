@@ -20,6 +20,14 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
        <script src="js/modernizr.js"></script>
+       <script>function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+         if (response.status === 'connected') {
+    console.log(response.authResponse.accessToken);
+  }
+   console.log('fbgotcalled');
+    });
+  }</script>
     </head>
     <body>
     <div id="fb-root"></div>
@@ -114,5 +122,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+
     </body>
 </html>
