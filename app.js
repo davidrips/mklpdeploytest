@@ -56,12 +56,14 @@ var sequelize = new Sequelize(process.env.DATABASE_URL, {
     })
 
 
+
 var Sweepstakes = sequelize.define('sweep',{
     id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
     email: Sequelize.STRING,
     name: Sequelize.STRING,
     submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
 })
+
 
 Sweepstakes.sync();
 

@@ -9,6 +9,10 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property='og:url' content='http://www.try.myklovr.com/sweepstakes'>
+        <meta property="og:title" content="myKlovr is giving away 2 pairs of Samsung VR Headsets" />
+        <meta property="og:description" content="Enter now for a chance to win the perfect gift for yourself or your family. We're all about looking towards the future - and your future gets way more real when you use myKlovr. " />
+        <meta property="og:image" content="/img/vrad.png" />
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
             <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,900|Josefin+Slab:400,600,700" rel="stylesheet">
@@ -26,28 +30,6 @@
     <body>
 
 <script>
-
-  // function loggingIn(){
-  //     if(document.getElementById('agree').checked){ 
-  //       FB.login(function(response) {
-  //           if (response.authResponse) {
-
-  //             console.log('Welcome!  Fetching your information.... ');
-  //             FB.api('/me', {fields: 'name,email'}, function(response) {
-  //               console.log(response);
-  //               console.log(response.email);
-  //               successTest(response.email);
-  //              });
-  //           }else{
-  //              console.log('User cancelled login or did not fully authorize.');
-  //           }
-  //         }, {scope: "public_profile,email"});
-  //       return false; 
-  //     } else{ 
-  //     alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); 
-  //     return false; 
-  //   }        
-  // }
 
 
   window.fbAsyncInit = function() {
@@ -76,32 +58,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
- <!--    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div id='navContainer' class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div>
-      </div>
-    </nav>  -->
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+ 
     
       <div class="container" id='container1'>
       <div class="row" id='toprow'>
@@ -881,33 +838,27 @@
         </div>
       </div>
 
-          <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body" id="newModalBody">
-                    <h1 class='display-4' id='newModalTitle'></h1>
-                    <h2 id='newModalSub'> Your entry was submitted!</h2>
-                    <p id='newModalText'>  We'll let you know over email if you win - in the meantime, invite your friends to play, so they can get some future in their life! </p>
-                    <div class="fb-share-button" data-href="http://www.myklovr.com/sweepstakes" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.myklovr.com%2Fsweepstakes&amp;src=sdkpreparse">Share</a></div>
-                    <div id="newModalButtonsCont">
-                   
+            <div class="modal-content" id='successModalContentDiv'>
+              <div class="modal-body" id="newSuccessBody">
+                    <h1 class='display-4' id='successModalTitle'>Your entry was submitted!</h1>
+                    <h2 class='successModalSub'>We're going to announce the winner on Facebook, <br>so make sure you like our page <br>so you can find out when you win!</h2>
+                    <div class="fb-page" 
+                          data-href="https://www.facebook.com/myklovr"
+                          data-width="380" 
+                          data-hide-cover="false"
+                          data-show-facepile="false" 
+                          data-show-posts="false"></div>
+
+
+
+
+                    <div id='shareTextCont'><h2 class='successModalSub'>Also, feel free to</h2> <div class="fb-share-button" data-href="http://try.myklovr.com/sweepstakes" data-layout="button" data-size="large" data-mobile-iframe="true"></div> <h2 class='successModalSub'>this contest with your friends and family.</h2></div>/
+
+                    <div id="successButtonsCont">
+              
                         <a class="btn btn-xl signupButton" href="http://www.myklovr.com" target="_blank" id='newModalButtonBlog'>Cool!</a>
-                    </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body" id="newModalBody">
-                    <h1 class='display-4' id='newModalTitle'></h1>
-                    <h2 id='newModalSub'> Are you ready to #worryless?</h2>
-                    <p id='newModalText'>  You'll be first in line to see how myKlovr will help you get everything you need to achieve what you want - be it better grades or better health, your dream school or your dream job. myKlovr is here to help you worry less, and do more. </p>
-                    <p class='lead' id="newModalSubText"> We'll let you know when we're ready for you!</p>
-                    <div id="newModalButtonsCont">
-                        <button type="button" class="btn  btn-xl" id='newModalButton' data-dismiss="modal">See you soon!</button>
-                        <a class="btn btn-xl" href="http://www.myklovr.wordpress.com" target="_blank" id='newModalButtonBlog'>See what's up!</a>
                     </div>
               </div>
             </div>
