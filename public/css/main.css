@@ -199,5 +199,44 @@ body{
 		#termsButton{
 			margin-top: 2vh;
 		}
+#successModal{
+	/*padding-top: 20vh;*/
+}
+	#successModalContentDiv{
+		/*height: 40vh;*/
+	}
+		#newSuccessBody{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+			#successModalTitle{
+				text-align: center;
+				font-size: 10vmin;
+				font-weight: bold;
+				font-family: "Amatic SC";
+				color:  #3c3d65;
+				margin: 1vh;
+			}
+			.successModalSub{
+				text-align: center;
+				font-size: 5vmin;
+				/*font-weight: bold;*/
+				font-family: "Amatic SC";
+				color:  #3c3d65;
+				margin: 1vh;
+
+			}
+
+			#shareTextCont{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#successButtonsCont{
+				margin-top: 2vh;	
+			}
 
 
