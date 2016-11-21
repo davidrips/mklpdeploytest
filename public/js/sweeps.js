@@ -22,7 +22,7 @@ $(document).ready(function(){
               FB.api('/me', {fields: 'name,email'}, function(response) {
                 console.log(response);
                 console.log(response.email);
-                successTest(response.email);
+                signUpComplete(response.email, response.name);
                });
             }else{
                console.log('User cancelled login or did not fully authorize.');
@@ -49,9 +49,6 @@ $(document).ready(function(){
     	$("#privacyModal").modal()
     })
 
-    function successTest(email){
-    	console.log(email);
-    }
 
     $("#signupForm").submit(function(e){
     	if(document.getElementById('agree').checked){ 
@@ -59,7 +56,8 @@ $(document).ready(function(){
     		e.preventDefault()
 	    	var inputs = $('#signupForm :input')
 	    	var inputEmail= inputs.val();
-    		signUpComplete(inputEmail);
+            var name = 'none'
+    		signUpComplete(inputEmail, name);
     		return false; 
     		
     		
@@ -69,9 +67,9 @@ $(document).ready(function(){
 		}
     })
 
-    function signUpComplete(email){
+    function signUpComplete(email, name){
 
-    	$.post('/sweepstake', {email: email}, function(data, textStatus, xhr) {
+    	$.post('/sweepstake', {email: email, name: name}, function(data, textStatus, xhr) {
     		console.log('submitted successfully!');
     		// console.log(data);
     		$("#successModal").modal();

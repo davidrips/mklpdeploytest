@@ -59,6 +59,7 @@ var sequelize = new Sequelize(process.env.DATABASE_URL, {
 var Sweepstakes = sequelize.define('sweep',{
     id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
     email: Sequelize.STRING,
+    name: Sequelize.STRING,
     submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
 })
 
@@ -121,7 +122,8 @@ app.post('/sweepstake', function(req, res){
           // res.redirect('/sweepstakes')
     }else{
       Sweepstakes.create({
-        email:req.body.email
+        email:req.body.email,
+        name: req.body.name
       }).then(function(user){
 
         console.log(user);
