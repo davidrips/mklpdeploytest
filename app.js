@@ -56,7 +56,13 @@ var sequelize = new Sequelize(process.env.DATABASE_URL, {
     })
 
 
+var Sweepstakes = sequelize.define('sweep',{
+    id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+    email: Sequelize.STRING,
+    submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
+})
 
+Sweepstakes.sync();
 
 // var sequelize = new Sequelize('myKlovrUsers','root', 'root');
 var Newusers = sequelize.define('auser',{
@@ -90,6 +96,31 @@ app.post('/signup', function(req, res){
       Newusers.create({
         first: req.body.first,
         last:req.body.last,
+        email:req.body.email
+      }).then(function(user){
+
+        console.log(user);
+        // res.json(user);
+        res.redirect('/')
+
+      })
+    }
+  })
+})
+
+
+app.post('/sweepstake', function(req, res){
+    Sweepstakes.findAll({
+    where: {email: req.body.email}
+  }).then(function(userArray){
+    console.log(userArray);
+    if (userArray.length > 0){
+    
+     console.log("Already have this email")
+          res.json({have:true})
+          // res.redirect('/sweepstakes')
+    }else{
+      Sweepstakes.create({
         email:req.body.email
       }).then(function(user){
 
