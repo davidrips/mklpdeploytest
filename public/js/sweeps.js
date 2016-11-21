@@ -50,21 +50,33 @@ $(document).ready(function(){
     })
 
 
-    $("#signupForm").submit(function(e){
-    	if(document.getElementById('agree').checked){ 
-    		console.log('clickedThis');
-    		e.preventDefault()
-	    	var inputs = $('#signupForm :input')
-	    	var inputEmail= inputs.val();
-            var name = 'none'
-    		signUpComplete(inputEmail, name);
-    		return false; 
-    		
-    		
-    	} else{ 
-			alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); 
-			return false; 
-		}
+    $("#signupForm").validator().submit(function(e){
+
+        if(e.isDefaultPrevented()){
+            console.log('why no email? :(');
+            alert("Please be sure to enter your email!");
+            return false;
+
+        }else{
+            if(document.getElementById('agree').checked){ 
+                console.log('clickedThis');
+                e.preventDefault()
+                var inputs = $('#signupForm :input')
+                var inputEmail= inputs.val();
+                var name = 'none'
+                signUpComplete(inputEmail, name);
+                return false; 
+                
+                
+            } else{ 
+                alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); 
+                return false; 
+            }
+
+        }
+
+
+    	
     })
 
     function signUpComplete(email, name){
