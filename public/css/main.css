@@ -43,7 +43,7 @@ a{
 }
 
 #toprow{
-	margin-bottom: 5vh;
+	margin-bottom: 1vh;
 }
 
 		.box{
@@ -95,7 +95,7 @@ a{
 				}
 
 #line3{
-	    font-size: 3.5vmin;
+	    font-size: 3vmin;
     text-align: center;
     color: white;
 }
@@ -241,7 +241,7 @@ a{
 				justify-content: center;
 				align-items: center;
 			}
-			
+
 			#successButtonsCont{
 				margin-top: 2vh;	
 			}
