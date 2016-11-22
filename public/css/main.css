@@ -10,6 +10,10 @@ body{
 	 /*background-cEolor: #3c3d65;*/
 }
 
+a{
+	color:#3c3d65;
+}
+
 .jumbotron{
 	/*margin-top: 5vh;*/
 	color: #3c3d65;
@@ -119,6 +123,8 @@ body{
 					flex: 1;
 					max-width: 60%;
 					display: inline-block;
+						font-family: "Lato"
+
 				}
 
 				#signupCheckboxDiv{
@@ -235,8 +241,22 @@ body{
 				justify-content: center;
 				align-items: center;
 			}
+			
 			#successButtonsCont{
 				margin-top: 2vh;	
 			}
+				#sharebox{
+				display: inline-flex;
+				flex-direction: row;
+				justify-content: space-around;
+				width: 80%
+
+
+			}
+			#sharebox img{
+				height: 6vmin;
+				width: auto;
+			}
+
 
 

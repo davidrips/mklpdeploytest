@@ -838,7 +838,7 @@
         </div>
       </div>
 
-       <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+           <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content" id='successModalContentDiv'>
               <div class="modal-body" id="newSuccessBody">
@@ -854,8 +854,24 @@
 
 
 
-                    <div id='shareTextCont'><h2 class='successModalSub'>Also, feel free to</h2> <div class="fb-share-button" data-href="https://mklpdeploytest.herokuapp.com/sweepstakes" data-layout="button" data-size="large">Share</div> <h2 class='successModalSub'>this contest with your friends and family.</h2></div>
+                  <div id='shareTextCont'><h2 class='successModalSub'>Also, feel free to share this contest</h2> 
 
+
+<!-- 
+                    <div class="fb-share-button" data-href="http://try.myklovr.com/sweepstakes" data-layout="button" data-size="large" data-mobile-iframe="true"></div>  -->
+                    <div id=sharebox>
+                        <img src="/img/facebook.png" id='share' />
+                           <a href="https://twitter.com/share?url=http://try.myklovr.com/sweepstakes&amp;text=Win%20A%20VR%20Headset%20With%20@myKlover&amp;hashtags=#myklovr#worryless" target="_blank">
+                                <img src="/img/twitter.png" alt="Twitter" />
+                            </a>
+                          <a href="mailto:?Subject=Thought of you, maybe we can both get these!&amp;Body=I%20saw%20this%20and%20thought%20you%20might%20want%20to%20try%20winning%20this%20VR%20headset%20with%20me!%20  http://try.myklovr.com/sweepstakes">
+                                <img src="/img/mail.png" class='shareButtons' id='mail' />
+                            </a>
+                 
+                    </div>
+
+
+                    <h2 class='successModalSub'>this contest with your friends and family.</h2></div>
                     <div id="successButtonsCont">
               
                         <a class="btn btn-xl signupButton" href="http://www.myklovr.com" target="_blank" id='newModalButtonBlog'>Cool!</a>
@@ -864,7 +880,6 @@
             </div>
           </div>
         </div>
-
 
 
     </div>

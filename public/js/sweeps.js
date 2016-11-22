@@ -2,7 +2,20 @@ $(document).ready(function(){
 
 
 
-
+    
+ $("#share").on('click', function(e){
+      e.preventDefault();
+      console.log("clicked share");
+      FB.ui({
+        method: 'share',
+        href: 'http://www.try.myklovr.com/sweepstakes',
+          name: "myKlovr is giving away 2 pairs of Samsung VR Headsets",
+          description: "Enter now for a chance to win the perfect gift for yourself or your family. We're all about looking towards the future - and your future gets way more real when you use myKlovr.",
+          picture: 'mklpdeploytest.herokuapp.com/img/vrad.png'
+      }, function(response){
+        console.log(response);
+      })
+    })
 
 
 
