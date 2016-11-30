@@ -1,8 +1,6 @@
 $(document).ready(function(){
 
-
-
-    
+      
  $("#share").on('click', function(e){
       e.preventDefault();
       console.log("clicked share");
@@ -16,9 +14,6 @@ $(document).ready(function(){
         console.log(response);
       })
     })
-
-
-
 
     $("#fbButton").on('click', function(){
             console.log('clicked fb button');
@@ -51,15 +46,15 @@ $(document).ready(function(){
 
 
     $(function(){
-    	$('.box').matchHeight();
+        $('.box').matchHeight();
     })
 
     $("#showTerms").on("click", function(){
-    	$("#termsModal").modal()
+        $("#termsModal").modal()
     })
 
-	$("#showPrivacy").on("click", function(){
-    	$("#privacyModal").modal()
+    $("#showPrivacy").on("click", function(){
+        $("#privacyModal").modal()
     })
 
 
@@ -89,16 +84,16 @@ $(document).ready(function(){
         }
 
 
-    	
+        
     })
 
     function signUpComplete(email, name){
 
-    	$.post('/sweepstake', {email: email, name: name}, function(data, textStatus, xhr) {
-    		console.log('submitted successfully!');
-    		// console.log(data);
-    		$("#successModal").modal();
-    	});
+        $.post('/sweepstake', {email: email, name: name}, function(data, textStatus, xhr) {
+            console.log('submitted successfully!');
+            // console.log(data);
+            $("#successModal").modal();
+        });
 
     }
 
@@ -106,7 +101,7 @@ $(document).ready(function(){
 
     
 
-	     function checkLoginState() {
+         function checkLoginState() {
     FB.getLoginStatus(function(response) {
          if (response.status === 'connected') {
     console.log(response.authResponse.accessToken);

@@ -8,12 +8,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property='og:url' content='https://mklpdeploytest.herokuapp.com/sweepstakes' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property='og:url' content='http://try.myklovr.com/sweepstakes' />
         <meta property="og:title" content="myKlovr is giving away 2 pairs of Samsung VR Headsets" />
         <meta property="og:description" content="Enter now for a chance to win the perfect gift for yourself or your family. We're all about looking towards the future - and your future gets way more real when you use myKlovr. " />
-        <meta property="og:image" content="https://mklpdeploytest.herokuapp.com/img/vrad.png" />
-        <link rel="stylesheet" href="css/normalize.css">
+        <meta property="og:image" content="http://try.myklovr.com/img/vrad.png" />
+         <meta property="fb:app_id" content="156802384772432" />
+         
+         <link rel="icon" 
+      type="image/png" 
+      href="/img/logotiny.png">
+               <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
             <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,900|Josefin+Slab:400,600,700" rel="stylesheet">
         <style>
@@ -22,9 +27,22 @@
                 padding-bottom: 20px;
             }
         </style>
+            <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
         <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
         <link rel="stylesheet" href="css/main.css">
        <script src="js/modernizr.js"></script>
+        
+        
+<!--         <script type="text/javascript">
+        setTimeout(function(){var a=document.createElement("script");
+        var b=document.getElementsByTagName("script")[0];
+        a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0058/5622.js?"+Math.floor(new Date().getTime()/3600000);
+        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+        </script> -->
+
     </head>
     
     <body>
@@ -34,7 +52,11 @@
 
   window.fbAsyncInit = function() {
   FB.init({
+    //REAL LIVE//
+    // appId      : '156802384772432',
+    //DEPLOY LIVE//
     appId      : '174978259621511',
+
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -53,14 +75,18 @@
   }(document, 'script', 'facebook-jssdk'));
 
 
+
+
+
+
 </script>
 
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
- 
+
     
-      <div class="container" id='container1'>
+        <div class="container" id='container1'>
       <div class="row" id='toprow'>
         <div class='col-sm-2' id='logodiv'>
           <div class='box'>
@@ -838,7 +864,7 @@
         </div>
       </div>
 
-      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content" id='successModalContentDiv'>
               <div class="modal-body" id="newSuccessBody">
@@ -882,7 +908,11 @@
         </div>
 
 
+
+
     </div>
+
+
 
 
   

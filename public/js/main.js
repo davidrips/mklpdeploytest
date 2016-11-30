@@ -1,12 +1,6 @@
 $(document).ready(function(){
 
-    // var logoW = $("#navLogo").width();
-    // $("#navLogo").css({'height':logoW})\
-// $('#myForm').validator()
 
-
-
-  
 
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {
@@ -87,11 +81,7 @@ if(!Modernizr.touchevents){
         .add(TweenMax.to($("#gr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
         .add(TweenMax.to($("#gy"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
         .add(TweenMax.to($("#gg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        // .add(TweenMax.to($("#gaugepartr"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        // .add(TweenMax.to($("#gaugeparty"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        // .add(TweenMax.to($("#gaugepartg"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        // .add(TweenMax.to($("#gaugepartp"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
-        // .add(TweenMax.to($("#gaugepartl"), 0.9, {strokeDashoffset: 0, ease:Linear.easeNone}))
+      
 
     var scene20 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:14, duration:"200%"}).setPin("#pinContainer", {pushFollowers:true}).addTo(controller);
     var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:0, offset:30, duration:"90%"}).setTween(drawGraphs).addTo(controller);
@@ -132,8 +122,6 @@ if(!Modernizr.touchevents){
 }else{
     console.log('touchin');
 
-    // $("#introhead").html("<h1>TESTINGITTT</h1>")
-
     var blinkarrows = TweenMax.fromTo($(".svgarrow"), 1, {fill:"#45A2D9"}, {fill:"#FED139", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
 
     var drawscribs = new TimelineMax({repeat:-1})
@@ -170,18 +158,41 @@ if(!Modernizr.touchevents){
 }
 
 
+    $(".is-light").each(function(index, elem){
+
+        var height = $(elem).height()
+        console.log(height);
+        console.log(typeof height);
+        var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
+
+        new ScrollMagic.Scene({
+            triggerElement:elem, duration:'"'+height+'px"', triggerHook:"0.03"
+        }).setTween(makeDark).addTo(controller);
+
+    })
+
+     $(".need-light").each(function(index, elem){
+        var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
+
+           new ScrollMagic.Scene({
+            triggerElement:elem, triggerHook:"0.03"
+        }).setTween(makeLight).addTo(controller);
+
+    })
+
+     var homeButton = $("#homeButton");
+     homeButton.on('click', function(e){
+        $(window).scrollTo('#slideOne', {duration:800, ease: Power4.easeInOut})
+     })
+
+
+
+    
+
     var keylink =$("#keysvg");
     var keyjig = new TimelineMax({repeat: -1, yoyo:true, repeateDelay:1})
     .add(TweenMax.fromTo(keylink, 0.7, {rotation:"-15"},{rotation:"15", ease: Back.easeOut.config(1.7)}))
-    // .add(TweenMax.to(keylink, 0.3, {rotation:"-15", ease: Back.easeOut.config(1.7)}));
-
-    // TweenMax.to(keylink, 0.2, {x:"-=10", yoyo:true, repeat:-1});
-
-
-    // controller.scrollTo(function(newpos){
-    //     TweenMax.to(window, 1, {scrollTo: {y: newpos}, ease: Power4.easeInOut});
-    // });
-
+  
     keylink.click(function(e){
         console.log("keyclicked");
         e.preventDefault();
@@ -215,6 +226,64 @@ if(!Modernizr.touchevents){
 
 
     })
+
+    function toUser(userType){
+
+        if(userType == 'student'){
+            $(window).scrollTo("#screen4container", {duration:800, ease: Power4.easeInOut});
+        }else if(userType == 'parent' ){
+            $(window).scrollTo("#screen5container", {duration:800, ease: Power4.easeInOut});
+        }else if(userType =='tutor'){
+            $(window).scrollTo("#screen6container", {duration:800, ease: Power4.easeInOut});
+        }
+
+    }
+
+      $(".imgcontainer1").click(function(){
+         let userType = $(this).data('user')
+         toUser(userType)
+    })
+
+       $(function(){
+        $('.screen4').matchHeight();
+    })
+
+      $('.bdytxt1').matchHeight();
+      $('.bdytxt2').matchHeight();
+      $('.bdytxt3').matchHeight();
+
+     $("#mwho").click(function(e){
+          e.preventDefault();
+         closeNav();
+        $(window).scrollTo("#screen2container", {duration:800, ease: Power4.easeInOut});
+    })
+
+    $("#mvalues").click(function(e){
+          e.preventDefault();
+         closeNav();
+        $(window).scrollTo("#screen3container", {duration:800,ease: Power4.easeInOut});
+    })
+
+    $("#mstudents").click(function(e){
+          e.preventDefault();
+         closeNav();
+        $(window).scrollTo("#screen4container", {duration:800, ease: Power4.easeInOut});
+    })
+
+    $("#mparents").click(function(e){
+          e.preventDefault();
+         closeNav();
+        $(window).scrollTo("#screen5container", {duration:800, ease: Power4.easeInOut});
+    })
+
+    $("#meducators").click(function(e){
+          e.preventDefault();
+         closeNav();
+        $(window).scrollTo("#screen6container", {duration:800, ease: Power4.easeInOut})
+    })
+
+
+
     // var mabout = document.getElementById('#mabout')
     $("#mabout").click(function(e){
           e.preventDefault();
@@ -247,249 +316,13 @@ if(!Modernizr.touchevents){
 
 
     function openNav() {
-    document.getElementById("mySidenav").style.width = "50vw";
+        document.getElementById("mySidenav").style.width = "30vw";
     }
 
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
+
     }
-     
-   
 
 
-   
-  
-
-// var gaugepartr = $("#gr").get(0).getTotalLength();
-// console.log("gr = " + gaugepartr);
-// // var gaugepartp = $("#gp").get(0).getTotalLength();
-// // console.log("gp" + gaugepartp);
-// var gaugepartg = $("#gy").get(0).getTotalLength();
-// console.log("gy " + gaugepartg);
-// // var gaugeparty = $("#ga").get(0).getTotalLength();
-// // console.log("ga" + gaugeparty);
-// var gaugepartl = $("#gg").get(0).getTotalLength();
-// console.log("gg " + gaugepartl);
-// conright = 2801.720458984375
-// conbottom = 2674.608154296875
-// contop= 2828.107666015625
-// conleft= 2070.843994140625
-// conleft2= 4688.1962890625
-    //pin again
-    // var pinIntroScene2 = new ScrollMagic.Scene({
-    //     triggerElement: '#crtxt1',
-    //     triggerHook: 0,
-    //     duration:"90%"
-    // })
-    // .setPin('#crtxt2', {pushFollowers: false})
-    // .addTo(controller);
-
-    //build a scene
- //    var ourScene = new ScrollMagic.Scene({
- //        triggerElement: '#secondpgcontent3a img',
- //        duration: '50%',
- //        triggerHook: 0.9
- //    })
- //    .setClassToggle('#secondpgcontent3a', 'fade-in') //add class to project01
- //    .addIndicators({
- //        name: 'fade scene',
- //        colorTrigger:'white',
- //        colorStart:'#75C695',
- //        colorEnd: 'pink'
- //    }) //this requires a plugin
-
- //    .addTo(controller);
-
- // //build a scene
- //    var ourScene = new ScrollMagic.Scene({
- //        triggerElement: '#secondpgcontent3b img',
- //        duration: '50%',
- //        triggerHook: 0.9
- //    })
- //    .setClassToggle('#secondpgcontent3b', 'fade-in') //add class to project01
- //    .addIndicators({
- //        name: 'fade scene',
- //        colorTrigger:'white',
- //        colorStart:'#75C695',
- //        colorEnd: 'pink'
- //    }) //this requires a plugin
-
- //    .addTo(controller);
-
- //     //build a scene
- //    var ourScene = new ScrollMagic.Scene({
- //        triggerElement: '#secondpgcontent3c img',
- //        duration: '50%',
- //        triggerHook: 0.9
- //    })
- //    .setClassToggle('#secondpgcontent3c', 'fade-in') //add class to project01
- //    .addIndicators({
- //        name: 'fade scene',
- //        colorTrigger:'white',
- //        colorStart:'#75C695',
- //        colorEnd: 'pink'
- //    }) //this requires a plugin
-
- //    .addTo(controller);
-    // var scene21 = new ScrollMagic.Scene({triggerElement:"#pinContainer", triggerHook:"onLeave", offset:400, duration:"200%"}).setTween(wipeAnimation).addTo(controller);
-
-     
-
-
-
-
-
-
-// 191.69161987304688
-
-// 172.48553466796875
-
-   
-
-   
-
-    // var timeline1 = new TimelineMax().add(pushdownprovtext).add(maketoolbiggers);
-
-    // function givesize(){
-    //     var controw2space = $(".controw2spacer").css("padding-bottom")
-    //     // console.log(controw2space);
-    //     setOffset(controw2space)
-    // }
-
-    // function setOffset(size){
-    //     console.log(size);
-    //     var numsize = size.substring(0, size.length-2);
-    //     console.log(numsize);
-    //     var theheight =$("#secondpgcontent1a").css("height")
-    //     console.log(theheight);
-    //     var height1 = parseInt(theheight);
-
-    //     var height2 = height1 * 1.2;
-    //     // var newnumsize = numsize-height2;
-    //     // console.log(newnumsize);
-    //     a = height2
-    //     console.log(a);
-    //     // changeit(a)
-    // }
-
-    // function changeit(displace){
-    //     console.log('displaced it by' + [displace]);
-    //     // TweenMax.to($("#secondpgcontent1b"), 1, {top:[displace]});
-    //     // TweenMax.to()
-    // }
-
-
-
-
-
-    // var controw2space = $(".controw2spacer").attr('padding-bottom')
-    // console.log(controw2space);
-    
-    // var scene8 = new ScrollMagic.Scene({triggerElement:"#controw2", triggerHook:"onLeave", duration:"50%"}).setTween(maketoolbiggers).addTo(controller);
-   
-
-    // var scene8 = new ScrollMagic.Scene({})
-
-    // var maketoolbiggers = new TweenMax.to($(".toolsvgs"),1,{width:"20vw", height:"20vh", ease: "Power2.easeInOut" });
-
-    // var movet2down = TweenMax.to($("#secondpgcontent1b"), 1, {top:}
-
-
-    // var scene7 = new ScrollMagic.Scene({triggerElement:"#questinLines", triggerHook:"onLeave", duration:"25%"}).setTween(enterAnim2).addTo(controller);
-
-    // var scene7 = new ScrollMagic.Scene({triggerElement:"#secondpgcontent1a", triggerHook:"onLeave", duration:"30%"}).setPin("#secondpgcontent1a").addTo(controller)
-
-
-
-    // $('#myForm').on('submit', function(e){
-    //     // e.preventDefault();
-    //     console.log("clicked");
-
-    //     var first = $('#inputFirstName').val()
-    //     var last = $('#inputLastName').val() 
-    //     var email = $('#inputEmail').val()
-
-     
-
-    //     $.post('/signup', {
-    //         first: $('#inputFirstName').val(),
-    //         last: $('#inputLastName').val(), 
-    //         email: $('#inputEmail').val()
-    //     }, function(data){
-    //         // console.log(data);
-    //         $('#newModalTitle').text("Welcome to myKlovr " + first)
-    //             $('#newModal').modal();
-    //         // if (data.have == true){
-    //         //     console.log("this");
-    //         //     $('#newModal').modal();
-
-    //         // }else{console.log('that')
-    //         //     $('#newModalTitle').text("Welcome to myKlovr " + first)
-    //         //     $('#newModal').modal();
-    //         // }
-           
-
-
-
-    //     });
-
-
-
-
-
-
-    // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // $("#mainNav").hide();
-
-    // // fade in .navbar
-    // $(function () {
-    //     $(window).scroll(function () {
-
-    //              // set distance user needs to scroll before we start fadeIn
-    //         if ($(this).scrollTop() > 100) {
-    //             $('.navbar').fadeIn();
-    //         } else {
-    //             $('.navbar').fadeOut();
-    //         }
-    //     });
-    // });
-
-
-
-
-
-    // $("#myBtn").click(function(){
-    //     $("#myModal").modal();
-    // });
-    // $("#myBtnBusiness").click(function(){
-    //     $("#myBusiness").modal();
-    // });
-    // $("#myBtnSchools").click(function(){
-    //     $("#mySchools").modal();
-    // });
-    //   $("#myBtnEducators").click(function(){
-    //     $("#myEducators").modal();
-    // });
-
-
-
-
-
-
-
-// });
 })

@@ -1,16 +1,13 @@
 var express = require('express');
 var path = require('path');
-// var favicon = require('serve-favicon');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var mysql = require('mysql');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
 var routes = require('./routes/index');
-// var hacks = require('viewport-units-buggyfill.hacks');
-// var viewportUnitsBuggyfill = require('viewport-units-buggyfill');
 var app = express();
-
 
  
 var PORT = process.env.NODE_ENV || 3000;
@@ -30,42 +27,56 @@ app.use(cookieParser());
 
 var Sequelize = require('sequelize');
 
-var pg = require('pg');
+//DEPLOY TEST LIVE//
+// var pg = require('pg');
 
-pg.defaults.ssl = true;
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  if (err) throw err;
-  console.log('Connected to postgres! Getting schemas...');
+// pg.defaults.ssl = true;
+// pg.connect(process.env.DATABASE_URL, function(err, client) {
+//   if (err) throw err;
+//   console.log('Connected to postgres! Getting schemas...');
 
-  client
-    .query('SELECT table_schema,table_name FROM information_schema.tables;')
-    .on('row', function(row) {
-      console.log(JSON.stringify(row));
-    });
-});
+//   client
+//     .query('SELECT table_schema,table_name FROM information_schema.tables;')
+//     .on('row', function(row) {
+//       console.log(JSON.stringify(row));
+//     });
+// });
 
-// var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
-
-
-var sequelize = new Sequelize(process.env.DATABASE_URL, {
-      dialect:  'postgres',
-      protocol: 'postgres',
-      port:     5432,
-      host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
-      logging:  true //false
-    })
-
+//DEPLOY TEST LIVE//
+// var sequelize = new Sequelize(process.env.DATABASE_URL, {
+//       dialect:  'postgres',
+//       protocol: 'postgres',
+//       port:     5432,
+//       host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
+//       logging:  true //false
+//     })
 
 
-var Sweepstakes = sequelize.define('sweep',{
-    id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
-    email: Sequelize.STRING,
-    name: Sequelize.STRING,
-    submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
-})
+//ACTUAL SITE LIVE//
+// var sequelize = new Sequelize(process.env.DATABASE_URL, {
+//       dialect:  'postgres',
+//       protocol: 'postgres',
+//       port:     5432,
+//       host:     'ec2-54-243-58-188.compute-1.amazonaws.com',
+//       logging:  true //false
+//     })
 
 
-Sweepstakes.sync();
+
+
+
+
+
+
+
+
+
+//LOCAL SITE //
+
+var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
+
+
+
 
 // var sequelize = new Sequelize('myKlovrUsers','root', 'root');
 var Newusers = sequelize.define('auser',{
@@ -76,6 +87,16 @@ var Newusers = sequelize.define('auser',{
 })
 
 Newusers.sync();
+
+var Sweepstakes = sequelize.define('sweep',{
+    id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+    email: Sequelize.STRING,
+    name: Sequelize.STRING,
+    submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
+})
+
+
+Sweepstakes.sync();
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+ '/public/views/index.html'));
@@ -110,7 +131,6 @@ app.post('/signup', function(req, res){
     }
   })
 })
-
 
 app.post('/sweepstake', function(req, res){
     Sweepstakes.findAll({

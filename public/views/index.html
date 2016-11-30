@@ -17,8 +17,11 @@
       href="/img/logotiny.png">
 
     <!-- Bootstrap Core CSS -->
+       <link href="css/reset.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,900|Josefin+Slab:400,600,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lato:400,900|Josefin+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700,700i" rel="stylesheet">
 
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
@@ -31,6 +34,8 @@
     <![endif]-->
    <script src="js/modernizr.js"></script>
 
+
+<!--UNCOMMENT FOR LIVE-->
   <!-- Facebook Pixel Code -->
 <!-- <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -40,14 +45,24 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '151294275329736');
 fbq('track', 'PageView');
-fbq('track', 'Lead');
+
 </script>
+
+
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
 /></noscript> -->
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code -->
-  
+
+<!-- CRAZY EGG TRACKING-->
+<!-- <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0058/5622.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+   -->
 
 </head>
 
@@ -147,17 +162,37 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <a id="mhome">Home</a>
-        <a id="mabout">What We Do</a>
-        <a id="mend">How to Join</a>
+        <a class='menuButs' id="mhome">Home</a>
+        <a class='menuButs' id="mwho">Who We Are</a>
+        <a class='menuButs' id="mvalues">Our Values</a>
+        <a class='menuButs' id="mstudents">For Students</a>
+        <a class='menuButs' id="mparents">For Parents</a>
+        <a class='menuButs' id="meducators">For Educators</a>
+        <a class='menuButs' id="mabout">What We Do</a>
+        <a class='menuButs' id="mend">How to Join</a>
     
       </div>
 
-      <span id='sidenavtrig'><svg height="25px" version="1.1" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="hamburger" stroke="none" stroke-width="1"><g fill="white" id="Hamburger-Round"><path d="M0,4 C0,2.8954305 0.889763236,2 2.00359486,2 L22.9964051,2 C24.10296,2 25,2.88772964 25,4 C25,5.1045695 24.1102368,6 22.9964051,6 L2.00359486,6 C0.897039974,6 0,5.11227036 0,4 L0,4 Z M0,12 C0,10.8954305 0.889763236,10 2.00359486,10 L22.9964051,10 C24.10296,10 25,10.8877296 25,12 C25,13.1045695 24.1102368,14 22.9964051,14 L2.00359486,14 C0.897039974,14 0,13.1122704 0,12 L0,12 Z M0,20 C0,18.8954305 0.889763236,18 2.00359486,18 L22.9964051,18 C24.10296,18 25,18.8877296 25,20 C25,21.1045695 24.1102368,22 22.9964051,22 L2.00359486,22 C0.897039974,22 0,21.1122704 0,20 L0,20 Z" id="Hamburger"/></g></g></svg></span>
+      <span id='sidenavtrig'><svg id='hamsvg' height="25px" version="1.1" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="hamburger" stroke="none" stroke-width="1"><g fill="white" class='homeLogoPaths' id="Hamburger-Round"><path d="M0,4 C0,2.8954305 0.889763236,2 2.00359486,2 L22.9964051,2 C24.10296,2 25,2.88772964 25,4 C25,5.1045695 24.1102368,6 22.9964051,6 L2.00359486,6 C0.897039974,6 0,5.11227036 0,4 L0,4 Z M0,12 C0,10.8954305 0.889763236,10 2.00359486,10 L22.9964051,10 C24.10296,10 25,10.8877296 25,12 C25,13.1045695 24.1102368,14 22.9964051,14 L2.00359486,14 C0.897039974,14 0,13.1122704 0,12 L0,12 Z M0,20 C0,18.8954305 0.889763236,18 2.00359486,18 L22.9964051,18 C24.10296,18 25,18.8877296 25,20 C25,21.1045695 24.1102368,22 22.9964051,22 L2.00359486,22 C0.897039974,22 0,21.1122704 0,20 L0,20 Z" id="Hamburger"/></g></g></svg></span>
+      <span id='homeButton'>
+        <svg version="1.1" id="homeLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+              <g>
+                <path class='homeLogoPaths' fill="white" d="M501.162,224.406c-203.926,0-369.238,165.312-369.238,369.246c0,203.926,165.319,369.236,369.238,369.236
+                  c203.925,0,369.244-165.311,369.244-369.236C870.39,389.718,705.087,224.406,501.162,224.406z M501.162,799.934
+                  c-118.932,0-206.275-87.344-206.275-206.274s87.344-206.283,206.275-206.283s206.282,87.353,206.282,206.283
+                  S620.094,799.934,501.162,799.934z"/>
+                <path class='homeLogoPaths' fill="white" d="M806.815,100.768c0.008-0.138-0.022-0.285-0.022-0.423l0.276,0.224
+                  c-1.125-39.239-35.688-55.456-35.688-55.456H272.96c-34.392,0-62.258,24.824-62.258,55.456c0,30.624,27.866,55.448,62.258,55.448
+                  h498.422c0,0,34.57-16.226,35.688-55.448L806.815,100.768z"/>
+              </g>
+              </svg>
+
+      </span>
 
 
 
-        <div id="firstslidebox">
+<!--         <div id="firstslidebox">
             <div class="container-fluid" id="firstpgcontainer">
                 <div class='row' id='firstpgcontainerrow'>
                     
@@ -166,7 +201,298 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                     </div>
 
 
-                    <div id="pgform1" class="col-sm-5">
+             
+                </div>
+            </div>
+        </div> -->
+
+        <div id="slideOne">
+
+
+                <div class="fullscreen-bg">
+             
+                    <div class="filter"></div>
+                    <video autoplay loop poster="img/white-board.jpg" class="fullscreen-bg__video">
+                        <source src="img/white-board.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        <source src="img/white-board.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+                </div>
+
+
+
+                <div class='screen1rowcontainer'>
+                <div class="screen1row" id="row0">
+                      <div id='imgcontainer1'>
+                       <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
+                    </div>
+                </div>
+                  <div class="screen1row" id="row1">
+                    <p class='row1txt' id='mainHeading'>myklovr is a data-driven recommendation <wbr> engine that brings the future closer to you.
+                    </p>
+                  </div>
+
+                  <div class="screen1row row1txt" id="row1sub">
+                    to get started, choose who you are:
+                  </div>
+
+
+
+                  <div class="screen1row" id="row2">
+                      <div class='imgcontainer1' data-user='student'>
+                       <img src="/img/student.png" id="pg1imgs" alt="Responsive image">
+                       <div class="img1label">students</div>
+                    </div>
+                      <div class='imgcontainer1' 
+                      data-user='parent'>
+                       <img src="/img/parent.png" id="pg1imgs" alt="Responsive image">
+                       <div class="img1label">parents</div>
+                    </div>
+                      <div class='imgcontainer1' data-user='tutor'>
+                       <img src="/img/teacher.png" id="pg1imgs" alt="Responsive image">
+                       <div class="img1label">teachers</div>
+                    </div>
+
+                    
+                  </div>
+                  
+
+                  <div class="screen1row" id="row3">
+                    
+                  </div>
+                </div>
+        </div>
+
+        <div class='bodysection is-light' id='screen2container'>
+          <div class="mainrow">
+             <div class='row1txt toptxt'>- who we are -</div>
+             
+          </div>
+          <div class="mainrow" id='screen2text'>
+            <div class="bodytxt screen2body" id='s2textleft'>
+               We provide students and parents with the personalized<strong> guidance,</strong> tailored <strong>resources,</strong> and custom<strong> recommendations</strong> that they need for success.
+            
+            </div>
+            <div class='bodytxt screen2body'>
+            
+              By using analytics and machine learning, we want to make the college application process 
+              <strong>more straightforward</strong> and <strong>more successful</strong> for everyone involved. 
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class='imgDivider need-light' id='iD1'>
+          <img src="../img/chalkboardblank.jpg" id='chalkImg' alt="School Hallway">
+        </div>
+
+
+
+
+
+        <div class='bodysection is-light' id='screen3container'>
+          <div class='mainrow'>
+            <div class='row1txt toptxt'>- our values -</div>
+          </div>
+          <div class="mainrow">
+            <div class="row1txt bottomtxt">
+              We want to help students create and pursue the <br><strong>person they want to become</strong>.
+            </div>
+          </div>
+          <div class=" screen3text" id="screen3text1">
+
+              <div class='valuediv' id='identity'>
+                 <div class='row1txt subtxt'>identity</div> 
+                <div class='bodytxt screen3body'>
+                 Everyone is unique, which is why our personalized recommendations  are based on the <strong>specific</strong> backgrounds, strengths, and goals of the user.
+                  <br>
+                </div>
+            </div>
+
+            <div class='valuediv' id='accessibility'>
+              <div class='row1txt subtxt'>accessiblity</div> 
+              <div class="bodytxt screen3body">
+                More than anything, we want to challenge the complexities, inequalities, and high costs associated with getting into college, by <strong>leveling the playing field of education</strong>. 
+              </div> 
+            </div>
+
+          </div>
+
+          <div class="screen3text" id="screen3text2">
+
+         <div class='valuediv' id='community'>
+                  <div class='row1txt subtxt'>community</div> 
+               <div class='bodytxt screen3body'>
+                 We believe that collaboration between parents, students, and educators is <strong>essential</strong>, so we're creating a platform <strong>for these relationships to thrive</strong>.
+                 <br>
+               </div>
+         </div>
+          </div>
+        </div>
+
+
+
+         <div class='imgDivider need-light' id='iD2'>
+          <img src="../img/lecture.jpg" alt="School Hallway">
+        </div>
+
+
+
+        <div class='bodysection is-light' id='screen4container'>
+      
+              
+
+         
+          <div class='mainrow'>
+            <div class='row1txt toptxt'>- for students -</div>
+          </div>
+          <div class="screen4inner" id='studentMain'>
+            <div class="screen4img" id="studentimg">
+              <img src="/img/studentLarge.png" class="userImg" id='studentUser' alt="Responsive image">
+            </div>
+            <div class=" bodytxt screen4imgText">
+                 By using our proprietary data, we help you figure out what you need to do in the personal, professional, and academic spheres to make yourself a more competitive candidate for your dream schools.
+            </div>
+          </div>
+          <div class="screen4inner">
+            <div class="bodytxt bdytxt1 screen4bodyb">
+              <span class='screen4bodyc'> Get step-by-step directions to make progress on your college applications.</span>
+            </div>
+            <div class="bodytxt bdytxt1 screen4bodyb">
+              <span class='screen4bodyc'>Use predictive modeling to see  different possible paths to success.</span>
+            </div>
+            <div class="bodytxt bdytxt1 screen4bodyb">
+              <span class='screen4bodyc'> Find resources and information to get a head start on your career goals.</span> 
+            </div>
+          </div>
+          <div class="screen4inner emailForm">
+              <div class="inputLabel bodytxt">
+                Find out more:
+              </div>
+             <div class="inputFieldContainer">
+                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
+                     <div class="form-group" id="formField1">
+                         <div>
+                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
+                         </div> 
+                     </div>
+                     <div class="form-group" id='formFieldSub'>
+                         <div id="submitButton1" >
+                             <button type="submit" id="signupbutton" class="btn">Submit</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+          </div>
+
+        
+        </div>
+
+
+
+
+
+        <div class='bodysection is-light' id='screen5container'>
+          <div class='mainrow'>
+            <div class='row1txt toptxt'>- for parents -</div>
+          </div>
+          <div class="screen4inner" id='studentMain'>
+            <div class="screen4img" id="studentimg">
+              <img src="/img/parentLarge.png" class="userImg" id='studentUser' alt="Responsive image">
+            </div>
+            <div class=" bodytxt screen4imgText">
+                 Parents can get insight on their child's progress and application, and a way to see what works and what doesn't. This means making smarter choices that can benefit your child, and being able to help support them better throughout the process.  
+            </div>
+          </div>
+          <div class="screen4inner">
+            <div class="bodytxt bdytxt2 screen4bodyb">
+              <span class='screen4bodyc'> Use advanced analytics to track your child's improvements.</span>
+            </div>
+            <div class="bodytxt bdytxt2 screen4bodyb">
+              <span class='screen4bodyc'> Get information you need to fully understand the application process.</span>
+            </div>
+            <div class="bodytxt bdytxt2 screen4bodyb">
+              <span class='screen4bodyc'> Find your child the resources they need to become their best self. </span>
+            </div>
+          </div>
+          <div class="screen4inner emailForm">
+              <div class="inputLabel bodytxt">
+                Find out more:
+              </div>
+             <div class="inputFieldContainer">
+                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
+                     <div class="form-group" id="formField1">
+                         <div>
+                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
+                         </div> 
+                     </div>
+                     <div class="form-group" id='formFieldSub'>
+                         <div id="submitButton1" >
+                             <button type="submit" id="signupbutton" class="btn">Submit</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+          </div>
+        </div>
+
+        <div class='bodysection is-light' id='screen6container'>
+          <div class='mainrow'>
+            <div class='row1txt toptxt'>- for educators -</div>
+          </div>
+          <div class="screen4inner" id='studentMain'>
+            <div class="screen4img" id="studentimg">
+              <img src="/img/teacherLarge.png" class="userImg" id='studentUser' alt="Responsive image">
+            </div>
+            <div class=" bodytxt screen4imgText">
+                 Teachers and tutors can use myKlovr to be more in touch with the needs of students, coordinate better with parents, and get insight on what works an what doesn't.
+            </div>
+          </div>
+          <div class="screen4inner">
+            <div class="bodytxt bdytxt3 screen4bodyb">
+              <span class='screen4bodyc'> Analytics lets you know what your students need and what can help.</span>
+            </div>
+            <div class="bodytxt bdytxt3 screen4bodyb">
+              <span class='screen4bodyc'> Connect more effectively with parents to coordinate efforts.</span>
+            </div>
+            <div class="bodytxt bdytxt3 screen4bodyb">
+              <span class='screen4bodyc'> Find teaching and menthorshp opportunities and grow your experience. </span>
+            </div>
+          </div>
+          <div class="screen4inner emailForm">
+              <div class="inputLabel bodytxt">
+                Find out more:
+              </div>
+             <div class="inputFieldContainer">
+                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
+                     <div class="form-group" id="formField1">
+                         <div>
+                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
+                         </div> 
+                     </div>
+                     <div class="form-group" id='formFieldSub'>
+                         <div id="submitButton1" >
+                             <button type="submit" id="signupbutton" class="btn">Submit</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+          </div>
+        </div>
+
+        <div class='imgDivider need-light' id='iD3'>
+          <img src="../img/dreamschooldoor.jpg" id='chalkImg' alt="School Hallway">
+        </div>
+
+      
+
+
+
+
+
+<!-- 
+    <div id="pgform1" class="col-sm-5">
                             <div id='logintext'>
                                 <h1 id="introhead">LOG IN TO <br> YOUR FUTURE <br>WITH MYKLOVR</h1>
                             </div>
@@ -179,12 +505,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                             <div id="signupdiv">
     
                                     <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                                        <div class="form-group row" id="formField1">
-                                            <div class="col-xs-9">
-                                                <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                                               <!--  <div class="help-block with-errors"></div> -->
-                                            </div> 
-                                        </div>
+                                      
 
                                         <div class="form-group row" id="formField1">
                                            <div class="col-xs-9">
@@ -201,6 +522,13 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                                             </div>
                                         </div>
 
+                                          <div class="form-group row" id="formField1">
+                                            <div class="col-xs-9">
+                                                <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
+                                              
+                                            </div> 
+                                        </div>
+
                                         <div class="form-group row">
                                             <div id="submitButton1" >
                                                 <button type="submit" id="signupbutton" class="btn btn-xl">Worry Less</button>
@@ -210,9 +538,9 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                                     </form>
                             </div>
                     </div>
-                </div>
-            </div>
-        </div>
+ -->
+
+
  
         <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
@@ -232,7 +560,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
         </div>
 
     
-    <div class="container-fluid sectionMain" id='section2'>
+    <div class="container-fluid sectionMain need-light" id='section2'>
      
 
         <div id='genanimcont'>
@@ -244,11 +572,11 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                 <div id='probquest'>
                     <div class="bodyrow" id='secondpgcontentrwow'>
                         <div class="secondpgcontent bigr " id="secondpgcontent1">
-                                Getting into college is needlessly complicated.
+                               Good grades are hard to maintain, getting into college is way too complicated, and finding a job has become extremely competitive.
                         </div>
                     </div>
 
-                   <div class="bodyrow" id="secondpgcontentrwow">
+                   <div class="bodyrow" id="qlcriccont">
                       <div id="questionLines">
                           <img id='qlcirc' src="/img/circle.svg" alt="" />            
                       </div>
@@ -272,7 +600,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
 
                 <div class="bodyrow" id="controw4">
                      <div class="secondpgcontent bigr" id="secondpgcontent1b">
-                        by providing tailored guidance, resources, and information.
+                         with the personalized guidance, resources, and information they need for success.
                     </div>
                 </div>
             </div>
@@ -480,8 +808,8 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                     <div class=' secondpgcontent' id='controw5text'>
                         <span id='conttext5a'>
                             myKlovr is a data-driven recommendation engine
-                            that organizes and guides students and parents 
-                            through the college application process. 
+                            that assists and guides students and parents 
+                            through high school, into college, and beyond. 
                           </span>                 
                     </div>
 
@@ -495,7 +823,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                         <span class="line">We offer a tailored, step-by-step plan
                         </span>
                         <span class="line">and access to tools & information</span>
-                        <span class="line">to help students with their goals</span>
+                        <span class="line">to help students achieve their goals</span>
                     </div>
                 </div>
             </div>
@@ -503,17 +831,19 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
             <div id="svg6wrap">
                 <div class='bodyrow secondpgcontent' id='controw6a'>
                      
-                        <div class='cr6img' id="crimg2div"><img src="/img/aplus.svg" class="cr6svgs" id="crimg2" alt=""></div>     
+                        <div class='cr6img' id="crimg2div"><img src="/img/aplus.svg" class="cr6svgs" id="crimg2" alt=""></div>   
+                         <div class='cr6img' id="crimg4div"><img src="/img/gradcap.svg" class="cr6svgs" id="crimg4" alt=""></div>   
                         <div class='cr6img' id="crimg3div"><img src="/img/money.svg" class="cr6svgs" id="crimg3" alt=""></div>
-                        <div class='cr6img' id="crimg4div"><img src="/img/gradcap.svg" class="cr6svgs" id="crimg4" alt=""></div> 
+                       
                 </div>
             </div>
 
             <div class='bodyrow secondpgcontent' id='controw6b'>
               
                   <div class='rows6txt' id='crtxt2'>HIGHER<br>GRADES</div>
-                  <div class='rows6txt' id='crtxt3'>BETTER<br>JOBS</div>
-                  <div class='rows6txt' id='crtxt4'>DREAM<br>SCHOOLS</div>       
+                  <div class='rows6txt' id='crtxt3'>DREAM<br>SCHOOLS</div> 
+                  <div class='rows6txt' id='crtxt4'>BETTER<br>JOBS</div>
+                      
 
             </div>
                   
@@ -521,7 +851,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
                 <div class="bodyrow" id='controw7'>
                     <div id="controw7a">
                         <div class="secondpgcontent bigr" id="secondpgcontent4">
-                             Advanced analytics and modeling helps students see their improvements in real time and make decisions about their next move. 
+                             Advanced analytics and modeling allow students to visualize their improvements in real time, and figure out their next move. 
                         </div>
 
                         <div class="" id="row7svgdiv">
@@ -641,8 +971,8 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
             <div class="bodyrow" id='connectContainer'>
                 <div id="contextcon">
                     <div class="secondpgcontent bigr" id="secondpgcontent7">
-                           We use machine learning  to connect students and parents to curated resources and information
-                          so that they can make the best decisions for themselves... 
+                           We use artificial intelligence to connect students and parents to curated resources, tools, and strategies, 
+                          providing them with the ability to make the best decisions for themselves... 
                     </div>
 
                     <div id='consvgconcon'>
@@ -1044,7 +1374,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
               </div>
               
               <div class="secondpgcontent" id="secondpgcontent8a">
-                     Get exclusive, beta-testing access to help us change the way we think about education and getting into college. <br><br>Spots are limited - come unlock the power of personalized, data-driven guidance for yourself. 
+                     Get exclusive, beta-testing access to help change the way we think about education, getting into college, and getting a job. <br><br>Spots are limited - come unlock the power of personalized, data-driven guidance for yourself. 
               </div>
 
               <div class='section3svg'>
@@ -1159,6 +1489,7 @@ src="https://www.facebook.com/tr?id=151294275329736&ev=PageView&noscript=1"
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
