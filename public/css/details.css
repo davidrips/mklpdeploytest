@@ -226,7 +226,7 @@ text-decoration: none;}
 
         @media (max-width: 767px) {
             .fullscreen-bg {
-                background: url('../img/white-board.jpg') center center / cover no-repeat;
+                background: url('../img/White-Board.jpg') center center / cover no-repeat;
                 opacity: .5;
             }
 
