@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 var Sequelize = require('sequelize');
 
-//DEPLOY TEST LIVE//
+// DEPLOY TEST LIVE//
 var pg = require('pg');
 
 pg.defaults.ssl = true;
@@ -42,7 +42,7 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
     });
 });
 
-//DEPLOY TEST LIVE//
+// DEPLOY TEST LIVE//
 var sequelize = new Sequelize(process.env.DATABASE_URL, {
       dialect:  'postgres',
       protocol: 'postgres',
@@ -106,6 +106,10 @@ app.get('/sweepstakes', function(req,res){
   res.sendFile(path.join(__dirname+ '/public/views/sweeps.html'));
 })
 
+app.get('/business', function(req,res){
+  res.sendFile(path.join(__dirname+ '/public/views/business.html'));
+})
+
 app.post('/signup', function(req, res){
     Newusers.findAll({
     where: {email: req.body.email}
@@ -125,7 +129,7 @@ app.post('/signup', function(req, res){
 
         console.log(user);
         // res.json(user);
-        res.redirect('/')
+        // res.redirect('/')
 
       })
     }
