@@ -899,6 +899,11 @@ label{
     
 }
 
+#formField2{
+    display: inline-block;
+    width: 54vw;
+}
+
 #formFieldSub{
     display: inline-block;
 
