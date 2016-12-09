@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-
+      $("#row1signup").on("click", function(e){
+        $('#signModal').modal();
+    })
 
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {

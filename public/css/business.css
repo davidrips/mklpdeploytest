@@ -53,6 +53,100 @@ nav{
         height:4vmin;
         width: 4vmin
     }
+
+
+    #formField1 {
+    display: inline-block;
+    width: 25vw
+}
+#formField2 {
+    display: inline-block;
+    width: 54vw
+}
+#formFieldSub {
+    display: inline-block
+}
+#fbButton {
+    height: 9vmin;
+    width: 9vmin;
+    margin-top: 1vh
+}
+#signupSpan {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: "Lato"
+}
+#pgform1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+#submitButton1 {
+    display: inline-block;
+    margin-top: 2vh
+}
+#submitButton1 button {
+    color: #3c3d65
+}
+#signupdiv {
+}
+
+#pgform1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newModalBody {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+#newModalTitle {
+    color: #3c3d65;
+    margin-bottom: 0;
+    font-family: "Josefin Sans";
+    font-weight: 600;
+    font-size: 5vmin
+}
+#newModalSub {
+    color: #3c3d65;
+    font-size: 4vmin;
+    font-weight: 400;
+    font-family: 'Lato'
+}
+#newModalText {
+    color: #3c3d65;
+    width: 80%;
+    font-family: "Josefin Sans";
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 3vmin;
+    line-height: 97%
+}
+#newModalSubText {
+    color: #3c3d65
+}
+#newModalButton {
+    color: #3c3d65
+}
+#newModalButtonBlog {
+    color: #3c3d65
+}
+#newModalButtonsCont {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+#skyClimber {
+    width: 90%;
+    height: auto
+}
     
 
 
@@ -193,6 +287,28 @@ text-decoration: none;}
 
 .bodysection{
     height: 100vh;
+}
+#row1buttons{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.row1but{
+    font-size: 4vmin;
+      color: #3f3e65;
+    background-color: #f2d040;
+    opacity: .65;
+}
+
+
+.row1but:hover{
+    opacity: 1;
+     background-color: #f2d040;
 }
 
 #slideOne{
@@ -647,7 +763,7 @@ strong{
 
     #myForm{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -824,7 +940,7 @@ strong{
 
 #introsub{
     text-align: center;
-    color: white;
+    font-size: 3vh;
     margin-bottom: 24px;
     font-family: "Lato";
     font-weight: 400;
@@ -852,10 +968,8 @@ label{
 }
 
 #formField1{
-    display: inline-block;
-    width: 70%;
-    margin-right: 2vw;
-}
+       display: inline-block;
+    width: 25vw;}
 
 #formFieldSub{
     display: inline-block;
@@ -877,7 +991,7 @@ label{
 }
 
 #newModalBody{
-    background: #44a2d9;
+    background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -887,17 +1001,21 @@ label{
 }
 #newModalTitle{
     color:#3c3d65;
-    color:white;
-    font-size: 3em;
+    font-size: 4vmin;
+    font-family: "Lato";
 }
 #newModalSub{
-    color:#f2d040;
+    color:#3c3d65;
+        font-size: 3vmin;
+    font-weight: 300;
 }
 #newModalText{
     color:white;
 }
 #newModalSubText{
-    color: #f2d040;
+       color:#3c3d65;
+    font-size: 2.5vmin;
+    margin-bottom: 2vh;
 }
 #newModalButton{
     color:#3c3d65;
