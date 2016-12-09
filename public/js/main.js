@@ -241,7 +241,8 @@ if(!Modernizr.touchevents){
             // $('#screen6o').css('padding-top', ''+(headHeight + 10)+'px');
             // $('#svg6wrap').css('padding-top', ''+row6combined+'px');
             // $("#pinContainer").css("padding-top", ''+(headHeight + 10)+'px')
-            $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px')
+            $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px');
+            stillAnimation()
     }
 
 
@@ -251,7 +252,13 @@ if(!Modernizr.touchevents){
 
 }else{
     console.log('touchin');
+    stillAnimation()
 
+    
+}
+
+
+function stillAnimation(){
     var blinkarrows = TweenMax.fromTo($(".svgarrow"), 1, {fill:"#45A2D9"}, {fill:"#FED139", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
 
     var drawscribs = new TimelineMax({repeat:-1})
@@ -286,9 +293,6 @@ if(!Modernizr.touchevents){
         .add(TweenMax.to($("#conleft"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
         .add(TweenMax.to($("#conleft2"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),4)
 }
-
-
-
 
 
 
