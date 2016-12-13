@@ -19,6 +19,7 @@ html{
     /*font-size: 62.5%;*/
  }
 body{
+
     height: 100%;
     width:100vw;
     /*font-size: 100%;*/
@@ -291,11 +292,15 @@ text-decoration: none;}
 #row1buttons{
     margin-top: 2vh;
     display: flex;
-    justify-content: space-around; 
+    justify-content: center; 
     width: 100%;
     align-items: center;
     flex-direction: row;
 
+}
+
+#row00{
+    display: none;
 }
 
 .row1but{
@@ -303,6 +308,7 @@ text-decoration: none;}
       color: #3f3e65;
     background-color: #f2d040;
     opacity: .65;
+    padding: 3vh 6vh;
 }
 
 
@@ -379,7 +385,7 @@ text-decoration: none;}
                 color: white;
                 font-weight: 700;
                 margin-top: 0;
-                font-size: 8vmin;
+                font-size: 7vmin;
             }
                 .row1txt{
                     font-family: "Lato";
@@ -415,6 +421,7 @@ text-decoration: none;}
                    width: 20vw;
                    border-radius: 1vmin;
                    opacity: .6;
+                   flex-basis: 33%;
 
                   
                 }
@@ -427,6 +434,20 @@ text-decoration: none;}
                     .imgcontainer1:hover .img1label{
                         opacity: 1;
                     }
+
+                .imgcontainer2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 1vmin;
+                    width: 20vw;
+                    border-radius: 1vmin;
+                    opacity: .6
+                }
+                .imgcontainer2:hover {
+                    opacity: 1;
+                }
 
                     #pg1logo{
                         /*max-width: 100%;*/
@@ -454,8 +475,12 @@ text-decoration: none;}
                     /*text-shadow: 2px 2px 0px rgba(63, 63, 63, 1);*/
                     }
 
+                    .firefox .img1label{
+                        font-size: 4vmin;
+                    }
+
                 #row2{
-                    justify-content: space-between;
+                    justify-content: space-around;
                     /*padding-top: 5vh;*/
                     padding-left: 0;
                     padding-right: 0;
@@ -516,6 +541,16 @@ text-decoration: none;}
   
 
   /*background-image: url("../img/schoolhall.jpg");*/
+}
+
+#submitButton1 button {
+    
+    background-color: #3c3d65;
+    color: white;
+    font-family: "Lato";
+    font-weight: 400;
+    width: 30vw;
+  
 }
 
 #chalkImg{
@@ -982,9 +1017,6 @@ label{
     /*justify-content: center;*/
 }
 
-#submitButton1 button{
-    color:#3c3d65;
-}
 
 #signupdiv{
 
@@ -2043,39 +2075,7 @@ font-family: 'Amatic SC';
 
 
 
-@media only screen and (max-width: 768px) { 
-    #pg1logo{
-    max-height: 29vh;
-    }
 
-    #introhead{
-    text-align: center !important;
-    }   
-
-    #introsub{
-    text-align: center !important;
-    }
-    #aboutUsText{
-        margin-top: 20px;
-    }
-
-
-
-
-    #controw7a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    }
-
-
-
-    
-
-
-}
 
 /* ----------- iPhone 4 and 4S ----------- */
 

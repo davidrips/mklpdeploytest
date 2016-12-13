@@ -1,0 +1,849 @@
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (-webkit-min-device-pixel-ratio:1) {
+  #sidenavtrig {
+    display: inline
+  }
+
+  nav {
+    display: none
+  }
+
+
+
+  #secondpgcontent1 {
+    left: 0%;
+    font-weight: 600
+  }
+
+  #qlcirc {
+    width: auto;
+    height: auto
+  }
+
+  #qlcriccont {
+    margin-top: 5vh
+  }
+
+
+    #row1link{
+      opacity: 1;
+      margin-right: 3vw;
+    }
+    #row1signup{
+      opacity: 1;
+      margin-left: 3vw;
+    }
+
+  #row2{
+    margin-top: 3vh;
+    flex-flow: row wrap;
+  }
+    .img1wrap{
+        flex-basis: 33%;
+      }
+
+      .imgcontainer1{
+        opacity: 1;
+      }
+
+
+
+/*animation container*/
+  .toptxt{
+      font-size: 10vmin;
+    }
+
+    #screen6o{
+      margin-top: 0;
+      height: 100%;
+      padding-top:0;
+
+    }
+
+    #screen5{
+      padding-top: 15vh;
+    }
+
+     #contextcon {
+    height: auto;
+    margin-bottom:5vh;
+    display: inline-flex;
+    flex-direction: column-reverse;
+  }
+
+  #secondpgcontent7{
+      font-size: 6vmin;
+      line-height: 95%
+  }
+
+  .bigr{
+    line-height: initial;
+  }
+
+  #pg1logo{
+    height: 15vh;
+
+  }
+
+  #row1{
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .screen1rowcontainer{
+    justify-content: flex-start;
+  }
+
+
+
+
+  #row00 #row1buttons {
+    display: none;
+    margin-top: 3vh;
+  }
+
+  #row1buttons .btn-xl {
+    padding: 1.5vh 4vh;
+  }
+
+
+  #row1buttons {
+    display: none;
+    margin-top: 3vh;
+  }
+
+  #row1buttons .btn-xl {
+    padding: 1.5vh 4vh;
+  }
+
+  #row00{
+    display: flex;
+  }
+     #row1link{
+      opacity: 1;
+    }
+    #row1signup{
+      opacity: 1;
+    }
+
+  .row1but{
+    font-size: 3vmin;
+    margin-top: 2vh;
+    padding: 1vh 3vh;
+    width: 31vw;
+    color: #3f3e65;
+    /*background-color: white;*/
+    opacity: .65;
+    /*border-color: white;*/
+  }
+  
+  .img1label{
+    opacity: 1;
+  }
+
+
+
+.tableRow1{
+  display: none;
+}
+
+.tableRow2{
+  display: table;
+}
+
+
+    table{
+        table-layout: fixed;
+        width: 80vw;
+    }
+
+                tr{
+                    margin-bottom: 1vh;
+                }
+
+                td{
+                    padding:2vmin;
+                    font-family: "Josefin Sans";
+                        color: #3c3d65;
+                    font-size: 3vmin;
+                }
+
+                .col1{
+                    width: 10%;
+
+                }
+
+                .col2{
+                    width: 35%;
+                }
+
+                .col3{
+                     width: 10%;
+
+
+                }   
+                .col4{
+                    width: 10%;
+
+                }
+                .col5{
+                    width: 35%
+
+                }
+
+                .tableIcon{
+                    height: 5vmin;
+                    width: 5vmin;
+                }
+
+                .tableRow{
+                    align-items: flex-start;
+                }
+
+               
+
+
+
+     
+
+
+
+
+
+
+
+
+
+  
+
+
+/*  #qlcirc {
+    width: auto;
+    height: auto
+  }
+
+  #qlcriccont {
+    margin-top: 5vh
+  }
+
+  #probquest {
+    height: 100vh;
+    min-height: 100%;
+    margin-bottom: 5vh
+  }
+
+  #secondpgcontent1a {
+    right: 0%;
+    font-size: 13vmin;
+    line-height: 100%
+  }
+
+  #secondpgcontent1b {
+    left: 0%;
+    font-size: 13vmin
+  }
+
+  #missioncont {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    height: 100%;
+    border-top: 1vh dashed white
+  }
+
+  #svgrow {
+    transform: scale(1);
+    height: 100%;
+    margin-bottom: 5vh;
+    margin-top: 5vh
+  }
+
+  #tododiv {
+    height: 40vh
+  }
+
+  .toolsvgs {
+    width: 25vmin;
+    height: auto;
+    max-height: 25vmin
+  }
+
+  #screen5 {
+    margin-bottom: 0;
+    padding-top: 5vh;
+    height: 100%;
+
+  }
+
+
+  #screen6o {
+   
+    margin-top: 0;
+    height: 100%
+  }
+
+  #crtxt1 {
+    font-size: 10vmin
+  }
+
+  
+
+
+
+  #secondpgcontent4 {
+    font-size: 8vmin
+  }
+
+  #row7svgdiv {
+    padding-right: 2vw;
+    padding-left: 2vw
+  }
+
+  .barsvg {
+    max-width: 30%;
+    max-height: 20vh
+  }
+
+  #secondpgcontent5 {
+    font-size: 8vmin;
+    margin-bottom: 0;
+  }
+
+  #pinContainer {
+    height: 100%
+  }
+
+  #connectContainer {
+    border-top: 1vh dashed white;
+    height: 100%
+  }
+
+  #contextcon {
+    height: auto;
+    margin-bottom:5vh;
+    display: inline-flex;
+    flex-direction: column-reverse;
+  }
+
+  #secondpgcontent7 {
+    font-size: 8vmin;
+    margin-top:5vh;
+    right: 0
+  }
+
+  #consvg {
+    width: 100%
+  }
+
+  #consvgconcon {
+    margin-top: 5vh;
+    height: 100%;
+    max-height: 100%
+  }
+
+  #connectsvgcontainer {
+    height: 100%
+  }
+
+  #secondpgcontent7a {
+    left: 0;
+    font-size: 10vmin;
+    margin-top: 5vh
+  }
+
+  #section3 {
+    height: 100vh;
+    background: #3c3d65;
+    padding-left: 10vw;
+    padding-right: 10vw
+  }
+
+  #secondpgcontent8 {
+    display: inline-block;
+    text-align: center;
+    font-size: 5vmin;
+    margin-top: 5vh;
+    line-height: 100%;
+    width: 80vw;
+    white-space: normal
+  }
+
+ 
+
+  .section3svg {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-top: 5vh
+  }
+
+  #keysvg {
+    width: 40vmin
+  }
+
+  .testsvgblue {
+    fill: white
+  }
+*/
+/*
+
+
+  #probquest {
+    height: 100%;
+    margin-bottom: 5vh
+  }
+
+  #secondpgcontent1a {
+    right: 0%;
+    font-size: 13vmin;
+    line-height: 100%
+  }
+
+  #secondpgcontent1b {
+    left: 0%;
+    font-size: 13vmin
+  }
+
+  #missioncont {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-bottom: 5vh;
+    height: 100%;
+    border-top: 1vh dashed white
+  }
+
+  #svgrow {
+    transform: scale(1);
+    height: 100%;
+    margin-bottom: 5vh;
+    margin-top: 5vh
+  }
+
+  #tododiv {
+    height: 40vh
+  }
+
+  .toolsvgs {
+    width: 25vmin;
+    height: auto;
+    max-height: 25vmin
+  }
+
+  #screen5 {
+    margin-bottom: 0;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    height: 100%;
+    border-top: 1vh dashed white
+  }
+
+  #screen5text {
+    font-size: 10vmin
+  }
+
+  #screen6o {
+    border-top: 1vh dashed white;
+    margin-top: 0;
+    padding-top: 5vh;
+    height: 100%
+  }
+
+  #crtxt1 {
+    font-size: 10vmin
+  }
+
+  #svg6wrap {
+    height: 100%
+  }
+
+  #screen6a {
+    padding-left: 5vw;
+    padding-right: 5vw
+  }
+
+  .rows6txt {
+    font-size: 10vmin
+  }
+
+  #screen6b {
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    height: 100%
+  }
+
+  #controw7 {
+    border-top: 1vh dashed white;
+    padding-top: 5vh;
+    padding-bottom: 5vh
+  }
+
+  #secondpgcontent4 {
+    font-size: 10vmin
+  }
+
+  #row7svgdiv {
+    padding-right: 2vw;
+    padding-left: 2vw
+  }
+
+  .barsvg {
+    max-width: 30%;
+    max-height: 20vh
+  }
+
+  #secondpgcontent5 {
+    font-size: 10vmin
+  }
+
+  #pinContainer {
+    height: 100%
+  }
+
+  #connectContainer {
+    border-top: 1vh dashed white;
+    height: 100%
+  }
+
+  #contextcon {
+    height: auto;
+    margin-top: 5vh
+  }
+
+  #secondpgcontent7 {
+    font-size: 10vmin;
+    right: 0
+  }
+
+  #consvg {
+    width: 100%
+  }
+
+  #consvgconcon {
+    margin-top: 5vh;
+    height: 100%;
+    max-height: 100%
+  }
+
+  #connectsvgcontainer {
+    height: 100%
+  }
+
+  #secondpgcontent7a {
+    left: 0;
+    font-size: 10vmin;
+    margin-top: 5vh
+  }
+
+  #section3 {
+    height: 100vh;
+    background: #3c3d65;
+    padding-left: 10vw;
+    padding-right: 10vw
+  }
+
+  #secondpgcontent8 {
+    display: inline-block;
+    text-align: center;
+    font-size: 5vmin;
+    margin-top: 5vh;
+    line-height: 100%;
+    width: 80vw;
+    white-space: normal
+  }
+
+  #triangleContainer2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-self: flex-start
+  }
+
+  .section3svg {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-top: 5vh
+  }
+
+  #keysvg {
+    width: 40vmin
+  }
+
+  .testsvgblue {
+    fill: white
+  }
+*/
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (orientation:portrait) 
+and (-webkit-min-device-pixel-ratio:1) {
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (orientation:landscape) 
+and (-webkit-min-device-pixel-ratio:1) {
+
+  #row2{
+    flex-flow: initial;
+
+  }
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (-webkit-min-device-pixel-ratio:1) {
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (orientation:portrait) 
+and (-webkit-min-device-pixel-ratio:1) {
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (orientation:landscape) 
+and (-webkit-min-device-pixel-ratio:1) {
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+
+/* Portrait and Landscape */
+/*@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (-webkit-min-device-pixel-ratio:2) {
+  #sidenavtrig {
+    display: inline
+  }
+
+  nav {
+    display: none
+  }
+
+  #secondpgcontent1 {
+    left: 0%;
+    font-weight: 600
+  }
+
+  #qlcirc {
+    width: auto;
+    height: auto
+  }
+
+  #secondpgcontent1a {
+    right: 0%;
+    font-size: 13vmin;
+    line-height: 100%
+  }
+
+  #secondpgcontent1b {
+    left: 0%;
+    font-size: 13vmin
+  }
+
+  #missioncont {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    height: 100%
+  }
+
+  #svgrow {
+    transform: scale(1);
+    height: 100%;
+    margin-bottom: 5vh;
+    margin-top: 5vh
+  }
+
+  #tododiv {
+    height: 40vh
+  }
+
+  .toolsvgs {
+    width: 25vmin;
+    height: auto;
+    max-height: 25vmin
+  }
+
+  #screen5 {
+    margin-bottom: 0;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+    height: 100%;
+    border-top: 1vh dashed white
+  }
+
+  #screen5text {
+    font-size: 10vmin
+  }
+
+  #screen6o {
+    border-top: 1vh dashed white;
+    margin-top: 0;
+    padding-top: 5vh;
+    height: 100%
+  }
+
+  #crtxt1 {
+    font-size: 10vmin
+  }
+
+  #svg6wrap {
+    height: 100%
+  }
+
+  #screen6a {
+    padding-left: 5vw;
+    padding-right: 5vw
+  }
+
+  .rows6txt {
+    font-size: 10vmin
+  }
+
+  #screen6b {
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    height: 100%
+  }
+
+  #controw7 {
+    border-top: 1vh dashed white;
+    padding-top: 5vh;
+    padding-bottom: 5vh
+  }
+
+  #secondpgcontent4 {
+    font-size: 10vmin
+  }
+
+  #row7svgdiv {
+    padding-right: 2vw;
+    padding-left: 2vw
+  }
+
+  .barsvg {
+    max-width: 30%;
+    max-height: 20vh
+  }
+
+  #secondpgcontent5 {
+    font-size: 10vmin
+  }
+
+  #pinContainer {
+    height: 100%
+  }
+
+  #connectContainer {
+    border-top: 1vh dashed white;
+    height: 100%
+  }
+
+  #contextcon {
+    height: auto;
+    margin-top: 5vh
+  }
+
+  #secondpgcontent7 {
+    font-size: 10vmin;
+    right: 0
+  }
+
+  #consvg {
+    width: 100%
+  }
+
+  #consvgconcon {
+    margin-top: 5vh;
+    height: 100%;
+    max-height: 100%
+  }
+
+  #connectsvgcontainer {
+    height: 100%
+  }
+
+  #secondpgcontent7a {
+    left: 0;
+    font-size: 10vmin;
+    margin-top: 5vh
+  }
+
+  #section3 {
+    height: 100vh;
+    background: #3c3d65;
+    padding-left: 10vw;
+    padding-right: 10vw
+  }
+
+  #secondpgcontent8 {
+    display: inline-block;
+    text-align: center;
+    font-size: 5vmin;
+    margin-top: 5vh;
+    line-height: 100%;
+    width: 80vw;
+    white-space: normal
+  }
+
+  #triangleContainer2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-self: flex-start
+  }
+
+  .section3svg {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin-top: 5vh
+  }
+
+  #keysvg {
+    width: 40vmin
+  }
+
+  .testsvgblue {
+    fill: white
+  }
+
+}*/
+
+/* Portrait */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (orientation:portrait) 
+and (-webkit-min-device-pixel-ratio:2) {
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width:768px) 
+and (max-device-width:1024px) 
+and (orientation:landscape) 
+and (-webkit-min-device-pixel-ratio:2) {
+}

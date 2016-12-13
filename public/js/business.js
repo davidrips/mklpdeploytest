@@ -33,6 +33,25 @@ $(document).ready(function(){
 
      var controller = new ScrollMagic.Controller({loglevel: 3});
 
+     if(!Modernizr.touchevents){
+          $("html").addClass('desktop')
+            var vid = $("video").height();
+            console.log(vid);
+    
+
+  
+    $(window).scroll(function(){
+      if($(document).scrollTop() > vid){//Here 200 may be not be exactly 200px
+        $('video').css('display', 'none');
+        console.log('hiding');
+      }else{
+        if($('video').css('display')=='none'){console.log('wasnt showing');
+        $('video').css('display', 'initial');
+        }
+      }
+    });
+     }
+
 
 
     $(".is-light").each(function(index, elem){
@@ -123,7 +142,7 @@ $(document).ready(function(){
    
 
       $(".imgcontainer1").click(function(){
-         let userType = $(this).data('user')
+         var userType = $(this).data('user')
          toUser(userType)
     })
 
@@ -137,7 +156,7 @@ $(document).ready(function(){
        $.fn.matchHeight._rows($('.bdytxt1'));
 
       $(".menuButs").click(function(e){
-        let goWhere = $(this).data('where');
+        var goWhere = $(this).data('where');
         console.log(goWhere);
         e.preventDefault();
         closeNav();
@@ -160,9 +179,15 @@ $(document).ready(function(){
     })
 
 
+     function openNav() {
 
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "30vw";
+        if ($("html").hasClass("desktop")){
+            document.getElementById("mySidenav").style.width = "30vw";
+
+        }else {
+           document.getElementById("mySidenav").style.width = "50vw"; 
+        }
+        
     }
 
     function closeNav() {

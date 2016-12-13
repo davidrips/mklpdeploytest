@@ -36,6 +36,7 @@
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/details.css" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
   
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -158,24 +159,34 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 <div class="fullscreen-bg">
              
                     <div class="filter"></div>
-                    <video autoplay loop poster="img/White-Board.jpg" class="fullscreen-bg__video">
-                        <source src="img/White-Board.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                        <source src="img/White-Board.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <video autoplay loop poster="img/white-board.jpg" class="fullscreen-bg__video">
+                        <source src="img/white-board.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        <source src="img/white-board.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                     </video>
                 </div>
 
-
+                <div class="screen1row" id="row00">
+                     <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
+                      
+                     <button type="button" id="row1signup" class="row1but btn btn-xl">Sign Up</button>
+                </div>
 
                 <div class='screen1rowcontainer'>
+              
                 <div class="screen1row" id="row0">
+                     
                       <div id='imgcontainer1'>
-                       <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
+                        <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
                     </div>
+                   
                 </div>
                   <div class="screen1row" id="row1">
-                    <p class='row1txt' id='mainHeading'>myklovr is a data-driven recommendation <wbr> engine that brings the future closer to you.
+                    <p class='row1txt' id='mainHeading'>delivering student solutions<br>one student at a time
+                    </p>
+                    <p class='row1txt' id='mainHeadingB'>delivering student solutions one student at a time
                     </p>
                   </div>
+
 
                   <div class='screen1row' id='row1buttons'>
                     <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
@@ -190,33 +201,41 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
                   <div class="screen1row" id="row2">
-                      <div class='imgcontainer1' data-user='student'>
-                         <img src="/img/student.png" class="pg1imgs" id='' alt="Responsive image">
-                         <div class="img1label">students</div>
-                       </div>
-                      <div class='imgcontainer1' 
-                        data-user='parent'>
-                         <img src="/img/parent.png" class="pg1imgs" id='' alt="Responsive image">
-                         <div class="img1label">parents</div>
+                    
+                      <div class="img1wrap">
+                        <div class='imgcontainer1' data-user='student'>
+                           <img src="/img/student.png" class="pg1imgs" id='' alt="Responsive image">
+                           <div class="img1label">students</div>
+                         </div>
                       </div>
-                      <div class='imgcontainer1' data-user='tutor'>
-                         <img src="/img/teacher.png" class="pg1imgs" id='' alt="Responsive image">
-                         <div class="img1label">teachers</div>
-                      </div> 
-                       <a href="/business"><div class='imgcontainer2' data-user=''>
-                         <img src="/img/uni.png" class="pg1imgs" id='imgb' alt="Responsive image">
-                         <div class="img1label">schools</div>
-                      </div></a>
-                       <a href="/business"><div class='imgcontainer2' data-user=''>
-                         <img src="/img/business.png" class="pg1imgs" id='imgb' alt="Responsive image">
-                         <div class="img1label">companies</div>
-                      </div><                   
+                  <div class="img1wrap">
+                        <div class='imgcontainer1' 
+                      data-user='parent'>
+                       <img src="/img/parent.png" class="pg1imgs" id='' alt="Responsive image">
+                       <div class="img1label">parents</div>
+                    </div>
+                  </div>
+                     <div class="img1wrap"> <div class='imgcontainer1' data-user='tutor'>
+                          <img src="/img/teacher.png" class="pg1imgs" id='' alt="Responsive image">
+                          <div class="img1label">teachers</div>
+                       </div> </div>
+                   
+                       <div class="img1wrap">
+                         <div class='imgcontainer1' data-user=''>
+                           <a href="/business"><img src="/img/uni.png" class="pg1imgs" alt="Responsive image">
+                           <div class="img1label">schools</div></a>
+                        </div>
+                       </div>
+                     <div class="img1wrap ">
+                        <div class='  imgcontainer1' data-user=''>
+                           <a href="/business"><img src="/img/business.png" class="pg1imgs" alt="Responsive image">
+                          <div class="img1label">companies</div></a> 
+                       </div>
+                     </div>
+
                   </div>
                   
 
-                  <div class="screen1row" id="row3">
-                    
-                  </div>
                 </div>
         </div>
 
@@ -255,7 +274,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
           </div>
           <div class="mainrow">
             <div class="row1txt bottomtxt">
-              We want to help students create and pursue the <br><strong>person they want to become</strong>.
+              We want to unlock the full <br><strong>Academic, Personal, and Professional</strong> potential for every student, allowing them a clear path towards the person <strong>they want to become</strong>.
             </div>
           </div>
           <div class=" screen3text" id="screen3text1">
@@ -993,7 +1012,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 <div class="bodyrow" id='connectContainer'>
                     <div id="contextcon">
                         <div class="secondpgcontent bigr" id="secondpgcontent7">
-                               We use artificial intelligence to connect students and parents to curated resources, tools, and strategies, so that they can make the best decisions for themselves, all while leveling the playing field of education by offering affordable results with big-data accuracy. 
+                               We use artificial intelligence to connect students and parents to curated resources, tools, and strategies, all while leveling the playing field of education by offering affordable results with big-data accuracy. 
                         </div>
 
                         <div id='consvgconcon'>

@@ -26,6 +26,8 @@
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/business.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+      <link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -137,6 +139,13 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </div>
 
 
+                <div class="screen1row" id="row00">
+                     <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
+                      
+                     <button type="button" id="row1signup" class="row1but btn btn-xl">Sign Up</button>
+                </div>
+
+
 
                 <div class='screen1rowcontainer'>
                 <div class="screen1row" id="row0">
@@ -164,7 +173,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
 
-                  <div class="screen1row" id="row2">
+                  <div class="screen1row" id="row2" data-user='uni'>
                       <div class='imgcontainer1' id='schoolImg' data-user='uni'>
                          <img src="/img/uni.png" class="pg1imgs"  alt="Responsive image">
                          <div class="img1label">schools</div>
@@ -274,7 +283,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -339,7 +348,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -407,7 +416,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -444,7 +453,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             </div>
           </div>
 
-          <div class="screen4inner tableRow">
+          <div class="screen4inner tableRow tableRow1">
               <table>
                 <tr class='bdytxt1'>
                   <th class='col1'></th>
@@ -469,13 +478,37 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
               </table>
           </div>
+
+
+          <div class="screen4inner tableRow tableRow2">
+              <table>
+                <tr class='bdytxt1'>
+                  <th class='col1'></th>
+                  <th class='col2'></th>
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Product-specific hyper targetting delivers your goods or services to the consumer the moment they need them.</td>
+                   
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Collaborations options amongst sellers to strategically combine forces to reach corporate clients.</td>
+                </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Offer services, goods, and products directly through myKlovr recommendations.</td>
+                </tr>
+              </table>
+          </div>
+
           <div class="screen4inner emailForm">
               <div class="inputLabel bodytxt">
                 Find out more:
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -547,7 +580,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </div>
              <div class="inputFieldContainer">
                  <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField1">
+                     <div class="form-group" id="formField2">
                          <div>
                              <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                          </div> 
@@ -643,7 +676,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                                 <form id="myForm" data-toggle='validator' action='' method='post'>
                                   
 
-                                    <div class="form-group row" id="formField1">
+                                    <div class="form-group row" id="formField2">
                                        <div class="signModalFormField">
                                             <input type="text" class="form-control" id="inputFirstName" name='first' placeholder="Your First Name" required>
                                             <div class="help-block with-errors"></div>
@@ -651,14 +684,14 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                                       </div>
                                     </div>
 
-                                    <div class="form-group row" id="formField1">
+                                    <div class="form-group row" id="formField2">
                                         <div class="signModalFormField">
                                             <input type="text" class="form-control" id="inputLastName" name='last' placeholder="Your Last Name" required>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
 
-                                      <div class="form-group row" id="formField1">
+                                      <div class="form-group row" id="formField2">
                                         <div class="signModalFormField">
                                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
                                           

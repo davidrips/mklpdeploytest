@@ -115,9 +115,38 @@ $(document).ready(function(){
 
 
      var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+     var isFirefox = typeof InstallTrigger !== 'undefined';
+
+     if (isSafari == true){
+         $("html").addClass('safari')
+     };
+
+     if (isFirefox == true){
+        console.log('ur using firefox lol');
+         $("html").addClass('firefox')
+     };
+
+
+
 
      var controller = new ScrollMagic.Controller({loglevel: 3});
 if(!Modernizr.touchevents){
+    $("html").addClass('desktop')
+    var vid = $("video").height();
+    console.log(vid);
+    
+
+  
+    $(window).scroll(function(){
+      if($(document).scrollTop() > vid){//Here 200 may be not be exactly 200px
+        $('video').css('display', 'none');
+        console.log('hiding');
+      }else{
+        if($('video').css('display')=='none'){console.log('wasnt showing');
+        $('video').css('display', 'initial');
+        }
+      }
+    });
 
     if(isSafari==false){
 
@@ -224,7 +253,7 @@ if(!Modernizr.touchevents){
             var howToJoin = new ScrollMagic.Scene({triggerElement: '#section3', triggerHook: "onLeave", duration:"200%"}).setPin('#section3', {pushFollowers:true}).addTo(controller);
     }else{
         console.log('ur using safari arent u');
-        $("html").addClass('safari')
+       
          var av = $("#crimg3").height()
             console.log(av);
             var animHeight = $("#genanimcont").height()
@@ -241,7 +270,7 @@ if(!Modernizr.touchevents){
             // $('#screen6o').css('padding-top', ''+(headHeight + 10)+'px');
             // $('#svg6wrap').css('padding-top', ''+row6combined+'px');
             // $("#pinContainer").css("padding-top", ''+(headHeight + 10)+'px')
-            $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px');
+            // $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px');
             stillAnimation()
     }
 
@@ -252,6 +281,12 @@ if(!Modernizr.touchevents){
 
 }else{
     console.log('touchin');
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/mobile.css"/>');         
+      $('head').append('<link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>'); 
+      
+
+
+
     stillAnimation()
 
     
@@ -259,7 +294,10 @@ if(!Modernizr.touchevents){
 
 
 function stillAnimation(){
-    var blinkarrows = TweenMax.fromTo($(".svgarrow"), 1, {fill:"#45A2D9"}, {fill:"#FED139", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
+    var blinkarrows = TweenMax.fromTo($(".svgarrow"), 1, {fill:"white"}, {fill:"#FED139", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
+     var makeLight = TweenMax.fromTo($(".testsvgblue"), 3, {fill:"white"}, {fill:"#3f3e65", repeat: -1, repeatDelay:2,ease: RoughEase.ease.config({ template: Power0.easeNone, strength: 1, points: 20, taper: "none", randomize: true, clamp: false})});
+
+
 
     var drawscribs = new TimelineMax({repeat:-1})
         .add(TweenMax.to($("#svgscrib2"), 2, {strokeDashoffset: 0, ease:Linear.easeNone}),1)
@@ -459,7 +497,14 @@ function stillAnimation(){
 
 
     function openNav() {
-        document.getElementById("mySidenav").style.width = "30vw";
+
+        if ($("html").hasClass("desktop")){
+            document.getElementById("mySidenav").style.width = "30vw";
+
+        }else {
+           document.getElementById("mySidenav").style.width = "50vw"; 
+        }
+        
     }
 
     function closeNav() {
