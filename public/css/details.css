@@ -541,6 +541,10 @@ strong {
     padding-bottom: 5vh;
     padding-top: 3vh
 }
+
+.tableRow2{
+    display: none;
+}
 table {
     table-layout: fixed;
     width: 80vw

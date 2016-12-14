@@ -411,6 +411,15 @@ text-decoration: none;}
 
                     }
 
+                     #row1link{
+  
+      margin-right: 3vw;
+    }
+    #row1signup{
+
+      margin-left: 3vw;
+    }
+
 
                 .imgcontainer1{
                    display: flex;
@@ -845,6 +854,11 @@ strong{
 
 
 /*TABLE STYLES*/
+
+
+.tableRow2{
+    display: none;
+}
 
     table{
         table-layout: fixed;

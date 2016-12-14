@@ -353,6 +353,12 @@ and (-webkit-min-device-pixel-ratio:2) {
               font-weight: 700
             }
 
+
+            .img1label{
+              opacity: 1;
+            }
+
+
             
 
 
@@ -365,6 +371,15 @@ and (-webkit-min-device-pixel-ratio:2) {
 
     .tableRow2{
       display: table;
+    }
+
+    .col1{
+        width: 10%;
+
+    }
+
+    .col2{
+        width: 90%;
     }
 
 

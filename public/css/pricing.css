@@ -1,0 +1,84 @@
+
+*{
+	font-family: "Josefin Sans"
+}
+
+
+#main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 100vw;
+	height: 100vh;
+	
+
+}
+
+#headingContainer{
+	width: 80vw;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+
+
+}
+	#headingLogoContainer{
+
+
+	}
+	#headingContentContainer{
+
+	}
+#planContainer{
+	width: 80vw;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+
+}
+	.type{
+		height: 80vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+		.top{
+			width: 20vmin;
+			height: 20vmin;
+			margin-bottom: 5vh;
+
+
+		}
+		.bottom{
+			width: 20vmin;
+			height: 50vmin;
+
+		}
+
+		.tableIcon{
+			width: 5vmin;
+			height: 5vmin;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

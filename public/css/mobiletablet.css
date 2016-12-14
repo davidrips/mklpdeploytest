@@ -179,23 +179,10 @@ and (-webkit-min-device-pixel-ratio:1) {
                 }
 
                 .col2{
-                    width: 35%;
+                    width: 90%;
                 }
 
-                .col3{
-                     width: 10%;
-
-
-                }   
-                .col4{
-                    width: 10%;
-
-                }
-                .col5{
-                    width: 35%
-
-                }
-
+              
                 .tableIcon{
                     height: 5vmin;
                     width: 5vmin;
