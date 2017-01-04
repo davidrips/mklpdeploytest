@@ -588,6 +588,11 @@ strong{
     font-size: 11vmin;
 }
 
+.midtxt{
+    font-size: 9vmin;
+
+}
+
 .bottomtxt{
     font-size: 5vmin;
     font-weight: 400;
@@ -605,6 +610,9 @@ strong{
     padding-bottom: 5vh;
     padding-top: 3vh;
 }
+    #screen2container .mainrow{
+        flex-direction: column;
+    }
     #screen2text{
         height: 100%;
         display: flex;

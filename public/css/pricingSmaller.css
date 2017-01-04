@@ -1,0 +1,93 @@
+
+
+@media only screen 
+and (max-width:650px){
+
+}
+@media only screen
+and (min-width: 650px) 
+and (max-width:870px){
+	#headingContentContainer{
+		font-size: 7vmin;
+	}
+	.selected{
+		width: 150%;
+		/*flex:3;*/
+	}
+	
+}
+@media only screen 
+and (max-width:920px){
+
+	.selected{
+		font-size: 100%;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen 
+and (max-width:650px){
+	
+	.planScrollContainer{
+		display: flex;
+	}
+	#planContainer{
+		flex-direction: column;
+	}
+		.type{
+			flex-direction: row;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			margin-bottom: 2vh;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+
+		.top{
+			flex-basis: 75%;
+			min-height: 10vh;
+			margin-bottom: 0;
+			border:0;
+		}
+
+		.top div{
+			margin-top: 4vmin;
+		}
+
+		.bottom{
+			display: flex;
+			align-items: center;
+			border-bottom: 0;
+		}
+
+		h3{
+			font-size: 6vmin;
+		}
+
+		.signUpButton{
+			font-size: 5vmin;
+		}
+	td{
+		font-size: 3.5vmin;
+	}
+
+
+
+
+	
+
+
+
+} 

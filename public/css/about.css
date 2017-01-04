@@ -1,0 +1,362 @@
+    
+	/*General Site Styles*/
+	*{
+		font-family: "Lato";
+		box-sizing: border-box;
+		font-size: 2vmin;
+	}
+
+	html{
+		width: 100vw;
+	}
+	body{
+		width: 100vw;
+	}
+
+	@font-face{
+		font-family: "Josefin Sans";
+		src: url("../css/"font/JosefinSans-Regular.ttf);
+	}
+	@font-face{
+		font-family: "Lato";
+		src: url("../css/font/Lato-Regular.ttf");
+	}
+
+	#sidenavtrig {
+	    display: inline;
+	    position: fixed;
+	    top: 3vh;
+	    left: 3vw;
+	    z-index: 1090
+
+	}
+
+	#pstDiv{
+	/*    display: inline-block;*/
+	}
+	/* iPads (portrait) ----------- */
+	@media only screen 
+	and (min-width : 768px) 
+	 {
+	    #pstDiv{
+	        display: block;
+	    }
+	    /* Styles */
+	}        
+	#homeButton {
+	    display: inline;
+	    position: fixed;
+	    top: 3vh;
+	    left: 93vw;
+	    z-index: 1090
+	}
+	#homeLogo {
+	    height: 5vmin;
+	    width: 5vmin
+	}
+	#hamsvg {
+	    height: 4vmin;
+	    width: 4vmin
+	}
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: #111;
+	    overflow-x: hidden;
+	    padding-top: 60px;
+	    transition: 0.5s;
+	    z-index: 20000
+	}
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 3vmin;
+	    display: block;
+	    color: #818181;
+	    font-family: "Lato";
+	    display: block;
+	    transition: 0.3s
+	}
+	.sidenav a:hover, .offcanvas a:focus {
+	    color: #f1f1f1
+	}
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px
+	}
+
+	@media screen and (max-height:450px) {
+	    .sidenav {
+	        padding-top: 15px
+	    }
+	    .sidenav a {
+	        font-size: 18px
+	    }
+	}
+
+	#main{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 100vw;
+		height: auto;
+		background-color: #3c3d65;
+	}
+
+	#headingContainer{
+		width: 100vw;
+		padding-left: 10vw;
+		padding-right: 10vw;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		background-color: #3c3d65;
+		color: white;
+	}
+	#headingLogoContainer{
+		margin-top: 5vh;
+
+
+	}
+
+	#headingLogo{
+		width: 20vmin;
+		height: 20vmin;
+	}
+	#headingContentContainer{
+		font-family: "Lato";
+		text-align: center;
+		font-variant: small-caps;
+		font-weight: 300;
+		font-size: 8vmin;
+		margin-bottom: 2vh;
+		white-space: nowrap;
+		line-height: 90%
+
+	}
+
+		#headingContentContainer span{
+			font-size: 5vmin;
+			white-space: nowrap;
+			line-height: 90%;
+
+
+		}
+
+
+/*About Page Styles*/
+
+	.seperator{
+		height: 7vh;
+		background-color: #3c3d65;
+		width: 100vw;
+
+
+	}
+
+
+
+
+
+
+    .bodySection{
+	    background-color: white;
+	/*    height: 100%;*/
+	    width: 100vw;
+	    padding-bottom: 5vh;
+	    padding-top: 3vh;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        /*margin-bottom: 5vh;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+	}
+	
+	.bodyHeading{
+		    margin-bottom: 2vh;
+		    font-size: 11vmin;
+		    font-family: "Lato";
+		    font-weight: 300;
+		    color: #3f3e65;
+		    margin-top: 2.5vh;
+		    font-variant: small-caps;
+		    line-height: 90%;
+		    text-align: center;
+	}
+
+	.bodyText{
+		    font-size: 3vmin;
+		    /*font-weight: 400;*/
+		    font-family: "Lato";
+		    /*font-weight: bold;*/
+		    color: #3f3e65;
+		    margin-top: 2.5vh;
+		    margin-bottom: 0;
+		    line-height: 95%;
+		    text-align: left;
+
+	}
+
+	.teamCont{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: auto;
+	/*	margin-top: 2vh;*/
+		
+	}
+
+	.teamMember{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 5vh;
+
+	}
+	.teamInfo{
+
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 55%;
+
+	}
+
+	.teamHeading{
+		font-size: 3vmin;
+		font-family: "Lato";
+		font-weight: bold;
+		color: #3f3e65;
+		line-height: 95%;
+
+
+	}
+
+	.teamText{
+		font-size: 2.5vmin;
+		font-family: "Lato";
+		color: #3f3e65;
+		margin-top: 1vh;
+		margin-bottom: 0;
+		line-height: 95%;
+		text-align: left;
+
+
+	}
+
+	.teamImg{
+		width: 45%;
+		padding: 2%;
+
+	}
+	
+	.teamImg img{
+		width: 100%;
+		height: auto;
+		max-height: 350px;
+		max-width: 350px;
+	}
+
+	.pressCont{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.prCont{
+		width: 30vw;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 5vh;
+
+	}
+	.prCont span{
+		font-size: 5vmin;
+		margin-bottom:1vh;
+
+	}
+
+	.prCont img{
+		border: .5px solid black;
+		margin-top: 1vh;
+	}
+
+
+
+
+	.videoCont{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 80vw;
+
+	}
+
+	.video{
+		width:80%;
+		max-width: 400px;
+		flex-basis: 50%;
+		padding: 1vmin 2vmin
+	}
+
+	.videoBody {
+		position:relative;
+		padding-bottom:56.25%;
+		padding-top:30px;
+		height:0;
+		overflow:hidden;
+	}
+
+	.videoBody iframe, .videoBody object, .videoBody embed {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

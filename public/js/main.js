@@ -337,28 +337,26 @@ function stillAnimation(){
 
 
 
-
+    
     $(".is-light").each(function(index, elem){
 
         var height = $(elem).height()
-        console.log(height);
-        console.log(typeof height);
+        var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
         var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
-
-        new ScrollMagic.Scene({
-            triggerElement:elem, duration:'"'+height+'px"', triggerHook:"0.03"
-        }).setTween(makeDark).addTo(controller);
+        var isLight = new ScrollMagic.Scene({
+            triggerElement:elem, triggerHook:"0.03"
+        }).setTween(makeDark).addTo(controller)
 
     })
 
      $(".need-light").each(function(index, elem){
         var makeLight = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'white'});
-
-           new ScrollMagic.Scene({
+        var makeDark = new TweenMax.to($(".homeLogoPaths"), 0,{fill:'#3c3d65'})
+        var isDark = new ScrollMagic.Scene({
             triggerElement:elem, triggerHook:"0.03"
         }).setTween(makeLight).addTo(controller);
-
     })
+
 
      var homeButton = $("#homeButton");
      homeButton.on('click', function(e){
