@@ -99,7 +99,8 @@ $("#investButton").on("click", function(event){
                 investPass: $("#investText").val(), 
             }, function(data){
                 console.log(data);
-                 window.location.href = 'www.google.com'
+                 // window.location.href = 'www.google.com'
+                 $("#newModalBody").append("<a id='accessLink' href='"+data+"'>Access</a>")
 
          
                           }

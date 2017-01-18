@@ -361,6 +361,13 @@
 
 	}
 
+	#accessLink{
+		 font-family: "Josefin Sans";
+	    font-size: 5vmin;
+	    font-weight: bold;
+
+	}
+
 	/*.modal-body button{
 		border-radius: 3px;
 		height: 2vh;
