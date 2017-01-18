@@ -25,9 +25,12 @@
 
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
+     <link href="css/all.css" rel="stylesheet">
     <link href="css/business.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
       <link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>
+      <link rel="stylesheet" href="../css/bootstrap-social.css">
+     <link rel="stylesheet" href="../css/font-awesome.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -140,68 +143,110 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </div>
 
 
-                <div class="screen1row" id="row00">
-                     <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
-                      
-                     <button type="button" id="row1signup" class="row1but btn btn-xl">Sign Up</button>
-                </div>
-
 
 
                 <div class='screen1rowcontainer need-light'>
-                <div class="screen1row" id="row0">
-                      <div id='imgcontainer1'>
-                       <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
+                  <div id='tempContainer1'>
+                    <div class="screen1row" id="row0">
+                          <div id='imgcontainer1'>
+                           <img src="/img/logo1.png" id="pg1logo" alt="Responsive image">
+                        </div>
                     </div>
-                </div>
-                  <div class="screen1row" id="row1">
-                    <p class='row1txt' id='mainHeading'>myklovr allows you to integrate your organization with our tools, analytics and users.
-                    </p>
-                  </div>
-                  <div class='screen1row' id='row1buttons'>
-                    <a href="https://access.myklovr.com/#/login" id='row1link' class="row1but btn btn-xl">Log In</a>
-                    <button type="button" id="row1signup" class="row1but btn btn-xl">Sign Up</button>
+                      <div class="screen1row" id="row1">
+                        <p class='row1txt' id='mainHeading'>myklovr allows you to integrate your organization with our tools, analytics and users.
+                        </p>
+                      </div>
 
-                  </div>
-
+                   
+                        <div id="loginCont">
+                     <!--   <div class="loginSocialWrap">
+                              <div class='loginSocialCont'>
+                             <a class="btn btn-block btn-social btn-facebook">
+                               <span class="fa fa-facebook"></span> Sign in with Facebook
+                             </a>
+                             <a class="btn btn-block btn-social btn-google"> <span class="fa fa-google"></span> Sign in with Google</a>
+                         </div>
+                       </div> -->
+                            <div class="loginWrap">
+                            <input class='logInInput' id='loginEmail' placeholder="Email" type="text">
+                            
+                          </div>
+                          <div class="loginWrap">
+                            <input class='logInInput' id='loginPassword' placeholder="Password" type="text">
+                          </div>
+                            <div class='loginWrap' id='loginCheck'>
+                                <input type="checkbox" id='loginRemember'>
+                                <label for="'loginRemember">Remember Me</label>
+                            </div>
+                             <button type="button" id="loginButton" class="row1but btn btn-xl"><a href="https://access.myklovr.com/#/login">Log In</a></button>
+                             <!-- <div class='loginOr'>or</div> -->
+                             <button type="button" id="row1signup" class="row1but btn btn-xl signUpBtn">Sign Up</button>
+                        </div>
                   <div class="screen1row row1txt" id="row1sub">
-                    explore our services:
-                  </div>
-
-                  <div class="screen1row" id="row2a">
-                  
+                    start exploring our services
                   </div>
 
 
+                  <div class='slideOneArrow'>
+                    <svg class="arrows">
+                      <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    </svg>
+                  </div>
 
-                  <div class="screen1row" id="row2" data-user='uni'>
-                      <div class='imgcontainer1' id='schoolImg' data-user='uni'>
-                         <img src="/img/uni.png" class="pg1imgs"  alt="Responsive image">
-                         <div class="img1label">schools</div>
+                  </div>
+
+
+
+                  <div id='tempContainer2' class='is-light'> 
+
+                      <div class="screen1row row1txt" id="row1subB">
+                        how can we help?
                       </div>
-                      <div class='imgcontainer1' data-user='company'>
-                         <img src="/img/business.png" class="pg1imgs" id='companyImg' alt="Responsive image">
-                         <div class="img1label">companies</div>
+                      <div class="screen1row" id="row2">
+                        
+                          <div class="img1wrap">
+                            <div class='imgcontainer1' id='schoolImg' data-user='uni'>
+                               <img src="/img/uni.png" class="pg1imgs"  alt="Responsive image">
+                               <div class="img1label">schools</div>
+                            </div>
+                          </div>
+                      <div class="img1wrap">
+                           <div class='imgcontainer1' data-user='company'>
+                              <img src="/img/business.png" class="pg1imgs" id='companyImg' alt="Responsive image">
+                              <div class="img1label">companies</div>
+                            </div>
+                      </div>
+                         <div class="img1wrap"> 
+                            <div class='imgcontainer1' data-user='ads'>
+                                                   <img src="/img/ads.png" class="pg1imgs" alt="Responsive image">
+                                                   <div class="img1label">ads</div>
+                                                </div>
+                          </div>
+                       
+                           <div class="img1wrap">
+                              <div class='imgcontainer1' data-user='exchange'>
+                                <img src="/img/marketplace.png" class="pg1imgs" alt="Responsive image">
+                                <div class="img1label">exchange</div>
+                               </div>
+                           </div>
+                         <div class="img1wrap ">
+                              <div class='imgcontainer1' data-user='hr'>
+                               <img src="/img/hr.png" class="pg1imgs" alt="Responsive image">
+                               <div class="img1label">hr</div>
+                            </div>
+                         </div>
                       </div>
 
-                      <div class='imgcontainer1' data-user='ads'>
-                       <img src="/img/ads.png" class="pg1imgs" alt="Responsive image">
-                       <div class="img1label">ads</div>
-                    </div>
-                    <div class='imgcontainer1' data-user='exchange'>
-                       <img src="/img/marketplace.png" class="pg1imgs" alt="Responsive image">
-                       <div class="img1label">exchange</div>
-                    </div>
-                      <div class='imgcontainer1' data-user='hr'>
-                       <img src="/img/hr.png" class="pg1imgs" alt="Responsive image">
-                       <div class="img1label">hr</div>
-                    </div>
                   </div>
-                  
 
-                  <div class="screen1row" id="row3">
-                    
+                 
+
+                  <!-- <div class="screen1row" id="row2" data-user='uni'>
+                     
                   </div>
+                   -->
+
+            
                 </div>
         </div>
 
@@ -271,8 +316,8 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                               <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                               <td>Provides a supplement to your guidance department. Here is a longer example.</td>
                               <td></td>
-                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                              <td>This one is admittedly shorter...</td>
+                              <td></td>
+                              <td></td>
                           </tr>
                         </table>
                     </div>
@@ -860,7 +905,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
          <a href="https://www.linkedin.com/company/klōver" class="socialIconLink"> <img src="../img/linked.png" alt=""></a>
       </div>
       <div id='footercontent'>Copyright &copy; 2016 myKlōvr<br> All rights reserved<br>myKlōvr is a division of Student Global, LLC.<br>1350 Avenue of the Americas<br>New York, NY, 10019, USA<br></div>
-      <div id='footerlinks'><p id='tnsnp'><a href="/terms">Terms of Service</a> | <a href='/privacy'>Privacy Policy</a></p></div>
+      <div id='footerlinks'><p id='tnsnp'><a href="/terms-conditions">Terms of Service</a> | <a href='/privacy-policy'>Privacy Policy</a></p></div>
   </div>
 </footer>
 

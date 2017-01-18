@@ -9,6 +9,12 @@ var hbs = require('express-handlebars');
 var routes = require('./routes/index');
 var app = express();
 
+
+var redirect = require("express-redirect");
+var bcrypt = require('bcrypt');
+const saltRounds = 10;
+
+
  
 var PORT = process.env.NODE_ENV || 3000;
 
@@ -21,6 +27,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+redirect(app);
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', routes);
@@ -88,6 +95,14 @@ var Newusers = sequelize.define('auser',{
 
 Newusers.sync();
 
+var Investors = sequelize.define("investor",{
+  id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+  username: Sequelize.STRING,
+  password: Sequelize.STRING,
+})
+
+Investors.sync();
+
 var Sweepstakes = sequelize.define('sweep',{
     id:{type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
     email: Sequelize.STRING,
@@ -95,8 +110,90 @@ var Sweepstakes = sequelize.define('sweep',{
     submittedOn: {type: Sequelize.DATE, defaultValue:Sequelize.NOW}
 })
 
-
 Sweepstakes.sync();
+
+
+// var hash1;
+
+
+
+
+//       console.log(hash1);
+
+
+  app.get("/setpass/:pass", function(req,res){
+    console.log('inhere');
+    console.log(req.params.pass);
+    bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(req.params.pass, salt, function(err, hash) {
+
+      Investors.findAll({
+       where: {username: "invest"}
+      }).then(function(investorArray){
+              console.log(investorArray);
+              if (investorArray.length > 0){
+                  Investors.destroy({
+                    where: {username: "invest"}
+                  })
+              }
+                Investors.create({
+                username: "invest",
+                password:hash,
+              }).then(function(investor){
+                console.log(investor);
+              })
+      })       
+     });
+    });
+  })
+
+
+  app.post('/invest', function(req,res){
+    console.log(req);
+        Investors.findOne({
+          where:{username:"invest"}
+        }).then(function(investorInfo){
+          console.log(req.body.investPass);
+          console.log(investorInfo.password);
+          var passTry = req.body.investPass;
+          var hash= investorInfo.password;
+          bcrypt.compare(passTry, hash, function(err, res) {
+              if(res==true){console.log("true")
+                sendAnswer()
+                }
+              else{console.log("false");}
+       
+            });
+
+          function sendAnswer(){
+            console.log('insend');
+            var response = 'www.google.com'
+            res.send(response)
+          }
+
+       
+
+        })
+
+
+
+
+  })
+
+  app.get("/investorsroom", function(req,res){
+    console.log('get');
+    res.sendFile(path.join(__dirname+"/public/views/investor.html"+"/testing"));
+      })
+
+
+  
+
+
+
+
+
+
+
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname+ '/public/views/index.html'));

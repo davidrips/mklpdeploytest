@@ -85,6 +85,26 @@ $(".is-light").each(function(index, elem){
 })
 
 
+$("#investClick").on('click', function(event) {
+    console.log("clicked");
+      $("#investModal").modal();
+});
+
+$("#investButton").on("click", function(event){
+    console.log('submitting password');
+
+
+       $.post('/invest', {
+                username: "invest",
+                investPass: $("#investText").val(), 
+            }, function(data){
+                console.log(data);
+                 window.location.href = 'www.google.com'
+
+         
+                          }
+            )
+})
 
 
 

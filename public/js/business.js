@@ -1,8 +1,16 @@
 $(document).ready(function(){
 
+
+    $(".arrows").on('click', function(e){
+        $(window).scrollTo('#tempContainer2', {duration:800, ease: Power4.easeInOut})
+
+    })
+
       $("#row1signup").on("click", function(e){
         $('#signModal').modal();
     })
+
+
 
     $('#myForm').validator().on('submit', function (e) {
         if (e.isDefaultPrevented()) {
@@ -50,6 +58,8 @@ $(document).ready(function(){
         }
       }
     });
+     }else{
+      $(".slideOneArrow").css("display", "none")
      }
 
 

@@ -83,34 +83,23 @@ $(document).ready(function () {
 
 
 	$(".top").hover(function(){
-
-		// if( $(window).width() <= "650" ){
-		// 	$(this).parent().addClass("selected")
-		// }else{		
-		// 	$(this).parent().addClass("selected")
-		// 	$(this).addClass("isSelected");
-		// }
-
+		var w = $(window).width();
+		if (w > 966){
 			$(this).parent().addClass("selected")
 			$(this).addClass("isSelected");
+			$(".top").not(this).addClass('notSelected')
+			$(".top").not(this).siblings().addClass('notSelected')
+		}else{	console.log("NO")}
 
-		$(".top").not(this).addClass('notSelected')
-		$(".top").not(this).siblings().addClass('notSelected')
+		
+
+		
 
 	}, function(){ 
 
-		// if( $(window).width() <= "650" ){
-		// 	$(this).parent().removeClass("selected")
-		// }else{
-		// 	$(this).parent().removeClass("selected")
-		// 	$(this).removeClass("isSelected")
-			
-		// }
+		
 		$(this).parent().removeClass("selected")
 		$(this).removeClass("isSelected")
-		
-
-		// $(this).removeClass('selected');
 		$(".top").not(this).removeClass('notSelected')
 		$(".top").not(this).siblings().removeClass('notSelected')
 

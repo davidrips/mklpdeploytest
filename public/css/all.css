@@ -1,0 +1,242 @@
+*{
+
+}
+
+html{
+
+    width:100vw;
+    overflow-x: hidden;
+    /*font-size: 62.5%;*/
+ }
+body{
+
+    height: 100%;
+    width:100vw;
+    /*font-size: 100%;*/
+}
+nav{
+    display: none
+}
+#sidenavtrig{
+    display: inline;
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    z-index: 1;
+}
+
+#homeButton{
+    display: inline;
+    position: fixed;
+    top: 3vh;
+    left: 93vw;
+    z-index: 1;
+}
+
+#homeLogo{
+        height: 5vmin;
+        width: 5vmin;
+}
+#hamsvg{
+    height:4vmin;
+    width: 4vmin
+}
+
+
+
+#tempContainer1{
+    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   padding-bottom: 10vh;
+}
+#tempContainer2{
+    /*height: 100%;*/
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 5vh;
+    /*padding-top: 5vh;*/
+    /*border-bottom: dashed 3px #3f3e65;*/
+    /*border-top: dashed 3px #3f3e65;*/
+}
+#slideOne {
+    height: 100%;
+    z-index: 100
+}
+
+#loginCont{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+    .logInInput{
+        width: 40vw; 
+        padding: 1vmin;
+        margin-bottom: 1vh;
+    }
+
+    label {
+        color: #3c3d65 !important;
+        font-family: 'Lato';
+        font-weight: 300;
+    }
+
+        .loginSocial{
+            height: 9vmin;
+            width: 9vmin;
+            margin-top: 1vh;
+        }
+        .loginSocialContWrap{
+            display: block;
+        }
+        .loginSocialCont{
+            display: flex;
+            width: 40vw;
+
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2vh;
+        }
+            .loginSocialCont a{
+                height: 5vh;
+                flex-basis: 48%;
+            }
+        #loginEmail{
+
+        }
+        #loginPassword{
+
+        }
+        #loginInnerCont{
+            display: flex;
+            justify-content: flex-start;
+            width: auto;
+
+        }
+            #loginRemember{
+                margin-right: 1vw;
+                align-self: center;
+            }
+            #loginButton{
+                font-size: 2vmin;
+               width: 30vw;
+
+               padding: 1vmin 2vmin;
+            }
+            #loginButton a{
+                   color:#3f3e65;
+            }
+            .loginWrap{
+                white-space: nowrap;
+            }
+            #loginCheck{
+                align-self: center;
+            }
+        .loginOr{
+            text-align: center;
+            font-family: "lato";
+            width: 30vw;
+            color: #3f3e65;
+        }
+
+        #row1signup{
+            font-size: 2vmin;
+            width: 30vw;
+            padding: 1vmin 2vmin;
+            margin-top: 1vh;
+        }
+
+        #row1sub {
+            font-size: 4.5vmin;
+            font-weight: 400;
+        }
+
+        #row1subB {
+            font-size: 8.5vmin;
+            font-weight: 400;
+            color: #3f3e65;
+        }
+
+
+        .arrows {
+            width: 60px;
+            height: 32px;
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            bottom: 20px;
+        }
+
+        .arrows path {
+            stroke:  #3f3e65;
+            fill: transparent;
+            stroke-width: 3px;  
+            animation: arrow 4s infinite;
+            -webkit-animation: arrow 3s infinite; 
+        }
+
+        .slideOneArrow{
+            width: 100%;   
+
+        }
+
+        @keyframes arrow
+        {
+        0% {opacity:0}
+        40% {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+        }
+
+        @-webkit-keyframes arrow /*Safari and Chrome*/
+        {
+        0% {opacity:0}
+        40% {opacity:2}
+        80% {opacity:0}
+        100% {opacity:0}
+        }
+
+        .arrows path.a1 
+        {
+            animation-delay:-1.5s;
+            -webkit-animation-delay:-1.5s; /* Safari 和 Chrome */
+        }
+
+
+
+   
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

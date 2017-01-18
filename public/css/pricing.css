@@ -142,7 +142,7 @@ and (min-width : 768px)
 		height: 20vmin;
 	}
 	#headingContentContainer{
-		font-family: "Josefin Sans";
+		font-family: "Lato";
 		text-align: center;
 		font-size: 8vmin;
 		margin-bottom: 2vh;
@@ -267,13 +267,11 @@ and (min-width : 768px)
 			background-color: white;
 			z-index: 2;
 			flex-basis: 50%;
-
-
 			-webkit-box-shadow: 0px 5px 10px 4px rgba(50, 50, 50, 0.75);
 			-moz-box-shadow:    0px 5px 10px 4px rgba(50, 50, 50, 0.75);
 			box-shadow:         0px 5px 10px 4px rgba(50, 50, 50, 0.75);
 
-			font-size: 120%;
+			/*font-size: 120%;*/
 			-webkit-transition: all 0.3s ease-out;
 			transition: all 0.3s ease-out;
 			-webkit-backface-visibility: hidden;
@@ -285,16 +283,18 @@ and (min-width : 768px)
 				line-height: 95%
 			}
 
-			.selected .bottom{
-				font-size: 100%
-			}
+		
 
 		.isSelected{
 			border:0;
 		}
 
 		.notSelected{
-			opacity: .5
+			opacity: .5;
+		}
+
+		.bottom.notSelected{
+			font-size: 90%;
 		}
 
 			#t3{

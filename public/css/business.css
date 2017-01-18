@@ -1,62 +1,17 @@
   
 
-*{
-
-    /*font-family: "Raleway", sans-serif !important;*/
-  
-    /*font-size: 12pt;*/
-}
 
 
 
 
 
 
-html{
-
-    width:100vw;
-    overflow-x: hidden;
-    /*font-size: 62.5%;*/
- }
-body{
-
-    height: 100%;
-    width:100vw;
-    /*font-size: 100%;*/
-}
-nav{
-    display: none
-}
-#sidenavtrig{
-    display: inline;
-    position: fixed;
-    top: 3vh;
-    left: 3vw;
-    z-index: 1;
-}
-
-        #homeButton{
-    display: inline;
-    position: fixed;
-    top: 3vh;
-    left: 93vw;
-    z-index: 1;
-}
 
 
 
-    #homeLogo{
-        height: 5vmin;
-        width: 5vmin;
-    }
-    
-    #hamsvg{
-        height:4vmin;
-        width: 4vmin
-    }
 
 
-    #formField1 {
+#formField1 {
     display: inline-block;
     width: 25vw
 }
@@ -171,7 +126,7 @@ nav{
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 3vmin;
     display: block;
     /*color: white;*/
     color:#818181;
@@ -317,10 +272,6 @@ text-decoration: none;}
      background-color: #f2d040;
 }
 
-#slideOne{
-    height: 100vh;
-    z-index: 100;
-}
         .fullscreen-bg {
             position: fixed;
             top: 0;
@@ -401,24 +352,13 @@ text-decoration: none;}
                     text-align: center;
                     /*font-weight: 300;*/
                 }
-                    #row1sub{
-                        font-size: 5.5vmin;
-                        font-weight: 400;
-                        /*font-style: italic;*/
-                         /*color: #fed136;*/
-                        /*font-variant: none; */
-
-
-                    }
+                   
 
                      #row1link{
   
       margin-right: 3vw;
     }
-    #row1signup{
-
-      margin-left: 3vw;
-    }
+   
 
 
                 .imgcontainer1{
@@ -476,7 +416,7 @@ text-decoration: none;}
                     font-size: 5vmin;
                     opacity: 0;
                   
-                    color:white;
+                    color: #3f3e65;;
                     margin-top: 1vh;
                     font-variant: small-caps;
                     margin-bottom: 0;
@@ -1979,13 +1919,13 @@ font-family: 'Amatic SC';
         padding-top: 5vh;
         padding-bottom: 5vh;
         text-align: center;
-        /* font-family: Josephin slab; */
         font-family: 'Josefin Slab', serif
     }
 
     #footerLogo{
         width: 10vmin;
         height: auto;
+         margin-bottom: 2vh
     }
 
     footer p{

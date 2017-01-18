@@ -1,37 +1,8 @@
-  
-
-* {
-    box-sizing: border-box;
-}
 
 
-
-#mainheadinga{
-    font-weight: 400;
-    font-size: 7vmin;
-}
-
-#tempContainer1{
-    height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   padding-bottom: 10vh;
-}
-#tempContainer2{
-    /*height: 100%;*/
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 10vh;
-    padding-top: 10vh;
-    border-bottom: dashed 3px #3f3e65;
-}
-#slideOne {
-    height: 100%;
-    z-index: 100
-}
+#loginButton{
+    z-index: 3000;
+}  
 
  #row2 {
   
@@ -47,11 +18,7 @@
 
 }
 
-#row1subB {
-    font-size: 8.5vmin;
-    font-weight: 400
-    color: #3f3e65;
-}
+
 
 html {
     width: 100vw;
@@ -202,9 +169,7 @@ and (min-width : 768px)
 #row1link{
     margin-right: 3vw;
 }
-#row1signup{
-    margin-left: 3vw;
-}
+
 
 .fullscreen-bg {
     position: fixed;
@@ -273,7 +238,7 @@ and (min-width : 768px)
         font-size: 6vmin;
     }
 .row1txt {
-    font-family: "Lato";
+    font-family: "Josefin Sans";
     font-weight: bold;
     font-size: 6vmin;
     color: #3f3e65;
@@ -289,11 +254,70 @@ and (min-width : 768px)
     font-weight: 400
 }
 
+
+
+
+
+
+.hhContain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 2vh 10vw 2vh 10vw;
+}
+
+.hhTitle{
+    font-family: "Josefin Sans";
+    font-size: 8.5vmin;
+    font-weight: bold;
+    color: #3f3e65;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.hhContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+}
+
+.hhItem{
+    flex-basis: 25%;
+    width: 25%;
+    height: auto;
+}
+
+.hhImgCont{
+    display: flex;
+    justify-content: center;
+}
+
+.hhImg{
+    width: 150px;
+    height: 150px;
+}
+
+.hhLabel{
+    font-family: "Josefin Sans";
+    font-size: 3.5vmin;
+    font-weight: 400;
+    color: #3f3e65;
+    font-variant: small-caps;
+    text-align: center;
+    line-height: 80%
+
+}
+
 /*Row with Navigational Icons*/
 
         .img1wrap{
            /*display: inline;*/
-           flex-basis: 33%;
+           flex-basis: 50%;
             display: inline-block;
             width: auto;
         }
@@ -303,7 +327,7 @@ and (min-width : 768px)
             align-items: center;
             flex-direction: column;
             padding: 1vmin;
-            width: 30%;
+          
        
             border-radius: 1vmin;
             opacity: .6
@@ -327,23 +351,15 @@ and (min-width : 768px)
             opacity: 1
         }
                 .pg1imgs {
-                    /*height: 18vmin;*/
-                     /*min-height: 18vmin;*/
-                    height: 20vmin;
-                    width: auto
+                
+                    height: 150px;
+                    width: 150px;
                 }
 
-           /*     @media screen (max-width: 438px) {
-                    .pg1imgs{
-                        height: 
-                    }
-                    
-                }
-*/               
-
+           
 
                 .img1label {
-                    font-family: "Lato";
+                    font-family: "Josefin Sans";
                     font-weight: 400;
                     font-size: 4vmin;
                     text-align: center;
@@ -390,7 +406,7 @@ and (min-width : 768px)
 }
 .imgDivider {
     width: 100%;
-    height: 100%;
+    height: auto;
     background: white;
     display: flex;
     justify-content: center
@@ -398,13 +414,13 @@ and (min-width : 768px)
 .imgDivider img {
     opacity: .65;
     height: auto;
-    width:100vw;
+    /*width:100vw;*/
 }
 #iD1 {
 }
 #chalkImg {
-    width: 100%;
-    height: 100%
+    width: 100vw;
+    height: 100%;
 }
 strong {
 }
@@ -498,7 +514,7 @@ strong {
     padding-left: 10vw;
     padding-right: 10vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5vh
@@ -579,7 +595,7 @@ strong {
 #screen5container {
     background-color: white;
     height: 100%;
-    padding-bottom: 5vh;
+    /*padding-bottom: 5vh;*/
     padding-top: 3vh
 }
 #screen6container {
@@ -751,7 +767,8 @@ footer a {
     font-weight: 900
 }
 footer {
-    background-color: #3c3d65
+    background-color: #3c3d65;
+        width: 100vw;
 }
 footer h4 {
     text-align: center;
@@ -759,9 +776,7 @@ footer h4 {
     background-color: #3c3d65;
     text-transform: none !important
 }
-label {
-    color: #f2d040
-}
+
 #formField1 {
     display: inline-block;
     width: 25vw

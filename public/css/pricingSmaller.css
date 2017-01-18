@@ -63,17 +63,24 @@ and (max-width:650px){
 		}
 
 		.top div{
+			font-size: 4vmin;
+			font-family: "Josefin Sans";
 			margin-top: 4vmin;
+		}
+
+		#longCost{
+			font-size: 3.5vmin;
 		}
 
 		.bottom{
 			display: flex;
 			align-items: center;
 			border-bottom: 0;
+			
 		}
 
 		h3{
-			font-size: 6vmin;
+			font-size: 5vmin;
 		}
 
 		.signUpButton{
@@ -81,6 +88,7 @@ and (max-width:650px){
 		}
 	td{
 		font-size: 3.5vmin;
+		/*font-family: "Lato";*/
 	}
 
 

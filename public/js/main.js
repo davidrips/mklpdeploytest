@@ -1,7 +1,23 @@
 $(document).ready(function(){
+    console.log('hello?');
 
-    $("#row1signup").on("click", function(e){
+    $("#loginButton").on('click', function(e){
+        e.preventDefault();
+        console.log('clickedlogin');
+    })
+
+
+    $(".arrows").on('click', function(e){
+        $(window).scrollTo('#tempContainer2', {duration:800, ease: Power4.easeInOut})
+
+    })
+
+    $('.signUpBtn').on("click", function(e){
+        // debugger;
+        e.preventDefault()
+        console.log('clickedSignModalOpen');
         $('#signModal').modal();
+    
     })
 
      $(document).on('submit', "#myForm", function(e) {
@@ -133,7 +149,7 @@ $(document).ready(function(){
 if(!Modernizr.touchevents){
     $("html").addClass('desktop')
     var vid = $("video").height();
-    console.log(vid);
+    
     
 
   
@@ -283,6 +299,7 @@ if(!Modernizr.touchevents){
     console.log('touchin');
     $('head').append('<link rel="stylesheet" type="text/css" href="css/mobile.css"/>');         
       $('head').append('<link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>'); 
+      $(".slideOneArrow").css("display", "none")
       
 
 
@@ -509,6 +526,8 @@ function stillAnimation(){
         document.getElementById("mySidenav").style.width = "0";
 
     }
+
+    
 
 
 })

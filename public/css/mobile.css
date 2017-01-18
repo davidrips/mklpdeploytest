@@ -11,8 +11,6 @@
           font-size: 7vmin;
         }
 
-        
-
         .tableRow1{
           display: none;
         }
@@ -29,7 +27,82 @@
         .col2{
             width: 90%;
         }
+
+
+        #loginCont{
+            
+            width: 60vw;
+  
+        }
+            .logInInput{
+                width: 60vw; 
+            }
+
+                .loginSocial{
+                    height: 9vmin;
+                    width: 9vmin;
+                    margin-top: 1vh;
+                }
+                .loginSocialCont{
+                  
+                    width: 60vw;
+                 
+                    margin-bottom: 1vh;
+                    flex-direction: column;
+   
+                }
+                
+                    #loginButton{
+                        font-size: 4vmin;
+                       width: 60vw;
+                       padding: 2vmin 2vmin;
+                    }
+                    
+                    #loginCheck{
+                        align-self: center;
+                    }
+                .loginOr{
+                    text-align: center;
+                    font-family: "lato";
+                    width: 60vw;
+                    color: #3f3e65;
+                }
+
+                #row1signup{
+                    font-size: 4vmin;
+                    width: 60vw;
+                    padding: 2vmin 2vmin;
+                    margin-top: 1vh;
+                }
+
+                .hhItem{
+                  flex-basis: 50%;
+                }
+
+                    
  
+}
+
+
+@media screen and (max-width: 525px) { 
+    .hhItem{
+      flex-basis: 100%;
+    }
+
+    .hhLabel{
+      font-size: 6.5vmin;
+    }
+
+    .img1label{
+      font-size: 9vmin;
+    }
+
+
+@media screen and (max-width: 892px) { 
+    .img1wrap{
+      flex-basis: 100%;
+    }
+
 }
 
 @media only screen  and (min-device-width: 1200px) 
@@ -38,7 +111,7 @@
 
 /*Hide Big Buttons, Show Small Buttons*/
       #row00{
-      display: flex;
+      /*display: flex;*/
     }
        #row1link{
         opacity: 1;
@@ -118,62 +191,7 @@
 
 }
 
-@media only screen and (max-width: 768px) { 
- 
 
-    #introhead{
-    text-align: center !important;
-    }   
-
-    #introsub{
-    text-align: center !important;
-    }
-    #aboutUsText{
-        margin-top: 20px;
-    }
-
-
-
-
-    #controw7a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    }
-
-
-
-    
-
-
-}
-
-/* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-and (min-device-width:320px) 
-and (max-device-width:480px)
-and (-webkit-min-device-pixel-ratio:2) {
-}
-
-/* Portrait */
-@media only screen 
-and (min-device-width:320px) 
-and (max-device-width:480px)
-and (-webkit-min-device-pixel-ratio:2)
-and (orientation:portrait) {
-}
-
-/* Landscape */
-@media only screen 
-and (min-device-width:320px) 
-and (max-device-width:480px)
-and (-webkit-min-device-pixel-ratio:2)
-and (orientation:landscape) {
-}
 
 /* ----------- iPhone 5 and 5S ----------- 
 
@@ -192,6 +210,10 @@ and (-webkit-min-device-pixel-ratio:2) {
     font-size: 5vmin;
   }
 
+  #tempContainer2{
+    height: auto;
+  }
+
  
   #pg1logo {
     max-height: 20vh;
@@ -199,12 +221,28 @@ and (-webkit-min-device-pixel-ratio:2) {
     height: auto;
   }
 
+  .screen1row{
+    display: initial;
+  }
+
+
+
+  .loginSocialCont{
+
+         height: 14vh;
+ 
+  }
+
+  #row1sub{
+    font-size: 7vmin;
+  }
+
   .img1label{
-    font-size: 6vmin;
+    font-size: 8vmin;
   }
 
    .pg1imgs {
-    height: 27vmin;
+    
   }
 
 
@@ -218,7 +256,21 @@ and (-webkit-min-device-pixel-ratio:2) {
   }
 
   #row00{
-    display: flex;
+    /*display: flex;*/
+  }
+
+  .loginSocialCont{
+    margin-bottom: 2vh;
+  }
+
+  .loginWrap{
+    margin-bottom: 1vh;
+    white-space: normal;
+
+  }
+
+  label{
+    font-family: initial;
   }
      #row1link{
       opacity: 1;
@@ -266,9 +318,9 @@ and (-webkit-min-device-pixel-ratio:2) {
   }
 
   #row2 {
-    margin-bottom: 15vh;
-    padding-left: 0;
-    padding-right: 0;
+    height: auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
     margin-top: 2vh;
     flex-wrap: wrap;
 
@@ -281,7 +333,7 @@ and (-webkit-min-device-pixel-ratio:2) {
     font-size: 9vmin;
   }
     .img1wrap{
-      flex-basis: 33%;
+      
     }
 
   #sidenavtrig {
@@ -291,7 +343,8 @@ and (-webkit-min-device-pixel-ratio:2) {
 
   td {
         padding: 1vmin;
-        font-size: 4vmin
+        font-size: 6vmin;
+line-height: 99%;
     }
 
 
@@ -640,6 +693,12 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (orientation : landscape) { 
 
+
+
+
+
+
+
     .pg1imgs{
       height: 19vmin;
     }
@@ -663,13 +722,56 @@ and (orientation : landscape) {
 
     }
 
-    .tableRow1{
-  display: none;
-}
+    .loginSocialCont{
+        flex-direction: row;
+        margin-bottom: 6vh;
+    }
+      .loginSocialCont a{
+          height: initial;
+      }
 
-.tableRow2{
-  display: table;
-}
+      #loginButton{
+        
+               padding: 2vmin 2vmin;
+            }
+      #row1signup{
+    
+          padding: 2vmin 2vmin;
+      
+      }
+
+      #row1sub{
+        font-size: 7.5vmin;
+        margin-top: 3vmin;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .tableRow1{
+      display: none;
+    }
+
+    .tableRow2{
+      display: table;
+    }
 
     td {
         padding: 1vmin;
