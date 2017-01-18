@@ -100,7 +100,7 @@ $("#investButton").on("click", function(event){
             }, function(data){
                 console.log(data);
                  // window.location.href = 'www.google.com'
-                 $("#newModalBody").append("<a id='accessLink' href='"+data+"'>Access</a>")
+                 $("#newModalBody").append("<a id='accessLink' href='https://"+data+"'>Access</a>")
 
          
                           }
