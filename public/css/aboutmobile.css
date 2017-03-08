@@ -1,6 +1,46 @@
+
+@media screen and (max-width: 1024px) {
+
+	.careerBody{
+		/*ont-size: 2.5vmin;*/
+	}
+
+} 
+
+
 @media screen and (max-width: 900px) {
 
 } 
+
+
+@media screen and (max-width: 883px) {
+
+	.careerBody{
+		font-size: 1.5em;
+	}
+} 
+
+@media screen and (max-width: 900px) {
+	.teamMember{
+		flex-direction: column-reverse;
+	}
+
+	.teamInfo{
+		align-items: center;
+		width: 100%
+
+	}
+
+	.teamHeading{
+		font-size: 5vmin;
+	}
+
+	.teamText{
+		font-size: 3vmin;
+		line-height: initial;
+	}
+} 
+
 
 
 @media only screen 
@@ -10,4 +50,30 @@ and (-webkit-min-device-pixel-ratio:2) {
 	.sidenav a{
 		font-size: 5vmin;
 	}
+
+	.career{
+		flex-basis: 100%
+	}
+
+	.careerTitle{
+		font-size: 2em;
+	}
+
+	.bodyText{
+		font-size: 5vmin;
+	}
+
+	.careerBodySubtext{
+				font-size: 6vmin;
+				margin-bottom: 3vh;
+			}
+
+	.teamHeading{
+		font-size: 5vmin;
+	}
+
+	.teamText{
+		font-size: 4.5vmin;
+	}
+
 }

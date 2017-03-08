@@ -8,7 +8,8 @@
         max-height: 12vh;
         }
         #mainHeading{
-          font-size: 7vmin;
+          font-size: 9vmin;
+font-weight: bold;
         }
 
         .tableRow1{
@@ -95,6 +96,14 @@
 
     .img1label{
       font-size: 9vmin;
+    }
+
+    #row1subB{
+      font-weight: bold;
+    }
+
+    td{
+      font-size: 5.5vmin;
     }
 
 
@@ -223,7 +232,13 @@ and (-webkit-min-device-pixel-ratio:2) {
 
   .screen1row{
     display: initial;
+    text-align: center;
   }
+
+  #loginCheck{
+    display: none;
+  }
+
 
 
 
@@ -360,6 +375,25 @@ line-height: 99%;
     width: 100%
   }
 
+
+  .row1txt.bottomtxt{
+    font-size: 7vmin;
+  }
+
+  #screen3text1{
+    flex-direction: column;
+  }
+
+  .screen3body{
+    font-size: 6vmin;
+  }
+
+  #identity{
+    width: 100%;
+  }
+  #accessibility{
+    width: 100%
+  }
 
 
 
@@ -621,6 +655,10 @@ line-height: 99%;
     line-height: 100%;
     width: 80vw;
     white-space: normal
+  }
+
+  #secondpgcontent8a{
+    font-size: 6vmin;
   }
 
  

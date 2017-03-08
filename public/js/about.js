@@ -9,6 +9,12 @@ function toPlan(whereTo){
         $(window).scrollTo("#t3", {duration:800, offset:-30, ease: Power4.easeInOut});
     }else if(whereTo =='4'){
         $(window).scrollTo("#t4", {duration:800, offset:-30, ease: Power4.easeInOut});
+    }else if(whereTo=='5'){
+         $(window).scrollTo("#t5", {duration:800, offset:-30, ease: Power4.easeInOut});
+    }else if(whereTo=='6'){
+         $(window).scrollTo("#t6", {duration:800, offset:-30, ease: Power4.easeInOut});
+    }else if(whereTo=='7'){
+         $(window).scrollTo("#t7", {duration:800, offset:-30, ease: Power4.easeInOut});
     }
 
 }
@@ -27,6 +33,18 @@ home.click(function(e){
      $(window).scrollTo(0, {duration:700, ease: Power4.easeInOut});
 })
 
+     var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+     var isFirefox = typeof InstallTrigger !== 'undefined';
+
+     if (isSafari == true){
+         $("html").addClass('safari')
+         console.log('using safari');
+     };
+
+     if (isFirefox == true){
+        console.log('ur using firefox lol');
+         $("html").addClass('firefox')
+     };
 if(!Modernizr.touchevents){
      $("html").addClass('desktop')}
 
@@ -126,6 +144,8 @@ $("#investButton").on("click", function(event){
          $(window).scrollTo("#t5", {duration:800, offset:-30, ease: Power4.easeInOut});
      }else if(whereTo =='6'){
          $(window).scrollTo("#t6", {duration:800, offset:-30, ease: Power4.easeInOut});
+     }else if(whereTo =='7'){
+         $(window).scrollTo("#t7", {duration:800, offset:-30, ease: Power4.easeInOut});
      }
 
  }

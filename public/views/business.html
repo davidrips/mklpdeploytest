@@ -29,6 +29,7 @@
     <link href="css/business.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
       <link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>
+       <link rel="stylesheet" type="text/css" href="css/businessmobile.css"/>
       <link rel="stylesheet" href="../css/bootstrap-social.css">
      <link rel="stylesheet" href="../css/font-awesome.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -158,30 +159,48 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                       </div>
 
                    
-                        <div id="loginCont">
-                     <!--   <div class="loginSocialWrap">
-                              <div class='loginSocialCont'>
-                             <a class="btn btn-block btn-social btn-facebook">
-                               <span class="fa fa-facebook"></span> Sign in with Facebook
-                             </a>
-                             <a class="btn btn-block btn-social btn-google"> <span class="fa fa-google"></span> Sign in with Google</a>
-                         </div>
-                       </div> -->
-                            <div class="loginWrap">
-                            <input class='logInInput' id='loginEmail' placeholder="Email" type="text">
-                            
-                          </div>
-                          <div class="loginWrap">
-                            <input class='logInInput' id='loginPassword' placeholder="Password" type="text">
-                          </div>
-                            <div class='loginWrap' id='loginCheck'>
-                                <input type="checkbox" id='loginRemember'>
-                                <label for="'loginRemember">Remember Me</label>
-                            </div>
-                             <button type="button" id="loginButton" class="row1but btn btn-xl"><a href="https://access.myklovr.com/#/login">Log In</a></button>
-                             <!-- <div class='loginOr'>or</div> -->
-                             <button type="button" id="row1signup" class="row1but btn btn-xl signUpBtn">Sign Up</button>
-                        </div>
+                      
+                      <div id="loginCont">
+                         <!--<div class="loginSocialWrap">
+                                <div class='loginSocialCont'>
+                                   <a class="btn btn-block btn-social btn-facebook" ng-click="authenticate('facebook')">
+                                     <span class="fa fa-facebook"></span> Sign in with Facebook
+                                   </a>
+                                   <a class="btn btn-block btn-social btn-google" ng-click="authenticate('google')"> <span class="fa fa-google"></span> Sign in with Google</a>
+                              </div>
+                         </div>-->
+                          <form name="loginForm" ng-submit="submitLogIn()">
+                              <div class="form-validation-error" ng-if="logInError" ng-bind='logInError'></div>
+                              <div class="loginWrap">
+                                  <input class='logInInput' id='loginEmail' placeholder="Email" type="email" ng-model="user.email" name="email" ng-model-options="{ updateOn: 'mousedown blur' }" required>
+                                  <!--<span class="fa fa-check-circle fa-2x okspan" ng-show="loginForm.email.$valid && loginForm.email.$touched"></span>-->
+                                  <!--<span class="fa fa-exclamation-triangle fa-2x errspan" ng-show="loginForm.email.$invalid && loginForm.email.$touched"></span>-->
+                                  <div class="form-validation-error" ng-messages="loginForm.email.$error" ng-show='loginForm.email.$touched' role="alert">
+                                      <div ng-message="email">Invalid email</div>
+                                      <div ng-message="required">The email is required</div>
+                                  </div>
+
+                              </div>
+                              <div class="loginWrap">
+                                  <input class='logInInput' id='loginPassword' placeholder="Password" type="password" ng-model="user.password" name="password" required ng-model-options="{ updateOn: 'mousedown blur' }">
+                                  <!--<span class="fa fa-exclamation-triangle fa-2x errspan" ng-show="loginForm.password.$invalid && loginForm.password.$touched"></span>-->
+                                  <div class="form-validation-error" ng-messages="loginForm.password.$error" ng-show='loginForm.password.$touched' role="alert">
+                                      <div ng-message="required">The password is required</div>
+                                  </div>
+                              </div>
+                              <div class='loginWrap' id='loginCheck' style="text-align:center">
+                                  <input type="checkbox" id="loginRemember" ng-model="user.rememberMe" name="rememberMe">
+                                  <label for="loginRemember">Keep me logged in</label>
+                                  
+                              </div>
+                              <div style="text-align:center">
+                                  <button type="submit" id="loginButton" class="row1but btn btn-xl">Log In</button>
+                                  <a ui-sref="passwordRecovery-address({email: user.email})" class="forgot-password ">Forgot password?</a>
+                                  <!-- <div class='loginOr'>or</div> -->
+                                  <button type="button" id="row1signup" class="row1but btn btn-xl signUpBtn">Sign Up</button>
+                              </div>
+                          </form>
+                      </div>
                   <div class="screen1row row1txt" id="row1sub">
                     start exploring our services
                   </div>
@@ -206,7 +225,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                         
                           <div class="img1wrap">
                             <div class='imgcontainer1' id='schoolImg' data-user='uni'>
-                               <img src="/img/uni.png" class="pg1imgs"  alt="Responsive image">
+                               <img src="/img/oldicons/uni.png" class="pg1imgs"  alt="Responsive image">
                                <div class="img1label">schools</div>
                             </div>
                           </div>
@@ -284,9 +303,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             <div class="screen4img" id="studentimg">
               <img src="/img/uni.png" class="userImg" id='studentUser' alt="Responsive image">
             </div>
-            <div class=" bodytxt screen4imgText">
-                Whether you are private or public school or university, myKlovr can streamline every part of your organization, such as admissions, administration, guidance, and logistics. 
-            </div>
+       
           </div>
 
           <div class="screen4inner tableRow tableRow1">
@@ -312,13 +329,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                               <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                               <td>Helps your teachers coordinate with students and parents.</td>
                           </tr>
-                           <tr class='bdytxt1'>
-                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                              <td>Provides a supplement to your guidance department. Here is a longer example.</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                          </tr>
+                       
                         </table>
                     </div>
 
@@ -346,37 +357,12 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                               <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                               <td>Helps your teachers coordinate with students and parents.</td>
                           </tr>
-                           <tr class='bdytxt1'>
-                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                              <td>Provides a supplement to your guidance department. Here is a longer example.</td>
-                            </tr>
-                             <tr class='bdytxt1'>
-                              <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                              <td>This one is admittedly shorter...</td>
-                          </tr>
+                  
+                             
                         </table>
                     </div>
 
 
-          <div class="screen4inner emailForm">
-              <div class="inputLabel bodytxt">
-                Find out more:
-              </div>
-             <div class="inputFieldContainer">
-                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField2">
-                         <div>
-                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                         </div> 
-                     </div>
-                     <div class="form-group" id='formFieldSub'>
-                         <div id="submitButton1" >
-                             <button type="submit" id="signupbutton" class="btn">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>
-          </div>
 
         
         </div>
@@ -393,9 +379,9 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             <div class="screen4img" id="studentimg">
               <img src="/img/business.png" class="userImg" id='studentUser' alt="Responsive image">
             </div>
-            <div class=" bodytxt screen4imgText">
+     <!--        <div class=" bodytxt screen4imgText">
                  We help companies unlock and monitize hidden sources of revenue, while streamlining in-house hiring, retention, and efficiency. 
-            </div>
+            </div> -->
           </div>
        
          <div class="screen4inner tableRow tableRow1">
@@ -407,12 +393,20 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                   <th class='col4'></th>
                   <th class='col5'></th>
                 </tr>
+
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Unlock and monitize hidden sources of revenue.</td>
+                    <td></td>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Direct access to our proprietary, data-driven exchange marketplace.</td>
+                </tr>
                 <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                     <td>Advanced individual insights assure your hiring investments, while lowering cost per hire.</td>
                     <td></td>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Direct access to our proprietary, data-driven exchange marketplace.</td>
+                    <td>Streamline in-house hiring, retention, and efficiency.</td>
                 </tr>
                  <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
@@ -430,13 +424,21 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                   <th class='col2'></th>
             
                 </tr>
+                 <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Unlock and monitize hidden sources of revenue.</td>
+                </tr>
                 <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                     <td>Advanced individual insights assure your hiring investments, while lowering cost per hire.</td>
-                  </tr>
+                </tr>
                    <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                     <td>Direct access to our proprietary, data-driven exchange marketplace.</td>
+                </tr>
+                  <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Streamline in-house hiring, retention, and efficiency.</td>
                 </tr>
                  <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
@@ -448,25 +450,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
               </table>
           </div>
-          <div class="screen4inner emailForm">
-              <div class="inputLabel bodytxt">
-                Find out more:
-              </div>
-             <div class="inputFieldContainer">
-                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField2">
-                         <div>
-                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                         </div> 
-                     </div>
-                     <div class="form-group" id='formFieldSub'>
-                         <div id="submitButton1" >
-                             <button type="submit" id="signupbutton" class="btn">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>
-          </div>
+       
         </div>
 
 
@@ -484,9 +468,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
           <div class="screen4inner" id='studentMain'>
             <div class="screen4img" id="studentimg">
               <img src="/img/ads.png" class="userImg" id='studentUser' alt="Responsive image">
-            </div>
-            <div class=" bodytxt screen4imgText">
-                 Take advantage of our hypertargeted ads and analytics, bringing your ads to the ideal potential consumer.
             </div>
           </div>
 
@@ -510,8 +491,8 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                     <td>Self-Serve Solutions or Personalized Assistance with your targeted campaigns.</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Hypertargeted ads bring your ads directly to the ideal potential consumer.</td>
                 </tr>
               </table>
           </div>
@@ -536,28 +517,15 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                     <td>Self-Serve Solutions or Personalized Assistance with your targeted campaigns.</td>
            
                 </tr>
+                  <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Hypertargeted ads bring your ads directly to the ideal potential consumer.</td>
+           
+                </tr>
               </table>
           </div>
 
-          <div class="screen4inner emailForm">
-              <div class="inputLabel bodytxt">
-                Find out more:
-              </div>
-             <div class="inputFieldContainer">
-                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField2">
-                         <div>
-                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                         </div> 
-                     </div>
-                     <div class="form-group" id='formFieldSub'>
-                         <div id="submitButton1" >
-                             <button type="submit" id="signupbutton" class="btn">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>
-          </div>
+   
         </div>
 <!-- 
         <div class='imgDivider need-light' id='iD3'>
@@ -577,9 +545,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
             <div class="screen4img" id="studentimg">
               <img src="/img/marketplace.png" class="userImg" id='studentUser' alt="Responsive image">
             </div>
-            <div class=" bodytxt screen4imgText">
-                 A unique, price transparent, multisided marketplace exchange, offering data driven product and service recommendations to consumers, and generate recurring transactions between multiple user groups on the platform.  
-            </div>
+       
           </div>
 
           <div class="screen4inner tableRow tableRow1">
@@ -593,10 +559,17 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
                 <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
-                    <td>Product-specific hyper targetting delivers your goods or services to the consumer the moment they need them.</td>
+                    <td>Unique, price transparent, multisided marketplace exchange focused on education.</td>
                     <td></td>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                     <td>Collaborations options amongst sellers to strategically combine forces to reach corporate clients.</td>
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Product-specific hyper targetting delivers your goods or services to the consumer the moment they need them.</td>
+                    <td></td>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Generate recurring transactions between multiple user groups on the platform.</td>
                 </tr>
                  <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
@@ -617,6 +590,16 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
                 <tr class='bdytxt1'>
                     <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Unique, price transparent, multisided marketplace exchange focused on education.</td>
+                   
+                </tr>
+                  <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
+                    <td>Generate recurring transactions between multiple user groups on the platform.</td>
+                   
+                </tr>
+                <tr class='bdytxt1'>
+                    <td><img src="../img/check.png" alt="" class="tableIcon"></td>
                     <td>Product-specific hyper targetting delivers your goods or services to the consumer the moment they need them.</td>
                    
                 </tr>
@@ -632,25 +615,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
               </table>
           </div>
 
-          <div class="screen4inner emailForm">
-              <div class="inputLabel bodytxt">
-                Find out more:
-              </div>
-             <div class="inputFieldContainer">
-                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField2">
-                         <div>
-                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                         </div> 
-                     </div>
-                     <div class="form-group" id='formFieldSub'>
-                         <div id="submitButton1" >
-                             <button type="submit" id="signupbutton" class="btn">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>
-          </div>
+      
         </div>
 
 
@@ -672,9 +637,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
           <div class="screen4inner" id='studentMain'>
             <div class="screen4img" id="studentimg">
               <img src="/img/hr.png" class="userImg" id='studentUser' alt="Responsive image">
-            </div>
-            <div class=" bodytxt screen4imgText">
-                 Providing essential analytic and predictive tools for any HR department to maximize its efficiency, find the best hires, and predict and prevent any potential future problems.  
             </div>
           </div>
 
@@ -730,25 +692,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                 </tr>
               </table>
           </div>
-          <div class="screen4inner emailForm">
-              <div class="inputLabel bodytxt">
-                Find out more:
-              </div>
-             <div class="inputFieldContainer">
-                 <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                     <div class="form-group" id="formField2">
-                         <div>
-                             <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                         </div> 
-                     </div>
-                     <div class="form-group" id='formFieldSub'>
-                         <div id="submitButton1" >
-                             <button type="submit" id="signupbutton" class="btn">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>
-          </div>
+         
         </div>
 
 
@@ -758,57 +702,6 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
       
 
 
-
-
-
-<!-- 
-    <div id="pgform1" class="col-sm-5">
-                            <div id='logintext'>
-                                <h1 id="introhead">LOG IN TO <br> YOUR FUTURE <br>WITH MYKLOVR</h1>
-                            </div>
-                
-                            <div id='subtext'>
-                                <h3 id="introsub"> Get exclusive access <br> as soon as we launch</h3>
-                            </div>
-
-
-                            <div id="signupdiv">
-    
-                                    <form action="/signup" id="myForm" data-toggle='validator' method="POST" role="form">
-                                      
-
-                                        <div class="form-group row" id="formField1">
-                                           <div class="col-xs-9">
-                                                <input type="text" class="form-control" id="inputFirstName" name='first' placeholder="Your First Name" required>
-                                                <div class="help-block with-errors"></div>
-
-                                          </div>
-                                        </div>
-
-                                        <div class="form-group row" id="formField1">
-                                            <div class="col-xs-9">
-                                                <input type="text" class="form-control" id="inputLastName" name='last' placeholder="Your Last Name" required>
-                                                <div class="help-block with-errors"></div>
-                                            </div>
-                                        </div>
-
-                                          <div class="form-group row" id="formField1">
-                                            <div class="col-xs-9">
-                                                <input type="email" class="form-control" name='email' id="inputEmail" placeholder="Your Email" required>
-                                              
-                                            </div> 
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <div id="submitButton1" >
-                                                <button type="submit" id="signupbutton" class="btn btn-xl">Worry Less</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                            </div>
-                    </div>
- -->
           <div class="modal fade" id="signModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -904,7 +797,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
           <a href="https://www.facebook.com/myklovr" class="socialIconLink"><img src="../img/facebook2.png" alt=""></a>
          <a href="https://www.linkedin.com/company/klōver" class="socialIconLink"> <img src="../img/linked.png" alt=""></a>
       </div>
-      <div id='footercontent'>Copyright &copy; 2016 myKlōvr<br> All rights reserved<br>myKlōvr is a division of Student Global, LLC.<br>1350 Avenue of the Americas<br>New York, NY, 10019, USA<br></div>
+      <div id='footercontent'>Copyright &copy; 2017 myKlōvr<br> All rights reserved<br>myKlōvr is a division of Student Global, LLC.<br>1350 Avenue of the Americas<br>New York, NY, 10019, USA<br></div>
       <div id='footerlinks'><p id='tnsnp'><a href="/terms-conditions">Terms of Service</a> | <a href='/privacy-policy'>Privacy Policy</a></p></div>
   </div>
 </footer>

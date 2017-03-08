@@ -1,0 +1,35 @@
+@media screen and (max-width: 883px) {
+
+	.img1wrap{
+		flex-basis: 50%;
+	}
+} 
+
+@media screen and (max-width: 525px) { 
+    .img1wrap{
+      flex-basis: 100%;
+    }
+
+}
+
+
+@media only screen 
+and (min-device-width:320px) 
+and (max-device-width:736px)
+and (-webkit-min-device-pixel-ratio:2) {
+	
+	.screen2body{
+		font-size: 6vmin;
+	}
+
+	.bodytxt{
+		font-size: 6vmin;
+	}
+
+	#loginCheck{
+		display: none;
+	}
+
+
+
+}

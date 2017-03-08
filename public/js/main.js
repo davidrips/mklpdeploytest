@@ -45,17 +45,6 @@ $(document).ready(function(){
 
         });
 
-    //     $(document).on("click", "#signupbutton", function(e) {
-    //     debugger;
-    //     var form = document.getElementById("myForm")
-    
-    //     e.preventDefault; 
-    //     return false;
-        
-    // })
-
-
-
 
        function checkLoginState() {
     FB.getLoginStatus(function(response) {
@@ -130,11 +119,12 @@ $(document).ready(function(){
     })
 
 
-     var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+     var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
      var isFirefox = typeof InstallTrigger !== 'undefined';
 
      if (isSafari == true){
          $("html").addClass('safari')
+         console.log('using safari');
      };
 
      if (isFirefox == true){
@@ -207,7 +197,7 @@ if(!Modernizr.touchevents){
             var aq = (row6combined + av)*1.3;
 
             $('#screen5').css('padding-top', ''+(headHeight + 10)+'px');
-            $('#screen6o').css('padding-top', ''+(headHeight + 10)+'px');
+            $('#screen6o').css('padding-top', ''+(headHeight + 30)+'px');
             $('#svg6wrap').css('padding-top', ''+row6combined+'px');
             $("#pinContainer").css("padding-top", ''+(headHeight + 10)+'px')
             $("#contextcon").css("padding-top", ''+(headHeight + 10)+'px')

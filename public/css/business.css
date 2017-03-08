@@ -1,15 +1,6 @@
-  
-
-
-
-
-
-
-
-
-
-
-
+ #tempContainer2{
+    padding-bottom: 0;
+ }
 
 #formField1 {
     display: inline-block;
@@ -367,7 +358,6 @@ text-decoration: none;}
                    align-items: center;
                    flex-direction: column;
                    padding: 1vmin;
-                   width: 20vw;
                    border-radius: 1vmin;
                    opacity: .6;
                    flex-basis: 33%;
@@ -405,8 +395,8 @@ text-decoration: none;}
                     }
 
                     .pg1imgs{
-                        height: 17vmin;
-                        width: auto;
+                       height: 150px;
+                       width: 150px;
                         /*max-width: 20vw;*/
                     }
 
@@ -414,9 +404,9 @@ text-decoration: none;}
                     font-family: "Lato";
                     font-weight: 700;
                     font-size: 5vmin;
-                    opacity: 0;
+                    opacity: 1;
                   
-                    color: #3f3e65;;
+                    color: #3f3e65;
                     margin-top: 1vh;
                     font-variant: small-caps;
                     margin-bottom: 0;
@@ -431,6 +421,7 @@ text-decoration: none;}
                 #row2{
                     justify-content: space-around;
                     /*padding-top: 5vh;*/
+                    height: auto;
                     padding-left: 0;
                     padding-right: 0;
                     margin-top: 5vh;
@@ -715,8 +706,8 @@ strong{
     }
 
     .userImg{
-        height: auto;
-        width: 23vmin;
+        height: 150px;
+        width: 150px;
         /*max-width: 20vw;*/
     }
 
@@ -2107,10 +2098,7 @@ font-family: 'Amatic SC';
         opacity: 1;
     }
 
-    #row2{ 
-        margin-bottom: 15vh;
-
-    }
+   
     
 
 

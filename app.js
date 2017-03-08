@@ -35,28 +35,28 @@ redirect(app);
 var Sequelize = require('sequelize');
 
 // DEPLOY TEST LIVE//
-var pg = require('pg');
+// var pg = require('pg');
 
-pg.defaults.ssl = true;
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  if (err) throw err;
-  console.log('Connected to postgres! Getting schemas...');
+// pg.defaults.ssl = true;
+// pg.connect(process.env.DATABASE_URL, function(err, client) {
+//   if (err) throw err;
+//   console.log('Connected to postgres! Getting schemas...');
 
-  client
-    .query('SELECT table_schema,table_name FROM information_schema.tables;')
-    .on('row', function(row) {
-      console.log(JSON.stringify(row));
-    });
-});
+//   client
+//     .query('SELECT table_schema,table_name FROM information_schema.tables;')
+//     .on('row', function(row) {
+//       console.log(JSON.stringify(row));
+//     });
+// });
 
 // DEPLOY TEST LIVE//
-var sequelize = new Sequelize(process.env.DATABASE_URL, {
-      dialect:  'postgres',
-      protocol: 'postgres',
-      port:     5432,
-      host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
-      logging:  true //false
-    })
+// var sequelize = new Sequelize(process.env.DATABASE_URL, {
+//       dialect:  'postgres',
+//       protocol: 'postgres',
+//       port:     5432,
+//       host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
+//       logging:  true //false
+//     })
 
 
 //ACTUAL SITE LIVE//
@@ -80,7 +80,7 @@ var sequelize = new Sequelize(process.env.DATABASE_URL, {
 
 //LOCAL SITE //
 
-// var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
+var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
 
 
 
@@ -113,13 +113,13 @@ var Sweepstakes = sequelize.define('sweep',{
 Sweepstakes.sync();
 
 
-// var hash1;
 
 
 
 
-//       console.log(hash1);
 
+
+//DELETE THE BELOW SECTION AFTER SETUP//
 
   app.get("/setpass/:pass", function(req,res){
     console.log('inhere');
@@ -147,6 +147,29 @@ Sweepstakes.sync();
     });
   })
 
+   app.get("/setsite/:pass", function(req,res){
+    console.log('inhere');
+    console.log(req.params.pass);
+    Investors.findAll({
+     where: {username: "site"}
+    }).then(function(investorArray){
+            console.log(investorArray);
+            if (investorArray.length > 0){
+                Investors.destroy({
+                  where: {username: "site"}
+                })
+            }
+              Investors.create({
+              username: "site",
+              password:req.params.pass,
+            }).then(function(investor){
+              console.log(investor);
+            })
+    })       
+            
+  })
+
+//DELETE THE ABOVE SECTION AFTER SETUP//
 
   app.post('/invest', function(req,res){
     console.log(req);
@@ -162,37 +185,27 @@ Sweepstakes.sync();
                 sendAnswer()
                 }
               else{console.log("false");}
-       
             });
-
           function sendAnswer(){
             console.log('insend');
-            var response = 'www.google.com'
-            res.send(response)
+            Investors.findOne({
+              where:{username:"site"}
+            }).then(function(investorInfo){
+              console.log(investorInfo.password);
+              var link = investorInfo.password
+              sentIt(link)
+            })
+            function sentIt(link){
+              res.send(link)
+            } 
           }
-
-       
-
         })
-
-
-
-
   })
 
   app.get("/investorsroom", function(req,res){
     console.log('get');
     res.sendFile(path.join(__dirname+"/public/views/investor.html"+"/testing"));
       })
-
-
-  
-
-
-
-
-
-
 
 
 app.get('/', function (req, res) {
