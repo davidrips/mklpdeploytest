@@ -26,6 +26,111 @@ $(document).ready(function(){
     })
 
   })
+
+
+$('.btn').on("click", function(e){
+        // debugger;
+        e.preventDefault()
+        console.log('clickedSignModalOpen');
+        // $('#signModal').modal();
+    
+    })
+
+     $(document).on('submit', ".signUpForm", function(e) {
+        console.log('inhere');
+   
+            if (e.isDefaultPrevented()) {
+            console.log('gotstuck');
+            return false;
+        // handle the invalid form...
+        } else {
+        // everything looks good!
+
+        e.preventDefault();
+            console.log("clicked");
+
+            var email = $('#inputEmail').val()
+          
+          console.log(email);
+            signUpComplete(email, "first", "last")
+            return false;
+
+        }
+
+        });
+
+
+       function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+         if (response.status === 'connected') {
+    console.log(response.authResponse.accessToken);
+  }
+   console.log('fbgotcalled');
+    });
+  }
+
+  $("#fbButton").on('click', function(){
+            console.log('clicked fb button');
+            loggingIn()
+
+    })
+
+  function loggingIn(){
+     
+        FB.login(function(response) {
+            if (response.authResponse) {
+
+              console.log('Welcome!  Fetching your information.... ');
+              FB.api('/me', {fields: 'name,email'}, function(response) {
+                console.log(response);
+                console.log(response.email);
+                signUpComplete(response.email, response.name, "NULL");
+               });
+            }else{
+               console.log('User cancelled login or did not fully authorize.');
+            }
+          }, {scope: "public_profile,email"});
+        return false;
+  }
+
+
+
+    function signUpComplete(email, first, last){
+
+           $.post('/signup', {
+                first: first,
+                last: last, 
+                email: email
+            }, function(data){
+                          }
+            )
+
+           // setTimeout(function(){
+           //      console.log('this');
+           //      // $("#signModal").modal("hide")
+           //      // $('#newModalTitle').text("Welcome to myKlōvr " + first)
+           //      // $("#newModal").modal();
+
+           // }, 1500)
+
+           
+
+
+    }
+
+     $("#share").on('click', function(e){
+      e.preventDefault();
+      console.log("clicked share");
+      FB.ui({
+        method: 'share',
+        href: 'http://www.try.myklovr.com',
+          name: "Come explore myKlovr!",
+          description: "We're launching, and we want you to be a part of it. There's already a waiting list to join our exclusive experience in personalized education and guidance. Sign up now to recieve  access to a whole new world of solutions.",
+          picture: 'mklpdeploytest.herokuapp.com/img/skyClimber.jpg'
+      }, function(response){
+        console.log(response);
+      })
+    })
   
 
 

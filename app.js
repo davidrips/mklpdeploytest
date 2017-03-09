@@ -32,7 +32,7 @@ redirect(app);
 
 // app.use('/', routes);
 
-var Sequelize = require('sequelize');
+// var Sequelize = require('sequelize');
 
 // DEPLOY TEST LIVE//
 // var pg = require('pg');
@@ -49,14 +49,14 @@ var Sequelize = require('sequelize');
 //     });
 // });
 
-// DEPLOY TEST LIVE//
-// var sequelize = new Sequelize(process.env.DATABASE_URL, {
-//       dialect:  'postgres',
-//       protocol: 'postgres',
-//       port:     5432,
-//       host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
-//       logging:  true //false
-//     })
+DEPLOY TEST LIVE//
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
+      dialect:  'postgres',
+      protocol: 'postgres',
+      port:     5432,
+      host:     'ec2-54-243-190-37.compute-1.amazonaws.com',
+      logging:  true //false
+    })
 
 
 //ACTUAL SITE LIVE//
@@ -80,7 +80,7 @@ var Sequelize = require('sequelize');
 
 //LOCAL SITE //
 
-var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
+// var sequelize = new Sequelize('myKlovrUsers', 'root', "root")
 
 
 
