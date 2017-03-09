@@ -30,8 +30,8 @@ $(document).ready(function(){
 
 $('.btn').on("click", function(e){
         // debugger;
-        e.preventDefault()
-        console.log('clickedSignModalOpen');
+        // e.preventDefault()
+        // console.log('clickedSignModalOpen');
         // $('#signModal').modal();
     
     })
@@ -96,7 +96,7 @@ $('.btn').on("click", function(e){
 
 
     function signUpComplete(email, first, last){
-
+          console.log("INsignupcomplete");
            $.post('/signup', {
                 first: first,
                 last: last, 
