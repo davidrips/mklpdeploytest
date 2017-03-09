@@ -1,296 +1,356 @@
 
 
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 body{
-    background: #44a2d9;
-    font-family: "Josefin Slab";
-    padding-top: 25px;
-	 /*background-cEolor: #3c3d65;*/
+	width: 100%;
+
+}
+#navBarImg{
+	height: 100%;
 }
 
-a{
-	color:#3c3d65;
+.slide1Cont{
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
+.hhMain{
+	width: 100%;
+	/*padding-left: 10vw;*/
+	/*padding-right: 10vw;*/
+	display: flex;
+	justify-content: space-between;
+	/*flex-flow: row wrap;*/
+	margin-top: 3vh;
 
 
-.jumbotron{
-	/*margin-top: 5vh;*/
-	color: #3c3d65;
 }
-
-
-#navContainer{
-
-	 background-color: #3c3d65;
-}
-
-#fbButton{
-	height: 10vh;
-}
-
-
-#container1{
+.hhCont{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
+	align-items: center;	
+	flex-basis: 25%;
+}
+.hhImg{
+	/*width: 50%;*/
+	max-width: 25vw;
+	min-width: 150px;
 
 }
 
-#vrGogs{
-	width: 100%;
+.hhLabel{
+	font-family: "Quicksand";
+	font-size: 4.5vmin;
+	font-weight: bold;
+	color: #3f3e65;
+	font-variant: small-caps;
+	text-align: center;
+
 }
 
-#toprow{
-	margin-bottom: 1vh;
+footer{
+	background-color: #3c3d65;
+    width: 100vw;
 }
-
-		.box{
-			    display: flex;
-		    flex-direction: column;
-		    justify-content: center;
-		    align-items: center;
-		}
-
-
-
-		#logodiv{
-		
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-		}
-
-				#logo{
-					height: 18vh;
-					width: auto;
-				}
-
-		#line1div{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-		}
-
-
-				#line1{
-					margin-bottom: 0;
-					font-size: 4vmin;
-				    font-weight: 500;
-				    color: white;
-
-				}
-
-				#line2{
-					margin-top: 0;
-					margin-bottom: 0;
-					font-size: 11vmin;
-					color: white;
-					font-family: "Amatic SC"
-				}
-
-#line3{
-	    font-size: 3vmin;
-    text-align: center;
-    color: white;
-}
-
-#signupDiv{
-	display: flex;
+#footerdiv {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    font-size: 4vmin;
+    color: white;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    font-family: 'Josefin Slab', serif
+}
+#footerLogo {
+    width: 10vmin;
+    height: auto;
+    margin-bottom: 2vh
+}
+footer p {
+    font-size: 3vmin;
+    line-height: 1;
+    font-family: "lato";
+    margin-bottom: 1vmin
+}
+footer a {
+    font-size: 1.5vmin;
+    color: white
+}
+#footerlinks p {
+    font-size: 1.5vmin
+}
+#footercontent {
+    font-size: 2vmin;
+    line-height: 1.75;
+    font-family: "lato"
+}
+#footerlinks {
+}
+#socialicons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+#socialicons a {
+    opacity: .65
+}
+#socialicons a:hover {
+    opacity: 1
+}
+#socialicons img {
+    width: 8vmin;
+    height: auto
 }
 
-		#signupGroup{
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
-		}
-				#signupSpan{
-					font-size: 3vmin;
-					color: white;
-					font-family: "Amatic SC"
-				}
+#slide1iphone{
+	margin-right: 20px;
+}
+.slide1a{
+	width: 60%;
+	margin-left: 5vw;
+}
+.slogan{
+	text-align: center;
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 9vmin;
+	/*margin-top: 4vmin;*/
+	margin-bottom: 4vmin;
+}
 
-				#signupField{
-					flex: 1;
-					max-width: 60%;
-					display: inline-block;
-					font-family: "Lato"
-				}
+.signUp{
+	width:100%;
+	text-align: center;
+	
+}	
 
-				#signupCheckboxDiv{
-					display: flex;
-					justify-content: space-around;
-					margin-bottom: 1vmin;
-				}
+.signUpForm input{
+	width: 75%;
+	max-width: 454px;
+	height: 35px;
+	border-radius: 8px;
+	border: 1px slategray solid;
+	font-size: 24px;
+	font-family: "Raleway";
+/*	pointer-events:none;*/
 
-				#signupCheckbox{
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-					
-				}
+}
 
-				#signupCheckboxText{
-					display: inline-block;
-					align-items: center;
-					justify-content: center;
-					color: white;
-					font-family: "Lato";
-				}
-				#signupNotice{
-					font-family: "Lato";	
-					color: white;
-					text-align: center;
-					font-size: 2vmin;
+.signUpForm button{
+	height: 40px;
+	width: 120px;
+	border-radius: 8px;
+	border: 1px white solid;
+	background-color: #52B74B;
+	
+	font-size: 20px;
+	font-family: "Raleway";
+	color:white;
+}
+.subtitle{
+	text-align: center;
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 4vmin;
+}
+.subtitle2{
+	text-align: center;
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 5vmin;
+	margin-bottom: 2vmin;
 
-				}
-				#signupButtonDiv{
-					width: 100%;
-					display: flex;
-					justify-content: center;
-				}
-						.signupButton{
-    						background-color:#f2d040;
-    						font-family: "Amatic SC";
-							color:  #3c3d65;
-							border-radius: 3px;
-						    font-size: 6vmin;
-						    font-weight: bold;
-						   
-						}
+}
 
-						.singupButton :hover{
-							background-color: orange;
-						}
+.subtitle3{
+	text-align: center;
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 3vmin;
+	margin-bottom: 2vh;
+
+}
+
+.mainText{
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 4vmin;
+	margin-top: 5vh;
+	padding-top: 10vh;
+	width: 50%;
+}
+
+.slide2{
+	padding-top: 3vh;
+}
+.mainText1{
+
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 5vmin;
+	margin-top: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	text-align: center
+}
+
+.mainImgs1{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 5vh;
+	/*margin-bottom: 2vh;*/
+
+}
+
+.mainImgs1Cont{
+	width: 20vw;
+	margin-right: 5vw;
 
 
-#termsBody{
+}
+
+.mainImgs1Cont img{
+	width: 100%;
+	height: auto;
+
+}
+
+.subText1{
+
+	color:#3c3d65;
+	font-family: "Raleway";
+	font-size: 3vmin;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3vh;
+	text-align: left;
+	display: flex;
+	justify-content: space-around;
+}
+
+.subText1a{
+	width: 25%;
+}
+
+.mainImg{
+	text-align: center;
+		margin-top: 5vh;
+}
+.iphone{
+
+	max-width: 20vw;
+	min-width: 175px;
+	height: auto;
+}
+
+
+.roboto{
+	font-family: "Raleway";
+}
+
+.iphoneCont{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+
+}
+
+.iphoneCont2{
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+	justify-content: space-around;
+
+
+}
+
+
+.goalImg{
+	width: 80%;
+	height: auto;
+}
+
+.goalImgCont{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10vh;
+}
+
+.goalTitle{
+		text-align: center;
+		font-variant: small-caps;
+	color:#3c3d65;
+	font-family: "Quicksand";
+	font-size: 7vmin;
+	margin-bottom: 2vh;
+}
+
+
+.arrowDiv{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 5vh;
 }
-	#termsTitle{
-			text-align: center;
-			font-size: 10vmin;
-			font-weight: bold;
-			font-family: "Amatic SC";
-			color:  #3c3d65;
-			margin: 1vh;
-
-	}
-
-		.well{
-			border: 2px solid gray;
-			font-family: 'Lato';
-			padding-top: 3vh;
-			padding-left: 3vw;
-			padding-right: 3vw;
-			padding-bottom: 3vw;
-			height: 60vh;
-			overflow: scroll;
-
-		}
-
-		#termsButton{
-			margin-top: 2vh;
-		}
-
-#successModal{
-	/*padding-top: 20vh;*/
-}
-	#successModalContentDiv{
-		/*height: 40vh;*/
-	}
-		#newSuccessBody{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-			#successModalTitle{
-				text-align: center;
-				font-size: 10vmin;
-				font-weight: bold;
-				font-family: "Amatic SC";
-				color:  #3c3d65;
-				margin: 1vh;
-			}
-			.successModalSub{
-				text-align: center;
-				font-size: 5vmin;
-				/*font-weight: bold;*/
-				font-family: "Amatic SC";
-				color:  #3c3d65;
-				margin: 1vh;
-
-			}
-
-			#shareTextCont{
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-			#successButtonsCont{
-				margin-top: 2vh;	
-			}
-
-				#sharebox{
-				display: inline-flex;
-				flex-direction: row;
-				justify-content: space-around;
-				width: 80%
 
 
-			}
-			#sharebox img{
-				height: 6vmin;
-				width: auto;
-			}
+        .arrows {
+            width: 60px;
+            height: 32px;
+           
+        }
+
+        .arrows path {
+            stroke:  #3f3e65;
+            fill: transparent;
+            stroke-width: 3px;  
+            animation: arrow 4s infinite;
+            -webkit-animation: arrow 3s infinite; 
+        }
+
+        .slideOneArrow{
+            width: 100%;   
+            text-align: center;
+
+        }
+
+        @keyframes arrow
+        {
+        0% {opacity:0}
+        40% {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+        }
+
+        @-webkit-keyframes arrow /*Safari and Chrome*/
+        {
+        0% {opacity:0}
+        40% {opacity:2}
+        80% {opacity:0}
+        100% {opacity:0}
+        }
+
+        .arrows path.a1 
+        {
+            animation-delay:-1.5s;
+            -webkit-animation-delay:-1.5s; /* Safari 和 Chrome */
+        }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
 
 

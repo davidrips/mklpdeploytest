@@ -1,0 +1,296 @@
+
+
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+    background: #44a2d9;
+    font-family: "Josefin Slab";
+    padding-top: 25px;
+	 /*background-cEolor: #3c3d65;*/
+}
+
+a{
+	color:#3c3d65;
+}
+
+
+.jumbotron{
+	/*margin-top: 5vh;*/
+	color: #3c3d65;
+}
+
+
+#navContainer{
+
+	 background-color: #3c3d65;
+}
+
+#fbButton{
+	height: 10vh;
+}
+
+
+#container1{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#vrGogs{
+	width: 100%;
+}
+
+#toprow{
+	margin-bottom: 1vh;
+}
+
+		.box{
+			    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		}
+
+
+
+		#logodiv{
+		
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+				#logo{
+					height: 18vh;
+					width: auto;
+				}
+
+		#line1div{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+
+				#line1{
+					margin-bottom: 0;
+					font-size: 4vmin;
+				    font-weight: 500;
+				    color: white;
+
+				}
+
+				#line2{
+					margin-top: 0;
+					margin-bottom: 0;
+					font-size: 11vmin;
+					color: white;
+					font-family: "Amatic SC"
+				}
+
+#line3{
+	    font-size: 3vmin;
+    text-align: center;
+    color: white;
+}
+
+#signupDiv{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+		#signupGroup{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+				#signupSpan{
+					font-size: 3vmin;
+					color: white;
+					font-family: "Amatic SC"
+				}
+
+				#signupField{
+					flex: 1;
+					max-width: 60%;
+					display: inline-block;
+					font-family: "Lato"
+				}
+
+				#signupCheckboxDiv{
+					display: flex;
+					justify-content: space-around;
+					margin-bottom: 1vmin;
+				}
+
+				#signupCheckbox{
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					
+				}
+
+				#signupCheckboxText{
+					display: inline-block;
+					align-items: center;
+					justify-content: center;
+					color: white;
+					font-family: "Lato";
+				}
+				#signupNotice{
+					font-family: "Lato";	
+					color: white;
+					text-align: center;
+					font-size: 2vmin;
+
+				}
+				#signupButtonDiv{
+					width: 100%;
+					display: flex;
+					justify-content: center;
+				}
+						.signupButton{
+    						background-color:#f2d040;
+    						font-family: "Amatic SC";
+							color:  #3c3d65;
+							border-radius: 3px;
+						    font-size: 6vmin;
+						    font-weight: bold;
+						   
+						}
+
+						.singupButton :hover{
+							background-color: orange;
+						}
+
+
+#termsBody{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+	#termsTitle{
+			text-align: center;
+			font-size: 10vmin;
+			font-weight: bold;
+			font-family: "Amatic SC";
+			color:  #3c3d65;
+			margin: 1vh;
+
+	}
+
+		.well{
+			border: 2px solid gray;
+			font-family: 'Lato';
+			padding-top: 3vh;
+			padding-left: 3vw;
+			padding-right: 3vw;
+			padding-bottom: 3vw;
+			height: 60vh;
+			overflow: scroll;
+
+		}
+
+		#termsButton{
+			margin-top: 2vh;
+		}
+
+#successModal{
+	/*padding-top: 20vh;*/
+}
+	#successModalContentDiv{
+		/*height: 40vh;*/
+	}
+		#newSuccessBody{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+			#successModalTitle{
+				text-align: center;
+				font-size: 10vmin;
+				font-weight: bold;
+				font-family: "Amatic SC";
+				color:  #3c3d65;
+				margin: 1vh;
+			}
+			.successModalSub{
+				text-align: center;
+				font-size: 5vmin;
+				/*font-weight: bold;*/
+				font-family: "Amatic SC";
+				color:  #3c3d65;
+				margin: 1vh;
+
+			}
+
+			#shareTextCont{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			#successButtonsCont{
+				margin-top: 2vh;	
+			}
+
+				#sharebox{
+				display: inline-flex;
+				flex-direction: row;
+				justify-content: space-around;
+				width: 80%
+
+
+			}
+			#sharebox img{
+				height: 6vmin;
+				width: auto;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
