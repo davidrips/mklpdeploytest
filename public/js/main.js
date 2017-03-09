@@ -39,17 +39,17 @@ $('.btn').on("click", function(e){
      $(document).on('submit', ".signUpForm", function(e) {
         console.log('inhere');
    
-            if (e.isDefaultPrevented()) {
+        if (e.isDefaultPrevented()) {
             console.log('gotstuck');
             return false;
         // handle the invalid form...
         } else {
         // everything looks good!
 
-        e.preventDefault();
+        // e.preventDefault();
             console.log("clicked");
 
-            var email = $('#inputEmail', this).val()
+            var email = $('#inputEmail').val()
           
           console.log(email);
             signUpComplete(email, "first", "last")
