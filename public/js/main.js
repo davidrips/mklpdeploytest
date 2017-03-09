@@ -49,7 +49,7 @@ $('.btn').on("click", function(e){
         e.preventDefault();
             console.log("clicked");
 
-            var email = $('#inputEmail', this).val()
+            var email = $('#inputEmail').val()
           
           console.log(email);
             signUpComplete(email, "first", "last")
