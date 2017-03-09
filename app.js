@@ -234,6 +234,7 @@ app.get('/passes', function (req, res) {
 
 
 app.post('/signup', function(req, res){
+    console.log('IN SIGNUP');
     Newusers.findAll({
     where: {email: req.body.email}
   }).then(function(userArray){
