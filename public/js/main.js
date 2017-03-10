@@ -50,7 +50,7 @@ $('.btn').on("click", function(e){
             console.log("clicked");
             console.log(e);
 
-            var email = $('#inputEmail').val()
+            var email = $('.inputEmail').val()
           
           console.log(email);
             signUpComplete(email, "first", "last")
