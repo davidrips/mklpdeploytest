@@ -33,6 +33,8 @@ $('.btn').on("click", function(e){
         // e.preventDefault()
         // console.log('clickedSignModalOpen');
         // $('#signModal').modal();
+        var email = $('.inputEmail').val()  
+        console.log(email);
     
     })
 
