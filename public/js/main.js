@@ -54,7 +54,7 @@ $('.btn').on("click", function(e){
             console.log(e);
             console.log(e.target[0].value);
 
-            var email = $('.inputEmail').val()
+            var email = e.target[0].value;
           
           console.log(email);
             signUpComplete(email, "first", "last")
