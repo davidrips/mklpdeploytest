@@ -35,6 +35,7 @@ $('.btn').on("click", function(e){
         // $('#signModal').modal();
         var email = $('.inputEmail').val()  
         console.log(email);
+         console.log(e.target[0].value);
     
     })
 
