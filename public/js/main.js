@@ -35,7 +35,7 @@ $('.btn').on("click", function(e){
         // $('#signModal').modal();
         var email = $('.inputEmail').val()  
         console.log(email);
-         console.log(e.target[0].value);
+
     
     })
 
@@ -52,6 +52,7 @@ $('.btn').on("click", function(e){
         // e.preventDefault();
             console.log("clicked");
             console.log(e);
+            console.log(e.target[0].value);
 
             var email = $('.inputEmail').val()
           
