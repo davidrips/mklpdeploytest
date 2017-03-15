@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   console.log('hello?');
 
-  var list = ["teacher", "parent", "student"]
+  var list = ["teacher", "parent", "student", "applicant"]
   var a = 0;
   var len = list.length;
 
@@ -26,6 +26,37 @@ $(document).ready(function(){
     })
 
   })
+
+    var sidenavtrig = $("#sidenavtrig")
+    var sidenavclose= $(".closebtn")
+
+    sidenavtrig.click(function(e){
+        e.preventDefault()
+        openNav()
+    })
+
+    sidenavclose.click(function(e){
+        e.preventDefault()
+        closeNav()
+    })
+
+
+
+    function openNav() {
+
+        if ($("html").hasClass("desktop")){
+            document.getElementById("mySidenav").style.width = "30vw";
+
+        }else {
+           document.getElementById("mySidenav").style.width = "50vw"; 
+        }
+        
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+
+    }
 
 
 $('.btn').on("click", function(e){
@@ -137,7 +168,17 @@ $('.btn').on("click", function(e){
       })
     })
   
+  
+  var num = $(".menuCont").offset().top;
 
+  $(window).bind("scroll", function(){
+    if ($(window).scrollTop() > num) {
+      $(".menu").addClass('fixed');
+    }else {
+      num = $(".menuCont").offset().top;
+      $(".menu").removeClass('fixed')
+    }
+  })
 
 
 
@@ -657,36 +698,7 @@ $('.btn').on("click", function(e){
 //     })
 
 
-//     var sidenavtrig = $("#sidenavtrig")
-//     var sidenavclose= $(".closebtn")
 
-//     sidenavtrig.click(function(e){
-//         e.preventDefault()
-//         openNav()
-//     })
-
-//     sidenavclose.click(function(e){
-//         e.preventDefault()
-//         closeNav()
-//     })
-
-
-
-//     function openNav() {
-
-//         if ($("html").hasClass("desktop")){
-//             document.getElementById("mySidenav").style.width = "30vw";
-
-//         }else {
-//            document.getElementById("mySidenav").style.width = "50vw"; 
-//         }
-        
-//     }
-
-//     function closeNav() {
-//         document.getElementById("mySidenav").style.width = "0";
-
-//     }
 
     
 

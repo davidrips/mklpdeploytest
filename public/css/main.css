@@ -4,9 +4,139 @@
    Author's custom styles
    ========================================================================== */
 body{
+	width: 100vw;
+	margin:0px;
+
+}
+
+html{
+	width: 100vw;
+}
+#sidenavtrig{
+    display: none;
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    z-index: 1;
+}
+#hamsvg{
+    height:4vmin;
+    width: 4vmin
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 20000
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 3vmin;
+    display: block;
+    color: #818181;
+    font-family: "Lato";
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px
+}
+
+.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+.menuCont{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
 	width: 100%;
 
 }
+
+.menuContMobile{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
+
+
+}
+
+.menuContMobile .menu{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+#mobileNav{
+	display: none;
+}
+
+.menu{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navLogo{
+	height: 35px;
+	width: auto;
+}
+
+.menu a{
+	color: white;
+	text-decoration: none;
+	font-family: "Avenir"
+}
+
+.menu .signUpForm{
+	display: inline-flex;
+	align-items: center;
+}
+.menu .signUpForm input{
+	width: initial;
+		font-family: "Avenir";
+	height: 20px;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.menu .signUpForm button{
+	width: auto;
+	line-height: 0;
+	height: 20px;
+	font-family: "Avenir";
+	font-variant: small-caps;
+	font-size: 18px;
+	margin-bottom: 0;
+	border-radius: 4px;
+	margin-top: 0;
+	margin-left: 1vw;
+
+}
+
 #navBarImg{
 	height: 100%;
 }
@@ -25,6 +155,7 @@ body{
 	justify-content: space-between;
 	/*flex-flow: row wrap;*/
 	margin-top: 3vh;
+	margin-bottom: 10vh;
 
 
 }
@@ -111,12 +242,18 @@ footer a {
 }
 
 #slide1iphone{
-	margin-right: 20px;
+	/*margin-right: 20px;*/
 }
 .slide1a{
 	width: 60%;
 	margin-left: 5vw;
 }
+
+.slide1imgDiv{
+	width: 40%;
+    text-align: center;
+}
+
 .slogan{
 	text-align: center;
 	color:#3c3d65;
@@ -139,32 +276,36 @@ footer a {
 	border-radius: 8px;
 	border: 1px slategray solid;
 	font-size: 24px;
-	font-family: "Raleway";
+	font-family: "Avenir";
+	padding-left:10px;
+	margin-bottom: 2vh;
 /*	pointer-events:none;*/
 
 }
 
 .signUpForm button{
-	height: 40px;
-	width: 120px;
+	height: 10vh;
+	width: 40vw;
+	margin-top: 1vh;
 	border-radius: 8px;
 	border: 1px white solid;
 	background-color: #52B74B;
+	max-width: 350px;
 	
 	font-size: 20px;
-	font-family: "Raleway";
+	font-family: "Avenir";
 	color:white;
 }
 .subtitle{
 	text-align: center;
 	color:#3c3d65;
-	font-family: "Quicksand";
+	font-family: "Avenir";
 	font-size: 4vmin;
 }
 .subtitle2{
 	text-align: center;
 	color:#3c3d65;
-	font-family: "Quicksand";
+	font-family: "Avenir";
 	font-size: 5vmin;
 	margin-bottom: 2vmin;
 
@@ -173,7 +314,7 @@ footer a {
 .subtitle3{
 	text-align: center;
 	color:#3c3d65;
-	font-family: "Quicksand";
+	font-family: "Avenir";
 	font-size: 3vmin;
 	margin-bottom: 2vh;
 
@@ -184,12 +325,15 @@ footer a {
 	font-family: "Quicksand";
 	font-size: 4vmin;
 	margin-top: 5vh;
-	padding-top: 10vh;
 	width: 50%;
 }
 
 .slide2{
 	padding-top: 3vh;
+}
+
+.slide2Cont{
+	height: 100%;
 }
 .mainText1{
 
@@ -228,7 +372,7 @@ footer a {
 .subText1{
 
 	color:#3c3d65;
-	font-family: "Raleway";
+	font-family: "Avenir";
 	font-size: 3vmin;
 	width: 100%;
 	margin-left: auto;
@@ -239,8 +383,17 @@ footer a {
 	justify-content: space-around;
 }
 
+.subCont{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width:25%;
+
+}
+
 .subText1a{
-	width: 25%;
+	/*width: 25%;*/
 }
 
 .mainImg{
@@ -250,41 +403,57 @@ footer a {
 .iphone{
 
 	max-width: 20vw;
-	min-width: 175px;
+	min-width: 112px;
 	height: auto;
+}
+
+.mainImg .iphone{
+	max-width: 40vw;
+	max-height: 60vh;
 }
 
 
 .roboto{
-	font-family: "Raleway";
+	font-family: "Avenir";
 }
 
 .iphoneCont{
 	display: flex;
 	width: 100%;
+	height: 100vh;
 	justify-content: space-around;
+	align-items: center;
 
 }
 
 .iphoneCont2{
 	display: flex;
 	flex-direction: row-reverse;
+		align-items: center;
 	width: 100%;
+	height: 100vh;
 	justify-content: space-around;
 
 
 }
 
-
+.goalCont{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
 .goalImg{
-	width: 80%;
+	width: 65%;
 	height: auto;
 }
 
 .goalImgCont{
 	width: 100%;
 	text-align: center;
-	margin-bottom: 10vh;
+	margin-bottom: 5vh;
+	margin-top: 5vh;
 }
 
 .goalTitle{
@@ -292,17 +461,32 @@ footer a {
 		font-variant: small-caps;
 	color:#3c3d65;
 	font-family: "Quicksand";
-	font-size: 7vmin;
-	margin-bottom: 2vh;
+	font-size: 8vmin;
+	width: 80%;
+	margin-top: 
+
+
+
 }
 
+.goalText{
+	width: 65%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	padding-top: 0;
+	margin-top:0;
+	margin-bottom: 2vh;
+}
 
 .arrowDiv{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 5vh;
+	margin-top: 2vh;
+    margin-bottom: 2vh;
+
 }
 
 

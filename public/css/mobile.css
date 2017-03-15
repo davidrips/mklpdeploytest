@@ -1,7 +1,186 @@
-@media only screen and (max-width:401px){
+
+/*//iphone5//*/
+@media only screen 
+and (min-device-width:320px) 
+and (max-device-width:736px)
+and (-webkit-min-device-pixel-ratio:2) {
+
+  	.slide1imgDiv{
+  		/*display: none;*/
+  	}
+
+  	.slide1a{
+  		width: initial;
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: space-around;
+  		height: 80vh;
+  	}
+
+  	.signUpForm button{
+  		font-size: 16px;
+  	}
+
+  	#mobileNav{
+  		display: flex;
+  	}
+
+  	.menuCont{
+  		display: none;
+  	}
+
+  	.signUp{
+  		display: none;
+  	}
+
+  	.menu .signUpForm{
+  		justify-content: flex-end;
+
+  	}
+
+  	.menu .signUpForm button{
+
+  	}
+
+  	.menu .signUpForm input{
+  		width: 50%;
+  	}
+
+  	#hamsvg{
+  		height: 7vmin;
+  		width: 7vmin;
+  	}
+
+  	.sidenav a {
+  		font-size: 7vmin;
+  		font-family: "Avenir"
+  	}
+
+  	.slogan{
+  		margin-top: 4vmin;
+  	}
+
+  	.subtitle{
+  		font-size: 7vmin
+  	}
+
+  	.subtitle2{
+  		font-size: 7vmin;
+  	}
+
+  	.subtitle3{
+  		font-size: 6vmin;
+  	}
+
+  	.mainText1{
+  		font-size: 8vmin;
+  	}
+
+  	.subText1a{
+  		font-size: 6vmin !important;
+  		margin: 4vh 0;
+  	}
+
+  	.mainImgs1Cont{
+  		width: 40% !important;
+  	}
+
+  	.slide2Cont{
+  		height: 100%;
+  	}
+
+  	.iphoneCont2{
+  		height: initial;
+  		flex-direction: column-reverse !important;
+  	}
+
+  	.iphoneCont{
+  		flex-direction: column-reverse !important;
+  		height: initial;
+  	}
+
+  	.mainImg{
+  		width: 100%;
+  	}
+
+  	.mainImg .iphone{
+  		max-width: 66vw;
+  	}
+
+  	.mainText{
+  		font-size: 6vmin;
+  	}
+  	.goalImg{
+  		width: 95%
+  	}
+
+}
+
+@media only screen and (max-width:640px){
+
+	#sidenavtrig{
+		display: inline;
+	
+	}
+
+	.navLogo{
+		display: none;
+	}
+
+	.menu a{
+		display: none;
+	}
+
+	.mainText{
+		width:70%;
+	}
+
+	.subText1{
+		flex-direction: column;
+		align-items: center;
+	}
+	.subText1a{
+		font-size: 4vmin;
+	}
+	.subCont{
+		flex-direction: row;
+		width: 80%;
+
+
+	}
+	.mainImgs1Cont{
+		width: initial;
+		
+	}
+	.iphoneCont{
+		flex-direction: column;
+		align-items: center;
+	}
+	.iphoneCont2{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+
+@media only screen and (max-width:441px){
 	
 	.slide1Cont{
 		flex-direction: column;
+		margin-left: 0;
+
+	}
+	.slide1imgDiv{
+	width: 100vw;
+	margin:0;
+	text-align: center;
+	}
+	#slide1iphone {
+	     margin-right: 0; 
+	}
+	.slide1a{
+		margin-left: 0;
+		height: 100vh;
 	}
 }
 
@@ -14,25 +193,83 @@
 		flex-basis: 50%;
 	}
 
+	.subCont{
+		flex-direction: column;
+		width: 80%;
+
+
+	}
+	.mainImgs1Cont{
+		width: 25%;
+		
+	}
+
 }
 
-@media only screen and (max-width:640px){
-
-	.mainText{
-		width:70%;
-	}
-	.iphoneCont{
-		flex-direction: column;
-		align-items: center;
-	}
-	.iphoneCont2{
-		flex-direction: column;
-		align-items: center;
-	}
-}
 
 @media only screen and (max-width:700px){
 	.hhLabel{
 		font-size: 3.5vmin;
 	}
+}
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) { /* STYLES GO HERE */
+	
+}
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { /* STYLES GO HERE */ 
+
+}
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) { 
+	.slide1a{
+		height: initial;
+		width: 93%;
+	}
+
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
