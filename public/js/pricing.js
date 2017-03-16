@@ -6,6 +6,12 @@ $(document).ready(function () {
 
 	var sidenavtrig = $("#sidenavtrig")
 	var sidenavclose= $(".closebtn")
+	var sidenavtrig2 = $("#sidenavtrig2")
+     sidenavtrig2.click(function(e){
+      console.log('clicked ham');
+        e.preventDefault()
+        openNav()
+    })
 
 	sidenavtrig.click(function(e){
 	    e.preventDefault()
@@ -82,29 +88,29 @@ $(document).ready(function () {
 
 
 
-	$(".top").hover(function(){
-		var w = $(window).width();
-		if (w > 966){
-			$(this).parent().addClass("selected")
-			$(this).addClass("isSelected");
-			$(".top").not(this).addClass('notSelected')
-			$(".top").not(this).siblings().addClass('notSelected')
-		}else{	console.log("NO")}
+	// $(".top").hover(function(){
+	// 	var w = $(window).width();
+	// 	if (w > 966){
+	// 		$(this).parent().addClass("selected")
+	// 		$(this).addClass("isSelected");
+	// 		$(".top").not(this).addClass('notSelected')
+	// 		$(".top").not(this).siblings().addClass('notSelected')
+	// 	}else{	console.log("NO")}
 
 		
 
 		
 
-	}, function(){ 
+	// }, function(){ 
 
 		
-		$(this).parent().removeClass("selected")
-		$(this).removeClass("isSelected")
-		$(".top").not(this).removeClass('notSelected')
-		$(".top").not(this).siblings().removeClass('notSelected')
+	// 	$(this).parent().removeClass("selected")
+	// 	$(this).removeClass("isSelected")
+	// 	$(".top").not(this).removeClass('notSelected')
+	// 	$(".top").not(this).siblings().removeClass('notSelected')
 
 
-	})
+	// })
 
 
 

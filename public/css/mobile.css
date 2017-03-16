@@ -39,7 +39,8 @@ and (-webkit-min-device-pixel-ratio:2) {
   	}
 
   	.menu .signUpForm button{
-
+  		border: none;
+		height: 29px;	
   	}
 
   	.menu .signUpForm input{
@@ -111,7 +112,7 @@ and (-webkit-min-device-pixel-ratio:2) {
   		font-size: 6vmin;
   	}
   	.goalImg{
-  		width: 95%
+  		width: 95%;
   	}
 
 }

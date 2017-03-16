@@ -15,6 +15,12 @@ html{
 #sidenavtrig{
     display: none;
     position: fixed;
+    left: 3vw;
+    z-index: 1;
+}
+#sidenavtrig2{
+    
+    position: fixed;
     top: 3vh;
     left: 3vw;
     z-index: 1;
@@ -335,6 +341,9 @@ footer a {
 .slide2Cont{
 	height: 100%;
 }
+
+
+
 .mainText1{
 
 	color:#3c3d65;

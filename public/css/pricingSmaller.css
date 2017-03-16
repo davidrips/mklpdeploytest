@@ -1,4 +1,54 @@
 
+/*//iphone5//*/
+@media only screen 
+and (min-device-width:320px) 
+and (max-device-width:736px)
+and (-webkit-min-device-pixel-ratio:2) {
+
+
+	#mobileNav{
+  		display: flex;
+  	}
+
+  	.menuCont{
+  		display: none;
+  	}
+
+  	.signUp{
+  		display: none;
+  	}
+
+  	.menu .signUpForm{
+  		justify-content: flex-end;
+
+  	}
+
+  	.menu .signUpForm button{
+  		border: none;
+		height: 29px;	
+  	
+  	}
+
+  	.menu .signUpForm input{
+  		width: 50%;
+  		height: 35px;
+  	}
+
+  	#hamsvg{
+  		height: 7vmin;
+  		width: 7vmin;
+  	}
+
+  	.sidenav a {
+  		font-size: 7vmin;
+  		font-family: "Avenir"
+  	}
+
+}
+
+
+
+
 
 @media only screen 
 and (max-width:650px){

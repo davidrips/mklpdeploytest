@@ -21,17 +21,197 @@ body{
 	src: url("../css/font/Lato-Regular.ttf");
 }
 
-#sidenavtrig {
-    display: inline;
-    position: fixed;
-    top: 3vh;
-    left: 3vw;
-    z-index: 1090
 
-}
 #pstDiv{
 /*    display: inline-block;*/
 }
+
+
+
+/*NAV*/
+#sidenavtrig{
+    display: none;
+    position: fixed;
+    left: 3vw;
+    z-index: 1;
+}
+#sidenavtrig2{
+    
+    position: fixed;
+    top: 3vh;
+    left: 3vw;
+    z-index: 1;
+}
+#hamsvg{
+    height:4vmin;
+    width: 4vmin
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 20000
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 3vmin;
+    display: block;
+    color: #818181;
+    font-family: "Lato";
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px
+}
+
+
+.menuCont{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+
+}
+
+.menuContMobile{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
+
+
+}
+
+.menuContMobile .menu{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+#mobileNav{
+	display: none;
+}
+
+.menu{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navLogo{
+	height: 35px;
+	width: auto;
+}
+
+.menu a{
+	color: white;
+	text-decoration: none;
+	font-family: "Avenir"
+}
+
+.menu .signUpForm{
+	display: inline-flex;
+	align-items: center;
+}
+.menu .signUpForm input{
+	width: initial;
+		font-family: "Avenir";
+	height: 20px;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.menu .signUpForm button{
+	width: auto;
+	line-height: 0;
+	height: 20px;
+	font-family: "Avenir";
+	font-variant: small-caps;
+	font-size: 18px;
+	margin-bottom: 0;
+	border-radius: 4px;
+	margin-top: 0;
+	margin-left: 1vw;
+
+}
+
+#navBarImg{
+	height: 100%;
+}
+
+.signUpForm button{
+	height: 10vh;
+	width: 40vw;
+	margin-top: 1vh;
+	border-radius: 8px;
+	border: 1px white solid;
+	background-color: #52B74B;
+	max-width: 350px;
+	
+	font-size: 20px;
+	font-family: "Avenir";
+	color:white;
+}
+
+.signUpForm input{
+	width: 75%;
+	max-width: 454px;
+	height: 35px;
+	border-radius: 8px;
+	border: 1px slategray solid;
+	font-size: 24px;
+	font-family: "Avenir";
+	padding-left:10px;
+	margin-bottom: 2vh;
+/*	pointer-events:none;*/
+
+}
+
+@media only screen and (max-width:640px){
+	#sidenavtrig{
+		display: inline;
+	
+	}
+
+	.navLogo{
+		display: none;
+	}
+
+	.menu a{
+		display: none;
+	}
+
+	.mainText{
+		width:70%;
+	}
+
+}
+
+
 /* iPads (portrait) ----------- */
 @media only screen 
 and (min-width : 768px) 
@@ -75,7 +255,7 @@ and (min-width : 768px)
     font-size: 3vmin;
     display: block;
     color: #818181;
-    font-family: "Lato";
+    font-family: "Avenir";
     display: block;
     transition: 0.3s
 }
@@ -132,7 +312,7 @@ and (min-width : 768px)
 
 }
 	#headingLogoContainer{
-		margin-top: 5vh;
+		margin-top: 10vh;
 
 
 	}
@@ -142,7 +322,7 @@ and (min-width : 768px)
 		height: 20vmin;
 	}
 	#headingContentContainer{
-		font-family: "Lato";
+		font-family: "Quicksand";
 		text-align: center;
 		font-size: 8vmin;
 		margin-bottom: 2vh;
@@ -169,7 +349,7 @@ and (min-width : 768px)
 		width: 20vw;
 		height: 20vw;
 		font-size: 4vw;
-		font-family: "Lato";
+		font-family: "Avenir";
 		font-weight: 400;
 		display: flex;
 		align-items: center;
@@ -232,7 +412,7 @@ and (min-width : 768px)
 		.top{
 			width: 100%;
 			color: #3c3d65;
-			font-family: "Lato";
+			font-family: "Avenir";
 			font-size: 150%;
 			margin-bottom: 5vh;
 			border-top: 1px solid black;
@@ -325,14 +505,20 @@ and (min-width : 768px)
 
 			}
 
+			.summary{
+				font-family: "Avenir"
+			}
+
 			.top div.title{
 				margin-top: 2vh;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
 			}
 			h3{
 				font-size: 3vmin;
+				font-family: "Avenir"
 			}
 
 			.topInner{
@@ -358,7 +544,7 @@ and (min-width : 768px)
 					padding: 3vmin;
 					background-color: #f2d040;
 					border-radius: 10px;
-					font-family: "Lato";
+					font-family: "Avenir";
 					font-weight: bold;
 					font-size:3vmin;
 					width: 100%
@@ -370,7 +556,7 @@ and (min-width : 768px)
 		.bottom{
 			background-color: white;
 			color: #3c3d65;
-			font-family: "Josefin Sans";
+			font-family: "Avenir";
 			/*border-radius: 10px;*/
 			font-size: 2.5vmin;
 			width: 100%;
@@ -423,7 +609,7 @@ and (min-width : 768px)
 		    padding-top: 5vh;
 		    padding-bottom: 5vh;
 		    text-align: center;
-		    font-family: 'Josefin Slab', serif
+		    font-family: 'Avenir'
 		}
 		#footerLogo {
 		    width: 10vmin;
@@ -433,7 +619,7 @@ and (min-width : 768px)
 		footer p {
 		    font-size: 3vmin;
 		    line-height: 1;
-		    font-family: "lato";
+		    font-family: "Avenir";
 		    margin-bottom: 1vmin
 		}
 		footer a {
@@ -446,7 +632,7 @@ and (min-width : 768px)
 		#footercontent {
 		    font-size: 2vmin;
 		    line-height: 1.75;
-		    font-family: "lato"
+		    font-family: "Avenir"
 		}
 		#footerlinks {
 		}
