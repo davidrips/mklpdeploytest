@@ -115,8 +115,40 @@ and (-webkit-min-device-pixel-ratio:2) {
   		width: 95%;
   	}
 
+  	.vInner{
+  		flex-basis: 80%;
+  		margin-top: 5vh;
+  	}
+	.vInnerTitle{
+		font-size: 8vmin;
+	}
+  	.vInnerText{
+  		font-size: 5vmin
+  	}
+
+  	.valuesText{
+  		font-size: 5vmin;
+  	}
+
+  	.valuesSub{
+  		font-size: 11vmin;
+  	}
+
+
+
 }
 
+@media only screen 
+and (min-device-width:320px) 
+and (max-device-width:736px)
+and (-webkit-min-device-pixel-ratio:2)
+and (orientation:landscape) {
+	.goalCont{
+		height: initial;
+	}
+
+
+}
 @media only screen and (max-width:640px){
 
 	#sidenavtrig{
@@ -181,7 +213,7 @@ and (-webkit-min-device-pixel-ratio:2) {
 	}
 	.slide1a{
 		margin-left: 0;
-		height: 100vh;
+		/*height: 100vh;*/
 	}
 }
 
@@ -218,6 +250,9 @@ and (-webkit-min-device-pixel-ratio:2) {
 and (min-device-width : 414px) 
 and (max-device-width : 736px) 
 and (orientation : landscape) { /* STYLES GO HERE */
+	.menu .signUpForm input{
+		width: initial;
+	}
 	
 }
 

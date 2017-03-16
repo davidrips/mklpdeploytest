@@ -1,242 +1,134 @@
-*{
-
-}
-
-html{
-
-    width:100vw;
-    overflow-x: hidden;
-    /*font-size: 62.5%;*/
- }
-body{
-
-    height: 100%;
-    width:100vw;
-    /*font-size: 100%;*/
-}
-nav{
-    display: none
-}
 #sidenavtrig{
-    display: inline;
+    display: none;
+    position: fixed;
+    left: 3vw;
+    z-index: 1;
+}
+#sidenavtrig2{
+    
     position: fixed;
     top: 3vh;
     left: 3vw;
     z-index: 1;
-}
-
-#homeButton{
-    display: inline;
-    position: fixed;
-    top: 3vh;
-    left: 93vw;
-    z-index: 1;
-}
-
-#homeLogo{
-        height: 5vmin;
-        width: 5vmin;
 }
 #hamsvg{
     height:4vmin;
     width: 4vmin
 }
 
-
-
-#tempContainer1{
-    height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   padding-bottom: 10vh;
-}
-#tempContainer2{
-    /*height: 100%;*/
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 5vh;
-    /*padding-top: 5vh;*/
-    /*border-bottom: dashed 3px #3f3e65;*/
-    /*border-top: dashed 3px #3f3e65;*/
-}
-#slideOne {
+.sidenav {
     height: 100%;
-    z-index: 100
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 20000
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 3vmin;
+    display: block;
+    color: #818181;
+    font-family: "Lato";
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:hover, .offcanvas a:focus {
+    color: #f1f1f1
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px
 }
 
-#loginCont{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 2;
 }
-    .logInInput{
-        width: 40vw; 
-        padding: 1vmin;
-        margin-bottom: 1vh;
-    }
+.menuCont{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
 
-    label {
-        color: #3c3d65 !important;
-        font-family: 'Lato';
-        font-weight: 300;
-    }
+}
 
-        .loginSocial{
-            height: 9vmin;
-            width: 9vmin;
-            margin-top: 1vh;
-        }
-        .loginSocialContWrap{
-            display: block;
-        }
-        .loginSocialCont{
-            display: flex;
-            width: 40vw;
-
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 2vh;
-        }
-            .loginSocialCont a{
-                height: 5vh;
-                flex-basis: 48%;
-            }
-        #loginEmail{
-
-        }
-        #loginPassword{
-
-        }
-        #loginInnerCont{
-            display: flex;
-            justify-content: flex-start;
-            width: auto;
-
-        }
-            #loginRemember{
-                margin-right: 1vw;
-                align-self: center;
-            }
-            #loginButton{
-                font-size: 2vmin;
-               width: 30vw;
-
-               padding: 1vmin 2vmin;
-            }
-            #loginButton a{
-                   color:#3f3e65;
-            }
-            .loginWrap{
-                white-space: nowrap;
-            }
-            #loginCheck{
-                align-self: center;
-            }
-        .loginOr{
-            text-align: center;
-            font-family: "lato";
-            width: 30vw;
-            color: #3f3e65;
-        }
-
-        #row1signup{
-            font-size: 2vmin;
-            width: 30vw;
-            padding: 1vmin 2vmin;
-            margin-top: 1vh;
-        }
-
-        #row1sub {
-            font-size: 4.5vmin;
-            font-weight: 400;
-        }
-
-        #row1subB {
-            font-size: 8.5vmin;
-            font-weight: 400;
-            color: #3f3e65;
-        }
+.menuContMobile{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
 
 
-        .arrows {
-            width: 60px;
-            height: 32px;
-            position: absolute;
-            left: 50%;
-            margin-left: -30px;
-            bottom: 20px;
-        }
+}
 
-        .arrows path {
-            stroke:  #3f3e65;
-            fill: transparent;
-            stroke-width: 3px;  
-            animation: arrow 4s infinite;
-            -webkit-animation: arrow 3s infinite; 
-        }
+.menuContMobile .menu{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
 
-        .slideOneArrow{
-            width: 100%;   
+#mobileNav{
+	display: none;
+}
 
-        }
+.menu{
+	height: 50px;
+	background-color: #3f3e65;
+	color: white;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 
-        @keyframes arrow
-        {
-        0% {opacity:0}
-        40% {opacity:1}
-        80% {opacity:0}
-        100% {opacity:0}
-        }
+.navLogo{
+	height: 35px;
+	width: auto;
+}
 
-        @-webkit-keyframes arrow /*Safari and Chrome*/
-        {
-        0% {opacity:0}
-        40% {opacity:2}
-        80% {opacity:0}
-        100% {opacity:0}
-        }
+.menu a{
+	color: white;
+	text-decoration: none;
+	font-family: "Avenir"
+}
 
-        .arrows path.a1 
-        {
-            animation-delay:-1.5s;
-            -webkit-animation-delay:-1.5s; /* Safari 和 Chrome */
-        }
+.menu .signUpForm{
+	display: inline-flex;
+	align-items: center;
+}
+.menu .signUpForm input{
+	width: initial;
+		font-family: "Avenir";
+	height: 20px;
+	font-size: 18px;
+	margin-bottom: 0;
+}
 
+.menu .signUpForm button{
+	width: auto;
+	line-height: 0;
+	height: 20px;
+	font-family: "Avenir";
+	font-variant: small-caps;
+	font-size: 18px;
+	margin-bottom: 0;
+	border-radius: 4px;
+	margin-top: 0;
+	margin-left: 1vw;
 
+}
 
-   
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#navBarImg{
+	height: 100%;
+}

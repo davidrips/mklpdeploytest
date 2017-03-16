@@ -213,7 +213,7 @@ footer{
     padding-top: 5vh;
     padding-bottom: 5vh;
     text-align: center;
-    font-family: 'Josefin Slab', serif
+    font-family: 'Avenir', serif
 }
 #footerLogo {
     width: 10vmin;
@@ -223,7 +223,7 @@ footer{
 footer p {
     font-size: 3vmin;
     line-height: 1;
-    font-family: "lato";
+    font-family: "Avenir";
     margin-bottom: 1vmin
 }
 footer a {
@@ -236,7 +236,7 @@ footer a {
 #footercontent {
     font-size: 2vmin;
     line-height: 1.75;
-    font-family: "lato"
+    font-family: "Avenir"
 }
 #footerlinks {
 }
@@ -259,6 +259,8 @@ footer a {
 #slide1iphone{
 	/*margin-right: 20px;*/
 }
+
+
 .slide1a{
 	width: 60%;
 	margin-left: 5vw;
@@ -482,9 +484,6 @@ footer a {
 	font-size: 8vmin;
 	width: 80%;
 	margin-top: 
-
-
-
 }
 
 .goalText{
@@ -496,6 +495,104 @@ footer a {
 	margin-top:0;
 	margin-bottom: 2vh;
 }
+
+
+.valuesCont{
+
+
+}
+
+.valuesTitle{
+	text-align: center;
+	color: #3c3d65;
+    font-family: "Quicksand";
+    font-size: 13vmin;
+     font-variant: small-caps;
+
+
+}
+
+.valuesSub{
+	text-align: center;
+	color: #3c3d65;
+    font-family: "Quicksand";
+    font-size: 8vmin;
+    font-variant: small-caps;
+}
+
+.valuesText{
+	color: #3c3d65;
+    font-family: "Avenir";
+    font-size: 3vmin;
+    /*width: 90vw;*/
+    padding: 0 10vw;
+    text-align: center;
+
+}
+
+.vInnerCont{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap:  wrap;
+
+}
+
+sup {
+	font-size: 3vmin;
+}
+
+.vInner{
+	/*width: 45%;*/
+	display: inline-block;
+	flex-basis: 40%;
+	margin-left: 5vw;
+	margin-right: 5vw;
+
+
+}
+
+.vInner .vInner3{
+
+
+}
+
+.vInnerTitle{
+	color: #3c3d65;
+    font-family: "Quicksand";
+    font-size: 5vmin;
+    font-variant: small-caps;
+
+}
+
+.vInnerText{
+	color: #3c3d65;
+    font-family: "Avenir";
+    font-size: 3vmin;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .arrowDiv{
 	display: flex;
