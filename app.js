@@ -32,7 +32,7 @@ redirect(app);
 
 // app.use('/', routes);
 
-// var Sequelize = require('sequelize');
+var Sequelize = require('sequelize');
 
 // DEPLOY TEST LIVE//
 // var pg = require('pg');
@@ -60,13 +60,13 @@ redirect(app);
 
 
 // ACTUAL SITE LIVE//
-// var sequelize = new Sequelize(process.env.DATABASE_URL, {
-//       dialect:  'postgres',
-//       protocol: 'postgres',
-//       port:     5432,
-//       host:     'ec2-54-243-58-188.compute-1.amazonaws.com',
-//       logging:  true //false
-//     })
+var sequelize = new Sequelize(process.env.DATABASE_URL, {
+      dialect:  'postgres',
+      protocol: 'postgres',
+      port:     5432,
+      host:     'ec2-54-243-58-188.compute-1.amazonaws.com',
+      logging:  true //false
+    })
 
 
 
