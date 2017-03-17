@@ -11,34 +11,6 @@ $(document).ready(function(){
     })
 
 
-
-    $('#myForm').validator().on('submit', function (e) {
-        if (e.isDefaultPrevented()) {
-            console.log('gotstuck');
-        // handle the invalid form...
-        } else {
-        // everything looks good!
-        e.preventDefault();
-            console.log("clicked");
-
-            var first = $('#inputFirstName').val()
-            var last = $('#inputLastName').val() 
-            var email = $('#inputEmail').val()
-
-            $.post('/signup', {
-                first: $('#inputFirstName').val(),
-                last: $('#inputLastName').val(), 
-                email: $('#inputEmail').val()
-            }, function(data){
-                // console.log(data);
-                console.log('herenow');
-                $('#newModalTitle').text("Welcome to myKlovr " + first)
-                    $('#newModal').modal();
-                    }
-            )
-        }
-    })
-
      var controller = new ScrollMagic.Controller({loglevel: 3});
 
      if(!Modernizr.touchevents){
@@ -175,8 +147,16 @@ $(document).ready(function(){
 
     var sidenavtrig = $("#sidenavtrig")
     var sidenavclose= $(".closebtn")
+    var sidenavtrig2 = $("#sidenavtrig2")
+         
+    sidenavtrig2.click(function(e){
+      console.log('clicked ham');
+        e.preventDefault()
+        openNav()
+    })
 
     sidenavtrig.click(function(e){
+      console.log('clickedHam');
         e.preventDefault()
         openNav()
     })

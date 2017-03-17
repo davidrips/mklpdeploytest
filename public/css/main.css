@@ -275,7 +275,9 @@ footer a {
 	text-align: center;
 	color:#3c3d65;
 	font-family: "Quicksand";
-	font-size: 9vmin;
+	font-size: 11vmin;
+	font-weight: bold;
+	font-variant: small-caps;
 	/*margin-top: 4vmin;*/
 	margin-bottom: 4vmin;
 }
@@ -364,7 +366,8 @@ footer a {
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;
-	text-align: center
+	text-align: center;
+	font-variant: small-caps;
 }
 
 .mainImgs1{

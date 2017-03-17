@@ -59,6 +59,8 @@ and (-webkit-min-device-pixel-ratio:2) {
 
   	.slogan{
   		margin-top: 4vmin;
+      font-weight: initial;
+      font-variant: initial;
   	}
 
   	.subtitle{

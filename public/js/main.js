@@ -31,7 +31,6 @@ $(document).ready(function(){
     var sidenavtrig2 = $("#sidenavtrig2")
     var sidenavclose= $(".closebtn")
 
-
      sidenavtrig2.click(function(e){
       console.log('clicked ham');
         e.preventDefault()
