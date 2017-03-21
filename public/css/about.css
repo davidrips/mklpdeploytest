@@ -484,7 +484,6 @@
 		color: #3f3e65;
 		margin-top: 1vh;
 		margin-bottom: 0;
-		line-height: 95%;
 		text-align: left;
 
 
@@ -672,6 +671,81 @@
 				color: #3f3e65;
 
 			}
+
+
+
+		
+
+		footer {
+		    background-color: #3c3d65
+		}
+		footer h4 {
+		    text-align: center;
+		    color: #f2d040 !important;
+		    background-color: #3c3d65;
+		    text-transform: none !important
+		}
+		label {
+		    color: #f2d040
+		}
+
+
+		#footerdiv {
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    height: 100%;
+		    font-size: 4vmin;
+		    color: white;
+		    padding-top: 5vh;
+		    padding-bottom: 5vh;
+		    text-align: center;
+		    font-family: 'Avenir'
+		}
+		#footerLogo {
+		    width: 10vmin;
+		    height: auto;
+		    margin-bottom: 2vh
+		}
+		footer p {
+		    font-size: 3vmin;
+		    line-height: 1;
+		    font-family: "Avenir";
+		    margin-bottom: 1vmin
+		}
+		footer a {
+		    font-size: 1.5vmin;
+		    color: white
+		}
+		#footerlinks p {
+		    font-size: 1.5vmin
+		}
+		#footercontent {
+		    font-size: 2vmin;
+		    line-height: 1.75;
+		    font-family: "Avenir"
+		}
+		#footerlinks {
+		}
+		#socialicons {
+		    display: flex;
+		    justify-content: space-around;
+		    align-items: center
+		}
+		#socialicons a {
+		    opacity: .65
+		}
+		#socialicons a:hover {
+		    opacity: 1
+		}
+		#socialicons img {
+		    width: 8vmin;
+		    height: auto
+		}
+
+
+
 
 			
 
