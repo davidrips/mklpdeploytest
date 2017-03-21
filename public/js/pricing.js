@@ -1,5 +1,82 @@
 $(document).ready(function () {
 
+
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    function openModal() {
+        modal.style.display = "block";
+
+    }
+
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    $(document).on('submit', ".signUpForm", function(e) {
+        console.log('inhere');
+        e.preventDefault();
+        var modal = document.getElementById('myModal');
+         modal.style.display = "block";
+   
+
+            console.log(e);
+            console.log(e.target[0].value);
+
+            var email = e.target[0].value;
+          
+          console.log(email);
+            
+            signUpComplete(email, "first", "last")
+            $("input").val('')
+            return false;
+        });
+
+
+
+    function signUpComplete(email, first, last){
+          console.log("INsignupcomplete");
+           $.post('/signup', {
+                first: first,
+                last: last, 
+                email: email
+            }, function(data){
+                          }
+            )
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	if(!Modernizr.touchevents){
 	     $("html").addClass('desktop')}
 

@@ -24,8 +24,8 @@
 
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/pricing.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/pricingSmaller.css"/>
+    <!-- <link href="css/pricing.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/mobile.css"/>
     <link rel="stylesheet" type="text/css" href="css/mobiletablet.css"/>
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/aboutmobile.css">
@@ -72,94 +72,97 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <body id="page-top" class="index">
 
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="../img/skyClimber.jpg" alt="" id='skyClimber' />
+    
+    <h2 id='newModalSub'> are you ready to start exploring?</h2>
+    <p id='newModalText'> Thanks for joining the waiting list. <strong>You'll get to be part of the beta launch, and get access to our premium services for free.</strong>  We can't wait to show you how myKlovr will help you get everything you need to achieve what you want - we'll let you know when we're ready for you!</p>
+    <div class='fbDiv'>
+      <div class="fb-page" 
+      data-href="https://www.facebook.com/myklovr"
+      data-width="400" 
+      data-hide-cover="false"
+      data-show-facepile="false" 
+      data-show-posts="false">
+    </div>
+
+
+    </div>
+    
+</div>
+
+</div>
+
+
+
+    
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn">&times;</a>
-        <a class='menuButs' data-where="1" id="mwho">Who</a>
-        <a class='menuButs' data-where="2" id="mvalues">What</a>
-        <a class='menuButs' data-where="3" id="mstudents">How</a>
-        <a class='menuButs' data-where="4" id="mparents">Team</a>
-        <a class='menuButs' data-where="5" id="meducators">Investors</a>
-        <a class='menuButs' data-where="6" id="mabout">Press and Media</a>
-        <a class='menuButs' data-where="7" id="mcareer">Careers</a>
-        <a class='' href='/' id="mhome">Student and Parent Home</a>
-        <a class='' href='/business' id="mhome">School and Company Home</a>
-    
+        <a class='' href='/' id="mhome">Students and Parents Home</a>
+        <a href='/pricing'>Pricing</a>
+        <a href="/about">About Us</a>
+         <a href="www.myklovr.wordpress.com">Blog</a>
+        <!-- <a class='menuButs' data-where="end" id="mend">How to Join</a> -->
     
       </div>
 
-     <span id='sidenavtrig'><svg id='hamsvg' height="25px" version="1.1" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="hamburger" stroke="none" stroke-width="1"><g fill="white" class='homeLogoPaths' id="Hamburger-Round"><path d="M0,4 C0,2.8954305 0.889763236,2 2.00359486,2 L22.9964051,2 C24.10296,2 25,2.88772964 25,4 C25,5.1045695 24.1102368,6 22.9964051,6 L2.00359486,6 C0.897039974,6 0,5.11227036 0,4 L0,4 Z M0,12 C0,10.8954305 0.889763236,10 2.00359486,10 L22.9964051,10 C24.10296,10 25,10.8877296 25,12 C25,13.1045695 24.1102368,14 22.9964051,14 L2.00359486,14 C0.897039974,14 0,13.1122704 0,12 L0,12 Z M0,20 C0,18.8954305 0.889763236,18 2.00359486,18 L22.9964051,18 C24.10296,18 25,18.8877296 25,20 C25,21.1045695 24.1102368,22 22.9964051,22 L2.00359486,22 C0.897039974,22 0,21.1122704 0,20 L0,20 Z" id="Hamburger"/></g></g></svg></span>
-      <span id='homeButton'>
-        <svg version="1.1" id="homeLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 width="1000px" height="1000px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-              <g>
-                <path class='homeLogoPaths' fill="white" d="M501.162,224.406c-203.926,0-369.238,165.312-369.238,369.246c0,203.926,165.319,369.236,369.238,369.236
-                  c203.925,0,369.244-165.311,369.244-369.236C870.39,389.718,705.087,224.406,501.162,224.406z M501.162,799.934
-                  c-118.932,0-206.275-87.344-206.275-206.274s87.344-206.283,206.275-206.283s206.282,87.353,206.282,206.283
-                  S620.094,799.934,501.162,799.934z"/>
-                <path class='homeLogoPaths' fill="white" d="M806.815,100.768c0.008-0.138-0.022-0.285-0.022-0.423l0.276,0.224
-                  c-1.125-39.239-35.688-55.456-35.688-55.456H272.96c-34.392,0-62.258,24.824-62.258,55.456c0,30.624,27.866,55.448,62.258,55.448
-                  h498.422c0,0,34.57-16.226,35.688-55.448L806.815,100.768z"/>
-              </g>
-              </svg>
+      <div class="menuContMobile" id='mobileNav'>
+        <div class='menu' id='mobileNav'>
+        
+            
 
-      </span>
+          <span id='sidenavtrig2'>
+          <svg id='hamsvg' height="25px" version="1.1" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="hamburger" stroke="none" stroke-width="1"><g fill="white" class='homeLogoPaths' id="Hamburger-Round"><path d="M0,4 C0,2.8954305 0.889763236,2 2.00359486,2 L22.9964051,2 C24.10296,2 25,2.88772964 25,4 C25,5.1045695 24.1102368,6 22.9964051,6 L2.00359486,6 C0.897039974,6 0,5.11227036 0,4 L0,4 Z M0,12 C0,10.8954305 0.889763236,10 2.00359486,10 L22.9964051,10 C24.10296,10 25,10.8877296 25,12 C25,13.1045695 24.1102368,14 22.9964051,14 L2.00359486,14 C0.897039974,14 0,13.1122704 0,12 L0,12 Z M0,20 C0,18.8954305 0.889763236,18 2.00359486,18 L22.9964051,18 C24.10296,18 25,18.8877296 25,20 C25,21.1045695 24.1102368,22 22.9964051,22 L2.00359486,22 C0.897039974,22 0,21.1122704 0,20 L0,20 Z" id="Hamburger"/></g></g></svg></span>
+
+          <form class="signUpForm" role="">
+            <input type="text" placeholder="Email" class="">
+            <button type="submit" class="">sign up</button>
+          </form>
+
+        </div>   
+      </div>
+
+
+      <div class="menuCont">
+        <div class='menu'>
+        
+            
+
+          <span id='sidenavtrig'>
+          <svg id='hamsvg' height="25px" version="1.1" viewBox="0 0 25 25" width="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="hamburger" stroke="none" stroke-width="1"><g fill="white" class='homeLogoPaths' id="Hamburger-Round"><path d="M0,4 C0,2.8954305 0.889763236,2 2.00359486,2 L22.9964051,2 C24.10296,2 25,2.88772964 25,4 C25,5.1045695 24.1102368,6 22.9964051,6 L2.00359486,6 C0.897039974,6 0,5.11227036 0,4 L0,4 Z M0,12 C0,10.8954305 0.889763236,10 2.00359486,10 L22.9964051,10 C24.10296,10 25,10.8877296 25,12 C25,13.1045695 24.1102368,14 22.9964051,14 L2.00359486,14 C0.897039974,14 0,13.1122704 0,12 L0,12 Z M0,20 C0,18.8954305 0.889763236,18 2.00359486,18 L22.9964051,18 C24.10296,18 25,18.8877296 25,20 C25,21.1045695 24.1102368,22 22.9964051,22 L2.00359486,22 C0.897039974,22 0,21.1122704 0,20 L0,20 Z" id="Hamburger"/></g></g></svg></span>
+
+
+
+          <a href="/"><img src="img/logo1white.png" class='navLogo' alt=""></a>
+          <a href="/pricing">Pricing</a>
+          <a href="/">Students & Parents</a>
+          <a href="/about">About Us</a>
+           <a target="_blank" href="http://www.myklovr.wordpress.com">Blog</a>
+          <form class="signUpForm" role="">
+            <input type="text" placeholder="Email" class="">
+            <button type="submit" style='border:none'class="">sign up</button>
+          </form>
+
+        
+      </div>   
+      </div>
 
 
     <div id='main'>
       <div id='headingContainer' class='need-light'>
         <div id='headingLogoContainer'><img src="../img/logo1white.png" id='headingLogo' alt=""></div>
         <div id='headingContentContainer'>
-          we are an education tech <wbr>startup <wbr>based in nyc. <br> <span> our mission is to help <wbr> people achieve their goals.  </span>
-        </div>
-      </div>
-       <!-- <div class="is-light"></div> -->
-
-        <!-- <div class="seperator need-light"></div> -->
-
-      <div class='bodySection is-light' id='t1'>
-        <div class="bodyHeading">-who we are-</div>
-        <div class="bodyText">
-          We are a group of people who want to make education work better while giving students an opportunity to succeed in the challenging and competive modern market, before, during, and after college. 
-          <br>
-          <br>
-          <br>
-          We want to connect students and parents to schools and businessses to deliver transparent collaborative opportunities. 
-        </div>
-      </div>
-
-        <div class="seperator need-light"></div>
-
-      <div class="bodySection is-light" id='t2'>
-        <div class="bodyHeading">-what we do-</div>
-        
-
-        <div class="bodyText">
-          Serving the untapped needs of the global pre-professional education market, myKlovr provides students, parents, teachers, schools, and businesses with a single source platform, which offers each user personalized, data-driven recommendations. 
-          <br>
-          <br>
-          myKlōvr is a unique B2C and B2B platform providing students with a personalized 'return on identity'. Each student is assigned their own real-time MyKlovr score - KROI&copy;, which is responsive to the student’s personal, academic, and professional achievements. In addition to serving as a more wholesome metric of a student's performance, the personal score can be used for preferential goods and services through the exclusive MyKlovr proprietary Education Exchange. 
-          
-        </div>
-      </div>
-
-        <div class="seperator need-light"></div>
-
-      <div class="bodySection is-light" id='t3'>
-        <div class="bodyHeading">-how we do it-</div>
-        
-        <div class="bodyText">
-
-        myKlōvr gives users the ability to continually define, quantify and manage their very own academic, personal, and professional data assessments, and empowers them with continuous actionable and customized recommendations. Users have the ability to share these insights with friends, family, teachers, and businesses, while benefiting from the collective knowledge of their peers.
-        <br><br>
-        The myKlōvr Marketplace Exchange offers users recommended services such as access to tutors, mentors, and coaches, and personally selects relevant goods such as books, courses, and many other products, providing users with a customized blueprint for a success plan. The MyKlovr Marketplace functions as the transactional side of the platform; it offers seamless integration, and most importantly, true price transparency to and from all users.
-        
-      
+          we are a tech <wbr>startup <wbr>based in nyc. <br> <span> our mission is to help <wbr> people achieve their goals.  </span>
         </div>
       </div>
 
 
-        <div class="seperator need-light"></div>
+
 
      
       <div class="bodySection is-light" id='t4'>
@@ -247,7 +250,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
           </div>
           <div class="teamMember">
             <div class="teamInfo">
-              <div class="teamHeading">David Rips, Lead UI Developer and Digital Marketing Manager</div>
+              <div class="teamHeading">David Rips, Head of Marketing</div>
               <div class="teamText">
                 A graduate of Rutgers University and certified in Full Stack Development, David has worked on several mobile applications before joining myKlōvr. David is passionate about writing and marketing and is helping myKlõvr create a consistent and well integrated product. 
               </div>
@@ -260,31 +263,7 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
         <div class="seperator need-light"></div>
 
-    <!--   <div class="bodySection is-light" id='t5'>
-        <div class="bodyHeading">-investors-</div>
-        <div class="bodyText">Get access to the investors portal <a id='investClick'>here.</a></div>
-      </div> -->
-
-       <div class="modal fade" id="investModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body" id="newModalBody">
-            <p>  Please enter the password for entry.</p>
-
-              <form id='investForm'>
-
-                  <input type="text" id='investText' name="investText">
-                  <label for="investText">Password</label>
-                  <button type='button' id='investButton'>Submit</button>
-              
-                
-
-              </form>
-
-              </div>
-            </div>
-          </div>
-        </div>
+   
 
         <div class="seperator need-light"></div>
 

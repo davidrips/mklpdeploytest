@@ -22,17 +22,240 @@
 		src: url("../css/font/Lato-Regular.ttf");
 	}
 
-	#sidenavtrig {
-	    display: inline;
-	    position: fixed;
-	    top: 3vh;
-	    left: 3vw;
-	    z-index: 1090
+
+	/* The Modal (background) */
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content/Box */
+	.modal-content {
+	    background-color: #fefefe;
+	    margin: 15% auto; /* 15% from the top and centered */
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 80%; /* Could be more or less, depending on screen size */
+	}
+
+	/* The Close Button */
+	.close {
+	    color: #aaa;
+	    float: right;
+	    font-size: 28px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: black;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+
+	#skyClimber{
+	    width: 100%;
+	}
+
+	#newModalSub{
+	    
+	    font-family: "Quicksand";
+	    font-size: 5vmin;
+	    color: #3f3e65;
+	    font-variant: small-caps;
+	    text-align: center;
 
 	}
 
+	#newModalText{
+	    font-family: "Avenir";
+	    font-size: 3vmin;
+	    color: #3f3e65;
+
+	}
+
+	.fbDiv{
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	}
+
+
+
+	 #sidenavtrig{
+	    display: none;
+	    position: fixed;
+	    left: 3vw;
+	    z-index: 1;
+	}
+	#sidenavtrig2{
+	    
+	    position: fixed;
+	    top: 3vh;
+	    left: 3vw;
+	    z-index: 1;
+	}
+	#hamsvg{
+	    height:4vmin;
+	    width: 4vmin
+	}
+
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: #111;
+	    overflow-x: hidden;
+	    padding-top: 60px;
+	    transition: 0.5s;
+	    z-index: 20000
+	}
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 3vmin;
+	    display: block;
+	    color: #818181;
+	    font-family: "Lato";
+	    display: block;
+	    transition: 0.3s
+	}
+	.sidenav a:hover, .offcanvas a:focus {
+	    color: #f1f1f1
+	}
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px
+	}
+
+	.fixed{
+	    position: fixed;
+	    top: 0;
+	    z-index: 2;
+	}
+	.menuCont{
+	    height: 50px;
+	    background-color: #3f3e65;
+	    color: white;
+	    width: 100%;
+	    position: fixed;
+	    top: 0;
+	    z-index: 2;
+
+	}
+
+	.menuContMobile{
+	    height: 50px;
+	    background-color: #3f3e65;
+	    color: white;
+	    width: 100%;
+	     position: fixed;
+	    top: 0;
+	    z-index: 2;
+
+
+	}
+
+	.menuContMobile .menu{
+	    position: fixed;
+	    top: 0;
+	    z-index: 2;
+	}
+
+	#mobileNav{
+	    display: none;
+	}
+
+	.menu{
+	    height: 50px;
+	    background-color: #3f3e65;
+	    color: white;
+	    width: 100%;
+	    display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	}
+
+	.navLogo{
+	    height: 35px;
+	    width: auto;
+	}
+
+	.menu a{
+	    color: white;
+	    text-decoration: none;
+	    font-family: "Avenir"
+	}
+
+	.menu .signUpForm{
+	    display: inline-flex;
+	    align-items: center;
+	}
+	.menu .signUpForm input{
+	    width: initial;
+	        font-family: "Avenir";
+	    height: 20px;
+	    font-size: 18px;
+	    margin-bottom: 0;
+	}
+
+	.menu .signUpForm button{
+	    width: auto;
+	    line-height: 0;
+	    height: 20px;
+	    font-family: "Avenir";
+	    font-variant: small-caps;
+	    font-size: 18px;
+	    margin-bottom: 0;
+	    border-radius: 4px;
+	    margin-top: 0;
+	    margin-left: 1vw;
+
+	}
+
+	#navBarImg{
+	    height: 100%;
+	}
+
+
+
+	.signUpForm button{
+	    height: 10vh;
+	    width: 40vw;
+	    margin-top: 1vh;
+	    border-radius: 8px;
+	    border: 1px white solid;
+	    background-color: #52B74B;
+	    max-width: 350px;
+	    
+	    font-size: 20px;
+	    font-family: "Avenir";
+	    color:white;
+	}
+
+
+
+
+
+
 	#pstDiv{
 	/*    display: inline-block;*/
+
+
 	}
 	/* iPads (portrait) ----------- */
 	@media only screen 
@@ -115,6 +338,7 @@
 		width: 100vw;
 		padding-left: 10vw;
 		padding-right: 10vw;
+		padding-top: 50px;
 		height: auto;
 		display: flex;
 		flex-direction: column;

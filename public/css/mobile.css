@@ -1,13 +1,24 @@
 
 /*//iphone5//*/
+
+@media only screen 
+and (min-device-width:320px) 
+and (max-device-width:736px)
+and (-webkit-min-device-pixel-ratio:2)
+and (orientation: portrait) {
+  
+    .slide1imgDiv{
+      display: none;
+    }
+
+}
+
 @media only screen 
 and (min-device-width:320px) 
 and (max-device-width:736px)
 and (-webkit-min-device-pixel-ratio:2) {
 
-  	.slide1imgDiv{
-  		/*display: none;*/
-  	}
+  
 
   	.slide1a{
   		width: initial;
@@ -154,7 +165,7 @@ and (orientation:landscape) {
 @media only screen and (max-width:640px){
 
 	#sidenavtrig{
-		display: inline;
+		display: inline !important;
 	
 	}
 

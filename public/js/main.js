@@ -2,7 +2,39 @@ $(document).ready(function(){
 
   console.log('hello?');
 
-  var list = ["teacher", "parent", "student", "applicant"]
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+function openModal() {
+    modal.style.display = "block";
+
+}
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+  var list = ["teacher", "parent", "student"]
   var a = 0;
   var len = list.length;
 
@@ -21,7 +53,7 @@ $(document).ready(function(){
   doNext();
 
    $(".arrows").on('click', function(e){
-        $(window).scrollTo('.slide2', {duration:800, ease: "easeInOutElastic"})
+        $(window).scrollTo('.slideTarget', {duration:800, ease: "easeInOutElastic"})
 
     })
 
@@ -68,10 +100,6 @@ $(document).ready(function(){
 
 
 $('.btn').on("click", function(e){
-        // debugger;
-        // e.preventDefault()
-        // console.log('clickedSignModalOpen');
-        // $('#signModal').modal();
         var email = $('.inputEmail').val()  
         console.log(email);
 
@@ -80,27 +108,21 @@ $('.btn').on("click", function(e){
 
      $(document).on('submit', ".signUpForm", function(e) {
         console.log('inhere');
+        e.preventDefault();
+        var modal = document.getElementById('myModal');
+         modal.style.display = "block";
    
-        if (e.isDefaultPrevented()) {
-            console.log('gotstuck');
-            return false;
-        // handle the invalid form...
-        } else {
-        // everything looks good!
 
-        // e.preventDefault();
-            console.log("clicked");
             console.log(e);
             console.log(e.target[0].value);
 
             var email = e.target[0].value;
           
           console.log(email);
+            
             signUpComplete(email, "first", "last")
+            $("input").val('')
             return false;
-
-        }
-
         });
 
 
@@ -148,18 +170,6 @@ $('.btn').on("click", function(e){
             }, function(data){
                           }
             )
-
-           // setTimeout(function(){
-           //      console.log('this');
-           //      // $("#signModal").modal("hide")
-           //      // $('#newModalTitle').text("Welcome to myKlōvr " + first)
-           //      // $("#newModal").modal();
-
-           // }, 1500)
-
-           
-
-
     }
 
      $("#share").on('click', function(e){
