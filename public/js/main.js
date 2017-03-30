@@ -34,7 +34,7 @@ window.onclick = function(event) {
 
 
 
-  var list = ["teacher", "parent", "student"]
+  var list = ["teacher", "parent", "student", "employee"]
   var a = 0;
   var len = list.length;
 
