@@ -566,6 +566,18 @@
 	}
 
 
+	.listPr{
+		margin-top: 5vh;
+		width: 100%;
+
+	}
+
+	.listPr tr{
+		height: 40px;
+    	text-align: center;
+	}
+
+
 	.modal-body{
 		display: flex;
 	    flex-direction: column;
@@ -743,6 +755,8 @@
 		    width: 8vmin;
 		    height: auto
 		}
+
+
 
 
 
