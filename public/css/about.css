@@ -452,6 +452,7 @@
 
 	.teamMember{
 		display: flex;
+		width:100%;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
@@ -460,7 +461,7 @@
 	}
 	.teamInfo{
 
-		display: inline-flex;
+	/*	display: inline-flex;*/
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
@@ -568,7 +569,7 @@
 
 	.listPr{
 		margin-top: 5vh;
-		width: 100%;
+		/*width: 100%;*/
 
 	}
 
@@ -633,12 +634,13 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
+		width: 100%;
 
 
 
 	}
 		.career{
-			display: flex;
+			/*display: flex;*/
 			flex-direction: column;
 			justify-content: space-around;
 			align-items: center;
@@ -666,6 +668,7 @@
 			color: #3f3e65;
 		}
 			.careerTitle{
+				margin-bottom: 2vh;
 				text-align: center;
 				font-family: "Lato";
 				font-size: 3vmin;
