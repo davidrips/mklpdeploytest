@@ -532,6 +532,25 @@
 		margin-top: 1vh;
 	}
 
+	.press-release-container{
+		width: 80vw;
+		display: flex;
+		justify-content: space-around;
+    	align-items: center;
+    	margin-bottom: 30px;
+	}
+	
+	.press-release{
+		text-align: center;
+	}
+
+	.press-release img{
+		width: 160px;
+	}
+
+	.press-release div{
+
+	}
 
 
 
