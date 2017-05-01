@@ -218,7 +218,7 @@ html{
 }
 
 .menu .signUpForm button{
-	width: auto;
+	width: 32%;
 	line-height: 0;
 	height: 20px;
 	font-family: "Avenir", "Nunito";
@@ -559,7 +559,7 @@ footer a {
 }
 
 .goalCont{
-	height: 100vh;
+	/*height: 100vh;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
